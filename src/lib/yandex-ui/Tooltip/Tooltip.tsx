@@ -6,7 +6,7 @@ import './Tooltip.scss';
 
 export interface ITooltipProps {
   view?: 'default';
-  size?: 's' | 'm';
+  size?: 's' | 'm' | 'l';
   theme?: 'dark' | 'light';
   anchor?: React.RefObject<HTMLElement>;
   visible?: boolean;

@@ -35,6 +35,13 @@
         font-size: var(--font-size-s);
       }
     }
+
+    &_l {
+      .Tooltip-Content {
+        padding: var(--space-m) var(--space-l);
+        font-size: var(--font-size-l);
+      }
+    }
   }
 
   /* View variants */
