@@ -6,6 +6,7 @@
     "@bem-react/classname": "^1.5.12",
     "@bem-react/core": "^5.0.0",
     "@bem-react/di": "^5.0.0",
+    "@popperjs/core": "^2.11.8",
     "@reduxjs/toolkit": "^1.8.6",
     "@types/react-input-mask": "^3.0.5",
     "axios": "^0.21.1",

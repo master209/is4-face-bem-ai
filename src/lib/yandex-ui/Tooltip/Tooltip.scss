@@ -1,37 +1,41 @@
-/* Yandex UI Tooltip */
-.Tooltip {
-  position: absolute;
+/* Yandex UI Tooltip with Popup2 styles */
+.Popup2 {
+  position: absolute !important;
   z-index: 1000;
   pointer-events: none;
+  margin: 0px !important;
+
+  /* Target anchor variant */
+  &_target_anchor {
+    /* Positioning handled by Popper.js */
+  }
+
+  /* View variants */
+  &_view_default {
+    /* Default popup styles */
+  }
+}
+
+.Tooltip {
   background: var(--color-bg-inverse);
   color: var(--color-text-inverse);
   border-radius: var(--border-radius-m);
-  padding: var(--space-s) var(--space-m);
-  font-size: var(--font-size-s);
-  font-family: var(--font-family);
   box-shadow: var(--shadow-m);
-  white-space: nowrap;
-  max-width: 200px;
-  word-wrap: break-word;
-
-  /* Arrow */
-  &::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 5px solid transparent;
-  }
 
   /* Size variants */
   &_size {
     &_s {
-      padding: var(--space-xs) var(--space-s);
-      font-size: var(--font-size-xs);
+      .Tooltip-Content {
+        padding: var(--space-xs) var(--space-s);
+        font-size: var(--font-size-xs);
+      }
     }
 
     &_m {
-      /* Default styles */
+      .Tooltip-Content {
+        padding: var(--space-s) var(--space-m);
+        font-size: var(--font-size-s);
+      }
     }
   }
 
@@ -42,46 +46,22 @@
     }
   }
 
-  /* Positioning */
-  &_position {
-    &_top {
-      &::after {
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-top-color: var(--color-bg-inverse);
-        border-bottom: none;
-      }
-    }
+  /* Content */
+  &-Content {
+    font-family: var(--font-family);
+    white-space: nowrap;
+    max-width: 200px;
+    word-wrap: break-word;
+    role: tooltip;
+  }
 
-    &_bottom {
-      &::after {
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-bottom-color: var(--color-bg-inverse);
-        border-top: none;
-      }
-    }
-
-    &_left {
-      &::after {
-        right: -10px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-left-color: var(--color-bg-inverse);
-        border-right: none;
-      }
-    }
-
-    &_right {
-      &::after {
-        left: -10px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-right-color: var(--color-bg-inverse);
-        border-left: none;
-      }
-    }
+  /* Backdrop */
+  &-Backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
   }
 }

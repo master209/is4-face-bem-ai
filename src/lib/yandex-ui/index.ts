@@ -3,3 +3,4 @@ export * from './Tooltip';
 export * from './Modal';
 export * from './Button';
 export * from './Attach';
+export * from './Portal';
