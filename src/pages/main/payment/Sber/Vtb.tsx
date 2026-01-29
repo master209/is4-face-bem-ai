@@ -82,10 +82,10 @@ const Vtb: FC<IClassNameProps> = () => {
   return (
     <div className={cnBank()}>
       <h1>Загрузка выписки по ВТБ</h1>
-        (<div className="Upload">
+        <div className="Upload">
           <FileAttach name="file" onChange={handleFileChange}/>
             <p><Button onClick={handleUploadClick} disabled={!file || !!result}>Подтвердить</Button></p>
-        </div>)
+        </div>
       <div className={`Result ${classError}`}>
         {result && renderResult()}
       </div>
