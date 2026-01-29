@@ -1,0 +1,21 @@
+@import "../../../scss/theme-app";
+
+.SideNav-Item_active {
+
+  .SideNav-Title {
+    color: $nav-link--color_active !important;
+    background: inherit;
+    cursor: pointer;
+    transition: background $transition-duration;
+
+    &:hover {
+      color: $nav-link--color_active;
+      background-color: $nav-title--bg-color_expanded;
+    }
+  }
+
+  .SideNav-Link {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}

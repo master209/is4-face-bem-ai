@@ -1,0 +1,17 @@
+.Input_required {
+  position: relative;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  &::after {
+    position: absolute;
+    content: "*";
+    z-index: 1;
+    color: $required--color;
+    right: 5px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+  }
+}

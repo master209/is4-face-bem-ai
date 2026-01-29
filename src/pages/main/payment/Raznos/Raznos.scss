@@ -1,0 +1,35 @@
+@import '../../../../scss/theme-app';
+
+@import '../../../../blocks/Input/Input';
+@import '../../../../blocks/Badge/Badge';
+@import '../../../../blocks/Grid/Table/Head/Grid-Head';
+@import '../../../../blocks/Grid/Table/Row/Grid-Row';
+@import '../../../../blocks/Grid/Table/Cell/Grid-Cell';
+
+.PaymentRaznos {
+  font-size: 15px;
+  line-height: 29px;
+
+  .Link {
+    color: $link--color;
+  }
+
+  .Input {
+    display: inline;
+    width: 100px;
+    height: 25px;
+    margin: 0;
+    padding: 0 3px;
+    border: 1px solid transparent;
+    text-align: right;
+
+    &:focus {
+      border-color: #958bef;
+      outline: 0;
+    }
+  }
+
+  .Button {
+    margin: 10px 20px 10px 0;
+  }
+}

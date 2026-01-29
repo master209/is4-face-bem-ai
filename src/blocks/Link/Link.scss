@@ -1,0 +1,15 @@
+@import "../../scss/theme-app";
+
+.Link {
+  box-sizing: border-box;
+  color: $link--color;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color $transition-duration;
+
+  &:hover {
+    cursor: pointer;
+    border-bottom-color: $link--border-color_hover;
+  }
+}

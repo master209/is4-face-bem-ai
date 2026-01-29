@@ -1,0 +1,38 @@
+@import "../../scss/theme-app";
+@import "./Cross/Modal-Cross";
+
+.ModalBlock {
+  display: flex;
+  flex-direction: column;
+
+  .Warning-Wrap {
+    height: 36px;
+  }
+
+  .Button {
+    color: $black !important;
+    font-size: 13px;
+    width: auto;
+    height: 34px;
+    margin-right: 20px;
+    line-height: 19px;
+    padding: 0 12px;
+
+    &:hover {
+      width: auto;
+      height: 36px;
+    }
+  }
+}
+
+.ModalWarning {
+  text-align: center;
+}
+
+/**************************/
+@media (max-width: 400px) {
+  .Modal-Content {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}

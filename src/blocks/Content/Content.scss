@@ -1,0 +1,10 @@
+@import "../../scss/theme-app";
+
+.Content {
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-size: $content--font-size;
+  line-height: 25px;
+  color: $black;  /* $content--color */
+}

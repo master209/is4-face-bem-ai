@@ -1,0 +1,19 @@
+.Logo-Label {
+  padding-left: 12px;
+}
+
+.Topbar {
+
+  .Link {
+      border-bottom: none;
+  }
+
+}
+
+
+/**************************/
+@media (max-width: 550px) {
+  .Logo-Label {
+    display: none;
+  }
+}

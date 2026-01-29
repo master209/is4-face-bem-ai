@@ -1,0 +1,16 @@
+@import "../../../scss/theme-app";
+
+.SideNav-Link {
+  padding: 9px 10px 9px 30px;
+  border-bottom: none;
+  transition: color .2s;
+  color: $nav-link--color;
+
+  display: block;
+
+  font-size: 14px;
+
+  &:hover {
+    color: $white;
+  }
+}

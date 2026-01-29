@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import "theme-app";
+
+/**
+ * Основные стили
+ **/
+
+body {
+/*  font-family: 'Montserrat', sans-serif;*/
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 35px;
+  margin: 14px 0;
+}
+
+.Error {
+  color: $error--color;
+}
+
+.Hidden {
+  display: none;
+}
+
+*:disabled {
+  background-color: $bg-color-disabled !important;
+  cursor: not-allowed;
+}
+
+input::placeholder {
+  color: $placeholder--color;
+}
+
+.right {
+  text-align: right;
+}
+
+td, th {
+  padding: 1px 8px;
+}
+.th {
+  font-weight: bold;
+}

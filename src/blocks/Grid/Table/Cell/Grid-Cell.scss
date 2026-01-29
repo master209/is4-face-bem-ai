@@ -1,0 +1,9 @@
+.Grid-Cell {
+  padding: 1px 6px;
+}
+
+.Grid-Cell_loading {
+  &::before {
+    background-color: inherit;
+  }
+}

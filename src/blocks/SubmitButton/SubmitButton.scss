@@ -1,0 +1,31 @@
+@import "../../scss/theme-app";
+
+
+.SubmitButton-Wrap {
+  width: 100%;
+  height: $submit-btn--height;
+}
+
+.SubmitButton {
+  width: 100%;
+  height: $submit-btn--height;
+  text-decoration: none;
+  color: $white !important;
+  background-color: $submit-btn--bg-color;
+  border: none;
+
+  &:hover {
+    height: $submit-btn--height_hover;
+    padding: 0 19px;
+    color: $white;
+    background-color: $submit-btn--bg-color_hover;
+  }
+
+  &:disabled {
+    &:hover {
+      height: 40px;
+      padding: 9px 0;
+      background-color: $submit-btn--bg-color;
+    }
+  }
+}

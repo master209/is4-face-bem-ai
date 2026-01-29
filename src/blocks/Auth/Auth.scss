@@ -1,0 +1,61 @@
+@import "../../scss/theme-app";
+
+.Auth {
+  width: $app-min-width;
+  min-width: $app-min-width;
+  margin: 10% auto;
+  padding: 22px 23px;
+
+  >p, >div {
+    margin: 10px 0;
+  }
+
+  .Form {
+    margin-top: 10px;
+  }
+
+  .Logo {
+    margin: 0 0 5px;
+  }
+
+  .FormSubTitle {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .Button {
+    width: 270px !important;
+    padding: 5px 0;
+    box-shadow: none;
+
+    &:hover {
+      width: 278px;
+    }
+
+    &:disabled {
+      &:hover {
+        width: 270px;
+      }
+    }
+  }
+
+  .InputCheckbox {
+    width: 27px !important;
+    height: 27px !important;
+  }
+
+  .FormWarning {
+    color: $red;
+    line-height: 14px;
+    font-size: 13px;
+  }
+
+}
+
+
+/**************************/
+@media (max-width: 380px) {
+  .Auth {
+    width: 100%;
+  }
+}

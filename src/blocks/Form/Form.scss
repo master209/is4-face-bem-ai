@@ -1,0 +1,23 @@
+@import "../../scss/theme-app";
+
+.Form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  >div, >p, >ul {
+    margin-top: 0;
+    margin-bottom: $form-input--margin-bottom;
+  }
+
+  .SubmitButton-Wrap {
+    margin-top: 0 !important;
+  }
+}
+
+.FormTitle {
+  text-align: center;
+  font-size: 25px;
+  line-height: 28px;
+}

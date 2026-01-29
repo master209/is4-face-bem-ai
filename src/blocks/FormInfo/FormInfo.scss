@@ -1,0 +1,12 @@
+@import "../../scss/theme-app";
+
+.FormInfo {
+  color: $nav-link--color;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+
+  &:last-child {
+    margin: 0 !important;
+  }
+}

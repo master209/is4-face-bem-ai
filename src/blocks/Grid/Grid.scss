@@ -1,0 +1,16 @@
+.Grid {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 30px;
+
+  .Shown-Reset {
+    margin-bottom: 12px;
+  }
+
+  .Pagination-Perpage {
+    margin-top: 20px;
+  }
+
+}

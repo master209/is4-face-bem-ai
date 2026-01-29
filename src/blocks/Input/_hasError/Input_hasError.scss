@@ -1,0 +1,25 @@
+@import "../../../scss/theme-app";
+
+.Input_hasError {
+
+  input, .InputIcon {
+    border-color: $error--color !important;
+  }
+
+  input {
+    border-left-color: $input--border-color !important;
+  }
+
+  .InputIcon {
+    border-right-color: $input--border-color !important;
+  }
+
+  .InputHelp {
+    color: $error--color;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 3px 0 1px;
+    align-self: flex-start;
+  }
+
+}

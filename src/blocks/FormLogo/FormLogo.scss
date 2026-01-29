@@ -1,0 +1,15 @@
+@import "../../scss/theme-app";
+
+.Auth {
+  .FormLogo {
+    margin: 0 0 5px;
+    display: flex;
+    align-items: center;
+
+    .FormLogo-Label {
+      color: $nav-link--color;
+      margin-left: 8px;
+      font-size: 15px;
+    }
+  }
+}

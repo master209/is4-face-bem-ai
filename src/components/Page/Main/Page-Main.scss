@@ -1,0 +1,13 @@
+@import "../../../scss/theme-app";
+
+.Page-Main {
+  margin: 0;
+  padding: 6px 15px;
+  border-radius: 10px;
+  grid-column: 2/4;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+  background: $content--bg-color;
+}

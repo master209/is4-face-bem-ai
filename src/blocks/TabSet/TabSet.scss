@@ -1,0 +1,58 @@
+@import "../../scss/theme-app";
+
+.TabSet {
+  position: relative;
+
+  .TabLabel {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 1px 10px;
+  }
+
+  .TabData {
+    width: 100%;
+    position: absolute;
+    margin: 10px 0;
+    padding: 15px 12px;
+    border: 1px solid $input--border-color;
+    .Button-Wrap {
+      text-align: left;
+      margin-bottom: 11px;
+    }
+  }
+
+  .TabData-active {
+    display: block;
+  }
+  .TabData-inactive {
+    display: none;
+  }
+
+  .Link {
+    border-bottom: none;
+
+    /*
+    &:hover {
+      border-bottom: 1px solid $link--color_hover;
+    }
+    */
+  }
+
+  .TabLabel-active {
+    color: $white;
+    background-color: $link--color;
+  }
+
+  .TabLabel-inactive {
+    color: $link--color;
+    background-color: $white;
+  }
+
+  .ButtonSet {
+    display: flex;
+
+    .Button-Wrap {
+      margin-right: 20px;
+    }
+  }
+}

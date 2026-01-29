@@ -1,0 +1,9 @@
+@import "../../scss/theme-app";
+
+.Page {
+  display: grid;
+  grid-template-rows: 70px 1fr auto;
+  grid-template-columns: 260px minmax(0,900px) minmax(160px,1fr);
+  background-color: $main--bg-color;
+  font: 16px/2 Arial,sans-serif;
+}

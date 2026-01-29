@@ -1,0 +1,26 @@
+@import "./Label/GridPerpage-Label";
+
+.Grid-Perpage {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .Input {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    width: 100%;
+  }
+
+  .InputLabel {
+    font-size: 14px;
+    width: 150px;
+  }
+}
+
+.Grid-PerpageItems {
+  text-align: center;
+  flex-basis: 35%;
+}

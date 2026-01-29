@@ -1,0 +1,8 @@
+@import "../../../../scss/theme-app";
+
+.Grid-Summary {
+  border-top: 1px solid $table--border-color;
+  border-bottom: 1px solid $table--border-color;
+  text-align: left;
+  font-weight: bold;
+}

@@ -1,0 +1,16 @@
+@import "../../../../scss/theme-app";
+
+.Nav-Item_active {
+
+  &:hover {
+    font-size: 16px;
+  }
+
+  .Nav-Link{
+    color: $nav-link--color_active;
+    border-bottom: 2px solid $black;
+    padding-bottom: 2px;
+  }
+
+}
+

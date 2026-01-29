@@ -1,0 +1,8 @@
+@import "../../../../../../scss/theme-app";
+
+.Head-Item_sorted {
+	svg {
+		opacity: 1;
+		transition: transform $transition-duration;
+	}
+}

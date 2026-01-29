@@ -1,0 +1,8 @@
+@import "../../../../../scss/theme-app";
+
+.Grid-Cell_ellipsis {
+  max-width: 320px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

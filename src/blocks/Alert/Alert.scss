@@ -1,0 +1,32 @@
+@import "../../scss/theme-app";
+@import "_type/Alert_type_info";
+@import "_type/Alert_type_success";
+@import "_type/Alert_type_error";
+
+
+.Alert {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  width: 450px;
+  margin: 50px auto;
+  padding: 10px 20px;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+}
+
+
+/**************************/
+@media (max-width: 500px) {
+  .Alert,
+  .Alert_type_info,
+  .Alert_type_success,
+  .Alert_type_error
+  {
+    width: 100% !important;
+    margin: 10% 0 !important;
+  }
+}

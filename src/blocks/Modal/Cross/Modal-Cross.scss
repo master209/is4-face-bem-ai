@@ -1,0 +1,31 @@
+@import "../../../scss/theme-app";
+
+.ModalBlock-Cross {
+  position: absolute;
+  content: '';
+  top: 6px;
+  right: 6px;
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  .Icon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: $bg-color_hover;
+    }
+
+    Img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

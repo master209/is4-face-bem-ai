@@ -1,0 +1,40 @@
+@import "../../scss/theme-app";
+@import "./Item/Card-Item";
+@import "./ItemTitle/Card-ItemTitle";
+@import "./ItemLab/Card-ItemLab";
+@import "./ItemVal/Card-ItemVal";
+
+.Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-bottom: 1.5rem;
+  padding: 25px;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid;
+  border-radius: $card--border-radius;
+  background-color: $white;
+  border-color: $input--border-color;
+  line-height: 24px;
+  transition: box-shadow $transition-duration;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+
+  .SubmitButton-Wrap {
+    text-align: center;
+    margin-top: 18px;
+
+    .Button {
+      width: 80%;
+
+      &:hover {
+        width: 81%;
+      }
+    }
+  }
+
+}

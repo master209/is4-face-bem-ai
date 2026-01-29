@@ -1,0 +1,9 @@
+@import "../../scss/theme-app";
+@import "./_on/Badge-On";
+@import "./_of/Badge-Of";
+
+.Badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: $white;
+}

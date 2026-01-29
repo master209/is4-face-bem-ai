@@ -1,0 +1,12 @@
+@import "../../../scss/theme-app";
+
+.ModalBlock-Buttons {
+  display: flex;
+
+  padding-top: 15px;
+  //border-top: 1px solid $input--border-color-light;
+
+  .Button-Wrap {
+    margin-top: 0;
+  }
+}

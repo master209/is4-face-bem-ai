@@ -1,0 +1,27 @@
+@import "../../../../../scss/theme-app";
+
+.Head-Item {
+  cursor: pointer;
+  padding: 2px 5px;
+  vertical-align: middle;
+
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  p {
+    line-height: 18px;
+  }
+
+  svg {
+    margin-bottom: -4px;
+    opacity: .3;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $pagination--border-color;
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../../../../../../scss/theme-app";
+
+.Head-Item_desc {
+	svg	{
+		transform: rotate(-180deg);
+		transition: transform $transition-duration;
+	}
+}

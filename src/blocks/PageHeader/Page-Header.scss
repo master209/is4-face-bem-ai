@@ -1,0 +1,18 @@
+@import "../../scss/theme-app";
+
+.Page-Header {
+  margin: 18px 0;
+
+  table {
+    width: 50%;
+    line-height: 23px;
+
+    tr {
+      //border: none;
+    }
+    td {
+      border: 1px solid $table--border-color;
+      padding: 1px 10px;
+    }
+  }
+}

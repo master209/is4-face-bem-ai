@@ -1,0 +1,5 @@
+@import "../../scss/mixins";
+
+.Wrap {
+  @include min-max($app-min-width, $app-max-width, 0);
+}

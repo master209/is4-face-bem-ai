@@ -1,0 +1,17 @@
+@import "../../../../scss/theme-app";
+
+.SideNav-Link_active {
+  position: relative;
+  color: $nav-link--color_active;
+
+  &::before {
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    width: 3px;
+    height: 80%;
+    content: "";
+    background-color: $brand--color;
+  }
+}
+

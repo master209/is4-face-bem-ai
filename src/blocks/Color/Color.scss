@@ -1,0 +1,24 @@
+@import "../../scss/theme-app";
+
+.Color {
+  color: $black;
+}
+
+.Normal {
+  background-color: $white;
+}
+
+.Success {
+  background-color: $green;
+}
+
+.Warning {
+  background-color: $red;
+}
+.WarningText {
+  color: red;
+}
+
+.Cancel {
+  background-color: $bg-color_disabled-light;
+}

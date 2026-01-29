@@ -1,0 +1,27 @@
+@import "../../../scss/theme-app";
+
+.Grid-Header {
+  margin-bottom: 30px;
+
+  .Tables {
+    display: flex;
+
+    table {
+      margin-right: 50px;
+
+      th, td {
+        padding: 0 8px;
+        line-height: 23px;
+        border: 1px solid $table--border-color;
+        text-align: right;
+      }
+
+      .Day-Head {
+        text-align: center;
+        border-top-color: $white;
+        border-left-color: $white;
+        border-right-color: $white;
+      }
+    }
+  }
+}

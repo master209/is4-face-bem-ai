@@ -1,0 +1,20 @@
+@import "../../../../scss/theme-app";
+
+.Grid-Row {
+  border-bottom: 1px solid $table--border-color;
+
+  &:hover {
+    color: $black; /* $content--color */
+    background-color: $bg-color_hover;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.NotHovered {
+  &:hover {
+    background-color: $white;
+  }
+}

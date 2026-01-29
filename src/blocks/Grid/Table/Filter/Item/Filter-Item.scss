@@ -1,0 +1,39 @@
+@import "../../../../../scss/theme-app";
+
+.Filter-Item {
+  .InputSelect {
+    width: 100%;
+
+    &:hover {
+      background-color: $white;
+      border-radius: 3px;
+      box-shadow: none;
+      border: 1px solid;
+      box-sizing: border-box;
+      padding: 2px 5px;
+    }
+  }
+
+  .InputDaterange {
+    display: flex;
+    min-width: 180px;
+    max-width: 220px;
+
+    .FilterSeparator {
+      border: 1px solid #ccc;
+      border-radius: 0;
+
+      min-width: 16px;
+      padding: 4px 5px;
+      line-height: 1.42857143;
+      text-shadow: 0 1px 0 #fff;
+
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+
+    .DateFrom, .DateTo {
+      width: 100%;
+    }
+  }
+}
