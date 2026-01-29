@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { withBemMod } from '@bem-react/core';
-import { Tooltip } from '@yandex/ui/Tooltip/desktop/bundle';
+import { Tooltip } from '../../../lib/yandex-ui/Tooltip';
 
 import { cnIcon, IIconProps } from '..';
 import { Link} from '../../Link';

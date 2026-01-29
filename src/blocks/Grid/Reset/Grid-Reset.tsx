@@ -2,7 +2,7 @@ import React, { FC, useState, useRef, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { IClassNameProps } from '@bem-react/core';
-import { Tooltip } from '@yandex/ui/Tooltip/desktop/bundle';
+import { Tooltip } from '../../../lib/yandex-ui/Tooltip';
 
 import { cnGrid, SORT_DEFAULT, useGridFiltersContext, useGridPaginationContext, useGridDataContext } from '..';
 

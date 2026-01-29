@@ -1,5 +1,5 @@
 import React, { FC, useState, useRef } from 'react';
-import { Tooltip } from '@yandex/ui/Tooltip/desktop/bundle';
+import { Tooltip } from '../../lib/yandex-ui/Tooltip';
 
 import { cnIcon, IIconProps } from '.';
 import { Img } from '../Img';

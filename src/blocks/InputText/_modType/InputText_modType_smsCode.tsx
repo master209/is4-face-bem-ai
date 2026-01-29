@@ -46,14 +46,14 @@ export const withInputTextTypeSmsCode = withBemMod<IInputTextProps>(
           || codeTooShortErrorMessage(normSmsCode(value))
         }
       >
-        <InputMask
-          {...register(name, validators)}
-          className={cnInputText()}
-          type="text"
-          id={name}
-          mask={mask}
-          {...props}
-        />
+        {React.createElement(InputMask as any, {
+          ...register(name, validators),
+          className: cnInputText(),
+          type: "text",
+          id: name,
+          mask,
+          ...props,
+        })}
       </Input>
     );
   }
