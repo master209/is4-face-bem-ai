@@ -56,7 +56,7 @@ export const GridReset: FC<IClassNameProps> = () => {
           onMouseLeave={() => setVisible(false)}
         >&nbsp;
         </div>
-        <Tooltip view="default" size="s" anchor={ref} visible={visible}>
+        <Tooltip theme='light' view="default" size="s" anchor={ref} visible={visible}>
           {filtered ? 'Сбросить фильтры и сортировки' : 'Нет фильтров или сортировок'}
         </Tooltip>
       </>

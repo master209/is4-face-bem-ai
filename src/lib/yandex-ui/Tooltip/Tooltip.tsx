@@ -7,6 +7,7 @@ import './Tooltip.scss';
 export interface ITooltipProps {
   view?: 'default';
   size?: 's' | 'm';
+  theme?: 'dark' | 'light';
   anchor?: React.RefObject<HTMLElement>;
   visible?: boolean;
   children?: React.ReactNode;
@@ -15,6 +16,7 @@ export interface ITooltipProps {
 export const Tooltip: FC<ITooltipProps> = ({
   view = 'default',
   size = 'm',
+  theme = 'dark',
   anchor,
   visible = false,
   children,
@@ -85,7 +87,7 @@ export const Tooltip: FC<ITooltipProps> = ({
   const tooltipContent = (
     <div
       ref={tooltipRef}
-      className={`Popup2 Popup2_target_anchor Popup2_view_default Tooltip Tooltip_size_${size} Tooltip_view_${view}`}
+      className={`Popup2 Popup2_target_anchor Popup2_view_default Tooltip Tooltip_size_${size} Tooltip_view_${view} Tooltip_theme_${theme}`}
       data-popper-placement={placement}
       style={{ position: 'absolute', zIndex: 1000 }}
     >

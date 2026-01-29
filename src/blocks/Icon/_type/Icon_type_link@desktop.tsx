@@ -47,7 +47,7 @@ export const withIconTypeLink = withBemMod<IIconTypeLinkProps, IIconProps>(
           />
         </Link>
         {tip &&
-          <Tooltip view="default" size="m" anchor={ref} visible={visible}>
+          <Tooltip theme="light" view="default" size="m" anchor={ref} visible={visible}>
             {tip}
           </Tooltip>}
       </div>

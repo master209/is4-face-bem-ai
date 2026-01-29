@@ -26,7 +26,7 @@ export const Icon: FC<IIconProps> = ({
     >
       <Img src={src} alt={alt}/>
       {tip &&
-        <Tooltip view="default" size="m" anchor={ref} visible={visible}>
+        <Tooltip theme="light" view="default" size="m" anchor={ref} visible={visible}>
           {tip}
         </Tooltip>}
     </div>

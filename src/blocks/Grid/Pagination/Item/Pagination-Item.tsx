@@ -66,7 +66,7 @@ export const PaginationItem: FC<IPaginationItemProps> = ({
         </Link>
       </li>
       {tipTipe && !disabled &&
-        <Tooltip view="default" size="s" anchor={ref} visible={visible}>
+        <Tooltip theme='light' view="default" size="s" anchor={ref} visible={visible}>
           {getTip(tipTipe)}
         </Tooltip>}
     </>

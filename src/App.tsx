@@ -12,13 +12,16 @@ import { LoginForm, HomeScreen } from './pages';
 import { routsSideMenu } from './routs';
 import { AppRoute } from './const';
 import { getAction } from './helpers';
+import TestThemes from './TestThemes';
 
 // https://yastatic.net/s3/frontend/lego/storybook/index.html?path=/docs/surface-tooltip-desktop--playground
 configureRootTheme({ theme });
 
 const App: FC = () => {
   return (
-    <Routes>
+    <>
+      <TestThemes />
+      <Routes>
       <Route path="" element={<HomeScreen/>}/>
 
       {routsSideMenu.map(({module, controllers}: IRouteItem) => (
@@ -56,6 +59,7 @@ const App: FC = () => {
       />
       <Route path="*" element={<NotFoundScreen/>}/>
     </Routes>
+    </>
   );
 };
 
