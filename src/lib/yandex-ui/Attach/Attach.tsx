@@ -114,9 +114,18 @@ export const Attach: FC<IAttachProps> = ({
     setFileMeta({ fileName: undefined, fileExtension: undefined });
     setIsDialogOpen(false);
 
+    // Создаем синтетическое событие для onChange с пустым значением
+    const syntheticEvent = {
+      target: { files: null, value: '' },
+      currentTarget: { files: null, value: '' },
+    } as ChangeEvent<HTMLInputElement>;
+
+    // Вызываем внешний обработчик изменения (чтобы сбросить file в родительском компоненте)
+    onChange?.(syntheticEvent);
+
     // Вызываем внешний обработчик очистки
     onClearClick?.();
-  }, [onClearClick]);
+  }, [onChange, onClearClick]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
