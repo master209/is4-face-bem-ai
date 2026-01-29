@@ -1,0 +1,15 @@
+// Test file to check Attach component HTML structure
+import React from 'react';
+import { Attach } from './lib/yandex-ui/Attach';
+
+const TestAttach = () => {
+  return (
+    <div className="Upload">
+      <Attach className="Bank-Attach" holderText="файл не выбран">
+        Выберите файл
+      </Attach>
+    </div>
+  );
+};
+
+export default TestAttach;

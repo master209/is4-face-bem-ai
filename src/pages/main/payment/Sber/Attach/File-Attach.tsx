@@ -3,7 +3,7 @@ import React, { FC, ChangeEvent } from 'react';
 import { IClassNameProps } from '@bem-react/core';
 
 import { cnBank } from '..';
-import { Attach } from '../../../../../blocks/Attach';
+import { Attach } from '../../../../../components/yandex-ui/Attach';
 
 import './File-Attach.scss';
 
