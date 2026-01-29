@@ -1,4 +1,4 @@
-import { Attach as AttachDesktop } from '@yandex-ui/Attach';
+import { Attach as AttachDesktop } from '../../lib/yandex-ui';
 
 import './Attach.scss';
 
