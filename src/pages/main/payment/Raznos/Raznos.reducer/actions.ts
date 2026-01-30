@@ -34,12 +34,12 @@ export const dispatchLoadData = (dispatch: Dispatch<Action>, {api, req}: Request
   dispatchLoading(dispatch);
 
   api.get(req)
-    .then((res) => res.data as State)
-    .then((data) => dispatch({
+    .then((res: any) => res.data as State)
+    .then((data: State) => dispatch({
       type: ActionType.LOAD_DATA,
       payload: {...data}
     }))
-    .catch((error) => {
+    .catch((error: any) => {
       // eslint-disable-next-line no-console
       console.log('!dispatchLoadData - server sent ERROR: ', error);
     });
@@ -49,12 +49,12 @@ export const dispatchLoadTableRows = (dispatch: Dispatch<Action>, {api, req}: Re
   dispatchLoading(dispatch);
 
   api.get(req)
-    .then((res) => res.data as TableRow[])
-    .then((data) => dispatch({
+    .then((res: any) => res.data as TableRow[])
+    .then((data: TableRow[]) => dispatch({
       type: ActionType.LOAD_TABLE_ROWS,
       payload: {...data}
     }))
-    .catch((error) => {
+    .catch((error: any) => {
       // eslint-disable-next-line no-console
       console.log('!dispatchLoadTableRows - server sent ERROR: ', error);
     });

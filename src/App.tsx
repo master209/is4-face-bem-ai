@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { configureRootTheme } from '@yandex/ui/Theme';
-import { theme } from '@yandex/ui/Theme/presets/default';
+import { configureRootTheme } from './lib/yandex-ui/Theme';
+import { theme } from './lib/yandex-ui/Theme';
 
 import { IRouteItem, IRouteController, IRouteAction } from './blocks/SideNavIs4';
 import { PrivateRoute, ModuleLayout, ControllerLayout, LayoutEmpty } from './components';

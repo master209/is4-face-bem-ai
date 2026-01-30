@@ -1,7 +1,7 @@
 import React, { FC, useState, useRef } from 'react';
 
 import { IClassNameProps } from '@bem-react/core';
-import { Tooltip } from '@yandex/ui/Tooltip/desktop/bundle';
+import { Tooltip } from '../../../../lib/yandex-ui/Tooltip';
 
 import { TipTipe, cnPagination, PaginationLink as Link } from '..';
 import { useGridPaginationContext, useGridDataContext } from '../..';
@@ -66,7 +66,7 @@ export const PaginationItem: FC<IPaginationItemProps> = ({
         </Link>
       </li>
       {tipTipe && !disabled &&
-        <Tooltip view="default" size="s" anchor={ref} visible={visible}>
+        <Tooltip theme='light' view="default" size="m" anchor={ref} visible={visible}>
           {getTip(tipTipe)}
         </Tooltip>}
     </>

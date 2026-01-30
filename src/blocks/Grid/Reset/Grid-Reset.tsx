@@ -2,7 +2,7 @@ import React, { FC, useState, useRef, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { IClassNameProps } from '@bem-react/core';
-import { Tooltip } from '@yandex/ui/Tooltip/desktop/bundle';
+import { Tooltip } from '../../../lib/yandex-ui/Tooltip';
 
 import { cnGrid, SORT_DEFAULT, useGridFiltersContext, useGridPaginationContext, useGridDataContext } from '..';
 
@@ -56,7 +56,7 @@ export const GridReset: FC<IClassNameProps> = () => {
           onMouseLeave={() => setVisible(false)}
         >&nbsp;
         </div>
-        <Tooltip view="default" size="s" anchor={ref} visible={visible}>
+        <Tooltip theme='light' view="default" size="m" anchor={ref} visible={visible}>
           {filtered ? 'Сбросить фильтры и сортировки' : 'Нет фильтров или сортировок'}
         </Tooltip>
       </>

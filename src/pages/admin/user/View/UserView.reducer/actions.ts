@@ -23,18 +23,18 @@ export const dispatchLoadData = (dispatch: Dispatch<Action>, {api, req}: Request
   dispatchLoading(dispatch);
 
   api.get(req)
-    .then((res) => {
+    .then((res: any) => {
       console.log('✅ API response received:', res);
       return res.data as State;
     })
-    .then((data) => {
+    .then((data: State) => {
       console.log('📦 Dispatching LOAD_DATA with data:', data);
       dispatch({
         type: ActionType.LOAD_DATA,
         payload: {...data}
       });
     })
-    .catch((error) => {
+    .catch((error: any) => {
       console.log('❌ dispatchLoadData - server sent ERROR: ', error);
       console.log('🔍 Error details:', {
         status: error.response?.status,

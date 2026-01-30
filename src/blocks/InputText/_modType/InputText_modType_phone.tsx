@@ -61,15 +61,15 @@ export const withInputTextTypePhone = withBemMod<IInputTextProps>(
           || phoneTooShortErrorMessage()
         }
       >
-        <InputMask
-          {...register(name, validators)}
-          className={cnInputText()}
-          type="text"
-          id={name}
-          placeholder={withLabel ? '' : capitalize(placeholder)}
-          mask={mask}
-          {...props}
-        />
+        {React.createElement(InputMask as any, {
+          ...register(name, validators),
+          className: cnInputText(),
+          type: "text",
+          id: name,
+          placeholder: withLabel ? '' : capitalize(placeholder),
+          mask,
+          ...props,
+        })}
       </Input>
     );
   }

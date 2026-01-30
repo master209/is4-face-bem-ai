@@ -3,7 +3,7 @@ import { IClassNameProps } from '@bem-react/core';
 
 import { classnames } from '@bem-react/classnames';
 import { cn } from '@bem-react/classname';
-import { Modal as YModal } from '@yandex/ui/Modal/desktop/bundle';
+import { Modal as YModal } from '../../lib/yandex-ui/Modal';
 
 import {
   ModalCross,

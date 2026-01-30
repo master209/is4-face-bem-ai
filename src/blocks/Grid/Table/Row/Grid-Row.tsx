@@ -2,7 +2,7 @@ import React, { FC, MouseEvent, useContext, useEffect, useState, createRef } fro
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 
 import { IClassNameProps, compose } from '@bem-react/core';
-import { Tooltip } from '@yandex/ui/Tooltip/desktop/bundle';
+import { Tooltip } from '../../../../lib/yandex-ui/Tooltip';
 
 import { Icon } from '../../..';
 import { withIconTypeLink } from '../../../Icon/_type/Icon_type_link@desktop';
