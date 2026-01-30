@@ -18,8 +18,11 @@ const Vtb: FC<IClassNameProps> = () => {
   const [result, setResult] = useState<string>('');
 
   const handleFileChange = (ev: ChangeEvent<HTMLInputElement>) => {
-    if (ev.target.files) {
+    if (ev.target.files && ev.target.files.length > 0) {
       setFile(ev.target.files[0]);
+    } else {
+      // Сброс файла (когда крестик нажат)
+      setFile(undefined);
     }
   };
 
