@@ -25,6 +25,7 @@ yarn-error.log*
 .idea
 *.sublime*
 .vscode
+*.code-workspace
 
 /backups
 /tmp
