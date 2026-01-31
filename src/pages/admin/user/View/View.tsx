@@ -5,6 +5,7 @@ import { IClassNameProps } from '@bem-react/core';
 import { api } from '../../../../store';
 import { Layout } from '../../../../components';
 import { OnRowDblClick } from '../../../../blocks/Grid';
+import { IGridRow } from '../../../../types/common';
 import {
   UserViewStateContext,
   PageHeader,
@@ -16,18 +17,13 @@ import {
 
 import './View.scss';
 
-type IGridRow = {
-  id: string;
-  [key: string]: string;
-}
-
 const UserView: FC<IClassNameProps> = () => {
   const {state, dispatch} = useAsReducer();
   const {id: ID} = useParams();
 
   const loadData = () => {
     // Проверяем данные в sessionStorage (для переходов через двойной клик)
-    const sessionState = sessionStorage.getItem('userViewState');
+    const sessionState = sessionStorage.getItem('gridRowViewState');
     console.log('🔍 UserView loadData, sessionState:', sessionState);
 
     if (sessionState) {
@@ -35,7 +31,7 @@ const UserView: FC<IClassNameProps> = () => {
       console.log('✅ UserView has sessionState. apiHandler, row:', apiHandler, row);
 
       // Очищаем sessionStorage после использования
-      sessionStorage.removeItem('userViewState');
+      sessionStorage.removeItem('gridRowViewState');
       console.log('🧹 SessionStorage cleared');
 
       dispatchLoadData(dispatch, {api, req:`${apiHandler}${ID as string}`});

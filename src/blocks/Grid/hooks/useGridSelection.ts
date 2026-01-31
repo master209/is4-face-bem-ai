@@ -73,11 +73,11 @@ export const useGridSelection = ({ onRowDblClick }: UseGridSelectionOptions) => 
         apiHandler: onRowDblClick.apiHandler,
         row
       };
-      sessionStorage.setItem('userViewState', JSON.stringify(stateToPass));
+      sessionStorage.setItem('gridRowViewState', JSON.stringify(stateToPass));
       console.log('💾 STATE SAVED TO SESSIONSTORAGE:', stateToPass);
 
       // Выполняем навигацию
-      window.location.replace(targetUrl);
+      window.location.assign(targetUrl);
 
       console.log('✅ NAVIGATE COMPLETED');
     } else {
