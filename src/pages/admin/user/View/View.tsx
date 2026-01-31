@@ -20,6 +20,7 @@ import './View.scss';
 const UserView: FC<IClassNameProps> = () => {
   const {state, dispatch} = useAsReducer();
   const {id: ID} = useParams();
+  const title = `Просмотр клиента #${state.tabs['Юзер'].userId.val}`;
 
   const loadData = () => {
     // Проверяем данные в sessionStorage (для переходов через двойной клик)
@@ -30,15 +31,7 @@ const UserView: FC<IClassNameProps> = () => {
       const {apiHandler, row} = JSON.parse(sessionState) as OnRowDblClick & {row: IGridRow};
       console.log('✅ UserView has sessionState. apiHandler, row:', apiHandler, row);
 
-      // Очищаем sessionStorage после использования
-      sessionStorage.removeItem('gridRowViewState');
-      console.log('🧹 SessionStorage cleared');
-
       dispatchLoadData(dispatch, {api, req:`${apiHandler}${ID as string}`});
-    } else {
-      // Если нет state, это прямой переход по URL - просто показываем страницу без API запроса
-      console.log('ℹ️ UserView no state - direct URL access');
-      // navigate('/admin/users/manage');
     }
   };
 
@@ -52,7 +45,7 @@ const UserView: FC<IClassNameProps> = () => {
       <UserViewStateContext.Provider value={{state, dispatch}}>
 		  <div className="UserView">
 			  <div className="HeaderAndTime">
-				<h1>Просмотр клиента #{state.tabs['Юзер'].userId.val}</h1>
+				<h1>{title}</h1>
 				<p className="CurrentTime">Время открытия страницы: {state.currentTime}</p>
 			  </div>
 			  <PageHeader/>
