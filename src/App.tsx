@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { configureRootTheme } from './lib/yandex-ui/Theme';
 import { theme } from './lib/yandex-ui/Theme';
+import { HelmetProvider } from 'react-helmet-async';
 
 import { IRouteItem, IRouteController, IRouteAction } from './blocks/SideNavIs4';
 import { PrivateRoute, ModuleLayout, ControllerLayout, LayoutEmpty } from './components';
@@ -18,44 +19,46 @@ configureRootTheme({ theme });
 
 const App: FC = () => {
   return (
-    <Routes>
-      <Route path="" element={<HomeScreen/>}/>
+    <HelmetProvider>
+      <Routes>
+        <Route path="" element={<HomeScreen/>}/>
 
-      {routsSideMenu.map(({module, controllers}: IRouteItem) => (
-        <Route
-          key={module}
-          path={module}
-          element={<ModuleLayout moduleName={module}/>}
-        >
-          {controllers.map(({controller, actions}: IRouteController) => (
-            <Route
-              key={`${module}-${controller}`}
-              path={controller}
-              element={<ControllerLayout controllerName={controller}/>}
-            >
-              {actions.map(({action, param, page: Element}: IRouteAction) => (
-                <Route
-                  key={`${module}-${controller}-${action}`}
-                  path={getAction(action, param)}
-                  element={
-                    <PrivateRoute>
-                      <Element/>
-                    </PrivateRoute>
-                  }
-                />
-              ))}
-            </Route>
-          ))}
-        </Route>
-      ))}
-      <Route path={AppRoute.Auth} element={
-        <LayoutEmpty>
-          <LoginForm/>
-        </LayoutEmpty>
-      }
-      />
-      <Route path="*" element={<NotFoundScreen/>}/>
-    </Routes>
+        {routsSideMenu.map(({module, controllers}: IRouteItem) => (
+          <Route
+            key={module}
+            path={module}
+            element={<ModuleLayout moduleName={module}/>}
+          >
+            {controllers.map(({controller, actions}: IRouteController) => (
+              <Route
+                key={`${module}-${controller}`}
+                path={controller}
+                element={<ControllerLayout controllerName={controller}/>}
+              >
+                {actions.map(({action, param, page: Element}: IRouteAction) => (
+                  <Route
+                    key={`${module}-${controller}-${action}`}
+                    path={getAction(action, param)}
+                    element={
+                      <PrivateRoute>
+                        <Element/>
+                      </PrivateRoute>
+                    }
+                  />
+                ))}
+              </Route>
+            ))}
+          </Route>
+        ))}
+        <Route path={AppRoute.Auth} element={
+          <LayoutEmpty>
+            <LoginForm/>
+          </LayoutEmpty>
+        }
+        />
+        <Route path="*" element={<NotFoundScreen/>}/>
+      </Routes>
+    </HelmetProvider>
   );
 };
 

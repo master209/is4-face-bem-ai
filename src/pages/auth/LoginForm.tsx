@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
-import { cn } from '@bem-react/classname';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { Helmet } from 'react-helmet-async';
+import { cn } from '@bem-react/classname';
 
 import { Form } from '../../blocks/Form';
 import { InputText, withInputTextTypePasswordAuth } from '../../blocks/InputText';
@@ -38,25 +39,30 @@ export function LoginForm(): JSX.Element {
   const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => dispatch(fetchUsername(data));
 
   return (
-    <div className={cnLoginForm(null, ['Form'])}>
-      <h1>Вход в ИС4</h1>
-      <Form onSubmit={onSubmit} handleSubmit={handleSubmit}>
-        <InputText
-          useFormProps = {{register, errors, getValues}}
-          name="username"
-          icon="user"
-          placeholder="Логин"
-          required
-          validators={{
-            required: FormError.Required
-          }}
-          error={errors.username?.message}
-        />
-        <InputTextTypePassword
-          useFormProps = {{register, errors, getValues}}
-          modtype="password"
-        />
-      </Form>
-    </div>
+    <>
+      <Helmet>
+        <title>{TITLE_FREFIX}Вход в ИС4</title>
+      </Helmet>
+      <div className={cnLoginForm(null, ['Form'])}>
+        <h1>Вход в ИС4</h1>
+        <Form onSubmit={onSubmit} handleSubmit={handleSubmit}>
+          <InputText
+            useFormProps = {{register, errors, getValues}}
+            name="username"
+            icon="user"
+            placeholder="Логин"
+            required
+            validators={{
+              required: FormError.Required
+            }}
+            error={errors.username?.message}
+          />
+          <InputTextTypePassword
+            useFormProps = {{register, errors, getValues}}
+            modtype="password"
+          />
+        </Form>
+      </div>
+    </>
   );
 }

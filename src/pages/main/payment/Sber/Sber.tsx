@@ -1,7 +1,8 @@
 import React, { FC, ChangeEvent, useState, useEffect } from 'react';
-
 import { IClassNameProps } from '@bem-react/core';
+import { Helmet } from 'react-helmet-async';
 
+import {TITLE_FREFIX} from "../../../../const";
 import { cnBank, FileAttach } from '.';
 import { Button } from '../../../../blocks/Button';
 import { BACKEND_URL } from '../../../../services/api';
@@ -84,6 +85,9 @@ const Sber: FC<IClassNameProps> = () => {
 
   return (
     <div className={cnBank()}>
+      <Helmet>
+        <title>{TITLE_FREFIX}Загрузка выписки по Сберу</title>
+      </Helmet>
       <h1>Загрузка выписки по Сберу</h1>
         <div className="Upload">
           <FileAttach name="file" onChange={handleFileChange}/>
