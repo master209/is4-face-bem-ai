@@ -57,7 +57,7 @@ export const GridReset: FC<IClassNameProps> = () => {
         >&nbsp;
         </div>
         <Tooltip theme='light' view="default" size="m" anchor={ref} visible={visible}>
-          {filtered ? 'Сбросить фильтры и сортировки' : 'Нет фильтров или сортировок'}
+          {filtered ? 'сбросить фильтры и сортировки' : 'нет фильтров или сортировок'}
         </Tooltip>
       </>
     );
