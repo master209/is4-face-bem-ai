@@ -2,9 +2,17 @@ import React, { FC, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { IClassNameProps } from '@bem-react/core';
 
-import { OnRowDblClick } from '../../../../blocks/Grid';
-import { dispatchLoadData, useAsReducer } from '.';
 import { api } from '../../../../store';
+import { Layout } from '../../../../components';
+import { OnRowDblClick } from '../../../../blocks/Grid';
+import {
+  UserViewStateContext,
+  PageHeader,
+  PageData,
+  dispatchLoadData,
+  useAsReducer
+} from '.';
+
 
 import './View.scss';
 
@@ -14,7 +22,7 @@ type IGridRow = {
 }
 
 const UserView: FC<IClassNameProps> = () => {
-  const {dispatch} = useAsReducer();
+  const {state, dispatch} = useAsReducer();
   const {id: ID} = useParams();
 
   const loadData = () => {
@@ -44,9 +52,18 @@ const UserView: FC<IClassNameProps> = () => {
   },[]);
 
   return (
-    <div>
-      {`UserView id: ${ID}`}
-    </div>
+    <Layout>
+      <UserViewStateContext.Provider value={{state, dispatch}}>
+		  <div className="UserView">
+			  <div className="HeaderAndTime">
+				<h1>Просмотр клиента #{state.tabs['Юзер'].userId.val}</h1>
+				<p className="CurrentTime">Время открытия страницы: {state.currentTime}</p>
+			  </div>
+			  <PageHeader/>
+			  <PageData/>
+		  </div>
+      </UserViewStateContext.Provider>
+    </Layout>
   );
 };
 

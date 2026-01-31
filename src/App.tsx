@@ -14,6 +14,9 @@ import { routsSideMenu } from './routs';
 import { AppRoute } from './const';
 import { getAction } from './helpers';
 
+import UserView from './pages/admin/user/View/View';
+import PaymentRaznos from './pages/main/payment/Raznos/Raznos';
+
 // https://yastatic.net/s3/frontend/lego/storybook/index.html?path=/docs/surface-tooltip-desktop--playground
 configureRootTheme({ theme });
 
@@ -22,6 +25,8 @@ const App: FC = () => {
     <HelmetProvider>
       <Routes>
         <Route path="" element={<HomeScreen/>}/>
+        <Route path={'admin/users/view/:id'} element={<UserView/>}/>
+        <Route path={'main/payment/raznos/:id'} element={<PaymentRaznos/>}/>
 
         {routsSideMenu.map(({module, controllers}: IRouteItem) => (
           <Route
