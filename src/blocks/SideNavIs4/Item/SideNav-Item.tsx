@@ -26,8 +26,7 @@ export const SideNavItem: FC<ISideNavItemProps> = ({
   handleNavLinkClick,
 }) => {
   return (
-    <>
-      <li
+    <li
         key={navItemId}
         className={cnSideNav('Item', {current: navItemId === activeNavItem.id})}
       >
@@ -62,6 +61,5 @@ export const SideNavItem: FC<ISideNavItemProps> = ({
           ))}
         </SideNavContent>
       </li>
-    </>
   );
 };

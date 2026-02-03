@@ -8,9 +8,6 @@ export const getFormattedDate = (date: string) =>
 
 export const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1).toLowerCase()}`;
 
-// приводит булево значение isFavorite к инвертированному числовому значению offerStatus (0/1)
-export const getOfferStatus = (isFavorite: boolean): number => +!isFavorite;
-
 export const getAction = (action: string, param: string | undefined): string =>
   param ? `${action}/:${param}` : action;
 
@@ -18,9 +15,6 @@ export const cellHidden = (key: string) => key === 'id' ? 'Hidden' : '';
 
 // для округления денег до копеек в меньшую сторону
 export const round = (sum: number): number => Math.round( sum * 100 ) / 100;
-
-export const boolYesNo = (bool: boolean) => bool ? 'да' : 'нет';
-export const numYesNo = (num: number) => num > 0 ? 'да' : 'нет';
 
 // преобразует +7 912 345 6789 к 9123456789
 export const normPhone = (phone: string) =>
@@ -30,17 +24,6 @@ export const normPhone = (phone: string) =>
 
 export const normSmsCode = (code = '-') =>
   code.replace(/\D/g, ''); // убираю все, кроме цифр
-
-// преобразует число секунд в формат MM:SS
-export const toTimeString = (seconds?:number) =>
-  seconds && new Date(seconds * 1000).toISOString().substr(14, 5);
-
-// время сейчас в UNIX-time в сек.
-export const nowUNIXtime = () => Math.trunc(Date.now() / 1000);
-
-// время UNIX-time в сек, когда пора разлогинивать в случае превышения порога бездействия userInactivityMaxTimeout
-export const userInactivityLogoutTime = (userInactivityMaxTimeout: number) =>
-  userInactivityMaxTimeout * 60 + nowUNIXtime();
 
 // сортировка объекта в порядке возрастания его ключей (свойств)
 export const sortObject = <T extends Record<string, unknown>>(obj: T): T => {

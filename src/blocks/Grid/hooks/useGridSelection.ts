@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 
 import { IGridRow, OnRowDblClick } from '../types';
 
@@ -13,7 +13,6 @@ export interface UseGridSelectionOptions {
 
 export const useGridSelection = ({ onRowDblClick }: UseGridSelectionOptions) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
   const { pathname } = useLocation();
 
   // Отладка изменения location
