@@ -1,7 +1,9 @@
-import { withBemMod } from '@bem-react/core'
+import React from 'react';
+import { withBemMod } from '@bem-react/core';
 
-import { cnIcon, IIconProps } from '..'
+import { cnIcon, IIconProps } from '..';
 import { Link } from '../../Link';
+import { Img } from '../../Img';
 
 export interface IIconTypeLinkProps {
   type?: 'link';
@@ -11,16 +13,7 @@ export interface IIconTypeLinkProps {
 export const withIconTypeLink = withBemMod<IIconTypeLinkProps, IIconProps>(
   cnIcon(),
   {type: 'link'},
-  () => ({
-     src,
-     alt,
-     href,
-     onClick,
-     className,
-     // @ts-ignore
-     type: _type,
-     ...props
-   }) => (
+  () => ({ src, alt, href, onClick, className, ...props }: IIconProps) => (
     <div
       {...props}
       className={cnIcon(null, [className, 'mobile'])}
@@ -29,8 +22,8 @@ export const withIconTypeLink = withBemMod<IIconTypeLinkProps, IIconProps>(
         href={href || '#'}
         handleClick={onClick}
       >
-        Link
+        <Img src={src} alt={alt} />
       </Link>
     </div>
   )
-)
+);
