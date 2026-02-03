@@ -1,4 +1,5 @@
 // Типы для компонента Grid
+import type { AxiosInstance } from 'axios';
 
 export type IGridRow = {
   id: string;
@@ -57,7 +58,7 @@ export type RowActions = {
 }
 
 export interface RequestProps {
-  api: any; // AxiosInstance
+  api: AxiosInstance;
   req: string;
   data?: string | object;
 }

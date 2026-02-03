@@ -19,12 +19,12 @@ import './Modal.scss';
 export const cnModal = cn('ModalBlock');
 
 export interface IModalProps extends IClassNameProps {
-  Body: FC;
-  Header?: FC;
+  Body: FC<{}>;
+  Header?: FC<{}>;
   Buttons?: {
     labelOk?: string;
     labelCancel?: string;
-    handleModalOk: (ev:MouseEvent) => void;
+    handleModalOk: (ev: MouseEvent) => void;
   };
   isVisible: boolean;
   setIsVisible: Dispatch<SetStateAction<boolean>>;

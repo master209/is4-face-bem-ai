@@ -32,7 +32,7 @@ export const InputText: FC<IInputTextProps> = ({
     error={error}
   >
     <input
-      {...register(name, validators as object) as object}
+      {...register(name, validators)}
       className={cnInputText()}
       type="text"
       id={name}

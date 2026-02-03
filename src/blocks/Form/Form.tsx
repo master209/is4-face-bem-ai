@@ -10,31 +10,37 @@ import './Form.scss';
 
 export const cnForm = cn('Form');
 
-interface IFormProps extends IClassNameProps {
+interface IFormProps<T extends Record<string, unknown> = Record<string, unknown>> {
+  className?: string;
   children: ReactNode;
   action?: string;
   method?: string;
-  /* eslint-disable */
-  onSubmit: SubmitHandler<any>;
-  handleSubmit: (onValid: SubmitHandler<any>) => (e?: React.BaseSyntheticEvent) => void;
+  onSubmit: SubmitHandler<T>;
+  handleSubmit: (onValid: SubmitHandler<T>) => (e?: React.BaseSyntheticEvent) => void;
   submitLabel?: string;
   submitDisabled?: boolean;
 }
 
-export const Form: FC<IFormProps> = ({
-  className,
-  children,
-  action,
-  onSubmit,
-  handleSubmit,
-  ...props
-}) => (
-  <form
-    className={cnForm(null, [className])}
-    action={action || '#'}
-    onSubmit={handleSubmit(onSubmit)}
-  >
-    {children}
-    <FormSubmit {...props} />
-  </form>
-);
+export const Form = <T extends Record<string, unknown> = Record<string, unknown>>(props: IFormProps<T>) => {
+  const {
+    className,
+    children,
+    action,
+    onSubmit,
+    handleSubmit,
+    submitLabel,
+    submitDisabled,
+    ...restProps
+  } = props;
+
+  return (
+    <form
+      className={cnForm(null, [className])}
+      action={action || '#'}
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      {children}
+      <FormSubmit submitLabel={submitLabel} submitDisabled={submitDisabled} {...restProps} />
+    </form>
+  );
+};

@@ -1,8 +1,3 @@
-// преобразует массив объектов в коллекцию объектов с ключом byKey
-/*export const convertArrayToMap = (arr:any, byKey: string) =>
-  arr.reduce((acc: any, next: any) =>
-    ({...acc, [next[byKey]]: next}), {}); */
-
 const ID_LEN = 4;
 // генерит уникальный числовой ID длиной ID_LEN
 export const getUniqueId = (len = ID_LEN): number =>
@@ -47,14 +42,10 @@ export const nowUNIXtime = () => Math.trunc(Date.now() / 1000);
 export const userInactivityLogoutTime = (userInactivityMaxTimeout: number) =>
   userInactivityMaxTimeout * 60 + nowUNIXtime();
 
-type BoolList = {
-  [key: string]: string;
-}
-
 // сортировка объекта в порядке возрастания его ключей (свойств)
-export const sortObject = (obj: BoolList) => {
-  return Object.keys(obj).sort().reduce(function (result: BoolList, key: string) {
+export const sortObject = <T extends Record<string, unknown>>(obj: T): T => {
+  return Object.keys(obj).sort().reduce(function (result: Record<string, unknown>, key: string) {
     result[key] = obj[key];
     return result;
-  }, {});
+  }, {}) as T;
 };

@@ -34,7 +34,7 @@ export const InputCheckbox: FC<ICheckboxProps> = ({
   error,
   className,
 }) => {
-  const formRegister = register && {...register(name, validators as object) as object};
+  const formRegister = register && {...register(name, validators)};
 
   return (
     <Input

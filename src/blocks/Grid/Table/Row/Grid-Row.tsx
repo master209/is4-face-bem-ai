@@ -72,7 +72,7 @@ export const GridRow: FC<IGridRowProps> = ({row}) => {
       onClick={(ev) => handleClick(ev, row.id)}
       onDoubleClick={(ev) => handleDoubleClick(ev, row.id)}
     >
-      {Object.entries(row as object).map(([key, val]) => {
+      {Object.entries(row).map(([key, val]) => {
         tips[key] = val as string;
 
         return (

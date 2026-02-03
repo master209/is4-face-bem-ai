@@ -11,8 +11,6 @@ export const Button: FC<IButtonProps> = ({
   as: Component = 'button',
   children,
   className,
-  // _@ts-ignore
-  // type: _type,
   ...props
 }) => (
   <div className={`${className || 'Button'}-Wrap`}>
