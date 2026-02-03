@@ -109,7 +109,7 @@ export const useGridData = ({ url, initialData }: UseGridDataOptions) => {
     });
 
     return params.toString();
-  }, [searchParams, state.formName, state.perPage]);
+  }, [searchParams]); // Убрали state.formName и state.perPage - они не используются в вычислении
 
   const loadData = useCallback(async () => {
     try {

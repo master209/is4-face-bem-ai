@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent, useContext, useEffect, useState, createRef } from 'react';
+import React, { FC, MouseEvent, useContext, useEffect, useState, createRef, useCallback } from 'react';
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 
 import { IClassNameProps, compose } from '@bem-react/core';
@@ -43,24 +43,24 @@ export const GridRow: FC<IGridRowProps> = ({row}) => {
   const delay = DBL_CLICK_DELAY;
   let timer: ReturnType<typeof setTimeout>;
 
-  const handleActionClick = (ev: MouseEvent, apiHandler: string) => {
+  const handleActionClick = useCallback((ev: MouseEvent, apiHandler: string) => {
     ev.preventDefault();
     // Пока оставляем старый способ для действий (удаления)
     // TODO: возможно потом тоже перевести на новый подход
-  };
+  }, []);
 
-  const handleClick = (ev: MouseEvent, id: string) => {
+  const handleClick = useCallback((ev: MouseEvent, id: string) => {
     timer = setTimeout(() => {
       !prevent && toggleRow(id);
       setPrevent(false);
     }, delay);
-  };
+  }, [delay, prevent, toggleRow]);
 
-  const handleDoubleClick = (ev: MouseEvent, id: string) => {
+  const handleDoubleClick = useCallback((ev: MouseEvent, id: string) => {
     clearTimeout(timer);
     setPrevent(true);
     doubleClickRow(row);
-  };
+  }, [doubleClickRow, row]);
 
   const isHidden = (field: string) => tableHead && tableHead[field] && tableHead[field].hidden;
 

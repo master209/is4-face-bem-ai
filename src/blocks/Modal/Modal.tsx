@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent, Dispatch, SetStateAction } from 'react';
+import React, { FC, MouseEvent, Dispatch, SetStateAction, useCallback } from 'react';
 import { IClassNameProps } from '@bem-react/core';
 
 import { classnames } from '@bem-react/classnames';
@@ -38,12 +38,12 @@ export const Modal: FC<IModalProps> = ({
   setIsVisible,
 }) => {
 
-  const handleModalCancel = () => setIsVisible(false);
+  const handleModalCancel = useCallback(() => setIsVisible(false), [setIsVisible]);
 
   return (
     <YModal
       theme="normal"
-      onClose={() => setIsVisible(false)}
+      onClose={handleModalCancel}
       visible={isVisible}
     >
       <div className={cnModal('')}>
