@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent, useState } from 'react';
+import React, { FC, MouseEvent, useState, useCallback } from 'react';
 
 import { cnShowHide, IShowHideProps } from '.';
 import { Link } from '../Link';
@@ -14,17 +14,22 @@ export const ShowHide: FC<IShowHideProps> = ({
 }) => {
   const [isShow, setIsShow] = useState(false);
 
-  const handleClick = (ev: MouseEvent, show: boolean) => {
+  const handleShow = useCallback((ev: MouseEvent) => {
     ev.preventDefault();
-    setIsShow(show);
-  };
+    setIsShow(true);
+  }, []);
+
+  const handleHide = useCallback((ev: MouseEvent) => {
+    ev.preventDefault();
+    setIsShow(false);
+  }, []);
 
   const needShow = isShow || isShowExtdata;
 
   return (
     <div className={cnShowHide()}>
       <Link
-        handleClick={(ev) => handleClick(ev, true)}
+        handleClick={handleShow}
         className={cnShowHide(!needShow ? 'Show' : 'Hide')}
         {...props}
       >
@@ -33,7 +38,7 @@ export const ShowHide: FC<IShowHideProps> = ({
 
       <fieldset className={cnShowHide(needShow ? 'Show' : 'Hide')}>
         <legend
-          onClick={(ev) => handleClick(ev, false)}
+          onClick={handleHide}
           className="Link"
         >
           {`Скрыть  ${label}`}
