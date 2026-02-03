@@ -3,7 +3,6 @@ import { cn } from '@bem-react/classname';
 
 import { Input } from '../Input';
 import { IInputTextProps, InputAutoComplete } from '.';
-import { capitalize } from '../../helpers';
 
 import './InputText.scss';
 
@@ -21,23 +20,32 @@ export const InputText: FC<IInputTextProps> = ({
   autocomplete = InputAutoComplete.On,
   validators,
   error,
-}) => name && placeholder ? (
-  <Input
-    name={name}
-    icon={icon}
-    required={required}
-    withLabel={withLabel}
-    withIcon={withIcon}
-    label={placeholder}
-    error={error}
-  >
-    <input
-      {...register(name, validators)}
-      className={cnInputText()}
-      type="text"
-      id={name}
-      placeholder={withLabel ? '' : capitalize(placeholder)}
-      autoComplete={autocomplete as InputAutoComplete}
-      maxLength={30}
-    />
-  </Input>) : null;
+}) => {
+  // Валидация обязательных пропсов
+  if (!name || !placeholder) {
+    console.warn('InputText: name and placeholder are required props');
+    return null;
+  }
+
+  return (
+    <Input
+      name={name}
+      icon={icon}
+      required={required}
+      withLabel={withLabel}
+      withIcon={withIcon}
+      label={withLabel ? placeholder : undefined}
+      error={error}
+    >
+      <input
+        {...register(name, validators)}
+        className={cnInputText()}
+        type="text"
+        id={name}
+        placeholder={withLabel ? '' : placeholder}
+        autoComplete={autocomplete as InputAutoComplete}
+        maxLength={30}
+      />
+    </Input>
+  );
+};

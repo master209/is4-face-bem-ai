@@ -1,7 +1,6 @@
 import React, { FC, MouseEvent, Dispatch, SetStateAction, useCallback } from 'react';
 import { IClassNameProps } from '@bem-react/core';
 
-import { classnames } from '@bem-react/classnames';
 import { cn } from '@bem-react/classname';
 import { Modal as YModal } from '../../lib/yandex-ui/Modal';
 
@@ -61,13 +60,13 @@ export const Modal: FC<IModalProps> = ({
           {Buttons &&
           <ModalButtons>
             <Button
-              className={classnames('Color', Color.Warning)}
+              className={`Color ${Color.Warning}`}
               onClick={Buttons.handleModalOk}
             >
               {Buttons.labelOk || 'Ok'}
             </Button>
             <Button
-              className={classnames('Color', Color.Cancel)}
+              className={`Color ${Color.Cancel}`}
               onClick={handleModalCancel}
             >
               {Buttons.labelCancel || 'Отмена'}

@@ -71,14 +71,16 @@ export const withInputTextTypePasswordAuth = withBemMod<IInputTextProps>(
         withLabel={withLabel}
         label={placeholder}
         withIcon={withIcon}
-        PasswEye={(
+        hasPasswEye={true}
+        passwEyeComponent={(
           <Icon
             src={`${IMG_PATH}${passwEyeIcon}.svg`}
             alt="eye"
             tip={isPasswEyeOpen ? 'Скрыть пароль' : 'Показать пароль'}
             onClick={handlePasswEyeClick}
             className={`PasswEye ${passwEyeIcon}`}
-          />)}
+          />
+        )}
         error=
           {errors.password?.message
           // || passwordTooShortErrorMessage()
