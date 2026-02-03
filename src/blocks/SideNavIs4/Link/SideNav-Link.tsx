@@ -12,7 +12,7 @@ export interface ISideNavLinkProps extends IClassNameProps {
   children: string;
   href: string;
   active: boolean;
-  handleClick: (ev: MouseEvent) => void;
+  handleClick?: (ev: MouseEvent) => void;
 }
 
 export const SideNavLink: FC<ISideNavLinkProps> = ({
@@ -25,7 +25,7 @@ export const SideNavLink: FC<ISideNavLinkProps> = ({
     <Link
       href={href}
       className={cnSideNav('Link', {active})}
-      handleClick={(ev: MouseEvent) => handleClick(ev)}
+      handleClick={(ev: MouseEvent) => handleClick?.(ev)}
     >
       {children}
     </Link>

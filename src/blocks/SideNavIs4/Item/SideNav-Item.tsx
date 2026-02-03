@@ -39,7 +39,6 @@ export const SideNavItem: FC<ISideNavItemProps> = ({
               <SideNavLink
                 href={`/${navItemId}`}
                 active={false}
-                handleClick={() => true}
               >
                 {title}
               </SideNavLink>
