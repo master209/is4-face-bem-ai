@@ -1,14 +1,5 @@
 @import "../../scss/theme-app";
 
-.Button-Wrap {
-  text-align: center;
-  height: $button--height;
-}
-
-div[class*=-Button-Wrap] {
-  display: inline-block;
-}
-
 .Button {
   display: inline-block;
   height: $button--height;

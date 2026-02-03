@@ -13,12 +13,10 @@ export const Button: FC<IButtonProps> = ({
   className,
   ...props
 }) => (
-  <div className={`${className || 'Button'}-Wrap`}>
-    <Component
-      className={cnButton(null, [className])}
-      {...props}
-    >
-      {children}
-    </Component>
-  </div>
+  <Component
+    className={cnButton(null, [className])}
+    {...props}
+  >
+    {children}
+  </Component>
 );
