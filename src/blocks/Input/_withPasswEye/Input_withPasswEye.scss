@@ -1,19 +1,4 @@
 .Input_withPasswEye {
-
-  .PasswEye {
-    padding: 0;
-    position: absolute;
-    right: 20px;
-    top: 4px;
-
-    img {
-      cursor: pointer;
-    }
-
-  }
-
-  .eye-closed {
-    top: 6px;
-  }
-
+  /* Стили для модификатора блока Input с глазком пароля */
+  /* Каскадные стили перенесены в модификаторы блока Icon */
 }

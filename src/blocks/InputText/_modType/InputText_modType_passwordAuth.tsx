@@ -78,7 +78,7 @@ export const withInputTextTypePasswordAuth = withBemMod<IInputTextProps>(
             alt="eye"
             tip={isPasswEyeOpen ? 'Скрыть пароль' : 'Показать пароль'}
             onClick={handlePasswEyeClick}
-            className={`PasswEye ${passwEyeIcon}`}
+            className={`Icon_passwEye Icon_passwEye_${passwEyeIcon}`}
           />
         )}
         error=

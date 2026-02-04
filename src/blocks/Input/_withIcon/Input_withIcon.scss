@@ -1,6 +1,4 @@
 .Input_withIcon {
-
-  input {
-    border-radius: 0 $input--border-radius $input--border-radius 0 !important;
-  }
+  /* Стили для модификатора блока Input с иконкой */
+  /* Каскадные стили input удалены - теперь обрабатываются на уровне компонента */
 }

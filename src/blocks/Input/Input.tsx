@@ -55,7 +55,7 @@ export const Input: FC<IInputProps> = ({
         <Icon
           src={`${IMG_PATH}${icon}.svg`}
           alt={icon}
-          className="InputIcon"
+          className="Icon_inputIcon"
         />}
       {children}
       {withLabelEnd && <Label>{label}</Label>}
