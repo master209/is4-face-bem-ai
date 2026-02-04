@@ -1,10 +1,10 @@
-.Icon_inputIcon {
+.Icon.Icon_inputIcon {
   height: 36px;
   display: flex;
   flex-wrap: nowrap;
   border: 1px solid;
   border-color: $input--border-color;
   border-radius: $input--border-radius 0 0 $input--border-radius;
-  padding: $InputIcon--padding !important;
+  padding: $InputIcon--padding;
   background-color: $bg-color_disabled-light;
 }
