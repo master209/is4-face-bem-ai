@@ -65,7 +65,7 @@ export const withInputTextTypePassword = withBemMod<IInputTextProps>(
         withLabel={withLabel}
         label={placeholder}
         withIcon={withIcon}
-        hasPasswEye={true}
+        withPasswEye={true}
         passwEyeComponent={(
           <Icon
             src={`${IMG_PATH}${passwEyeIcon}.svg`}

@@ -17,7 +17,7 @@ interface IInputProps extends IClassNameProps {
   required?: boolean;
   withLabel?: boolean; // лейбл перед инпутом
   withLabelEnd?: boolean; // лейбл после инпута
-  hasPasswEye?: boolean; // есть ли компонент глазик для просмотра пароля
+  withPasswEye?: boolean; // есть ли компонент глазик для просмотра пароля
   passwEyeComponent?: ReactNode; // компонент глазик для просмотра пароля
   withIcon?: boolean; // с иконкой на текстовом инпуте слева?
   label?: string | ReactNode;
@@ -34,7 +34,7 @@ export const Input: FC<IInputProps> = ({
   required = false,
   withLabel = false,
   withLabelEnd = false,
-  hasPasswEye = false,
+  withPasswEye = false,
   passwEyeComponent,
   withIcon = true,
   label = '',
@@ -45,7 +45,7 @@ export const Input: FC<IInputProps> = ({
     withIcon,
     withLabel,
     withLabelEnd,
-    hasPasswEye,
+    withPasswEye,
     hasError: !!error
   }, [className])}
   >
@@ -59,7 +59,7 @@ export const Input: FC<IInputProps> = ({
         />}
       {children}
       {withLabelEnd && <Label>{label}</Label>}
-      {hasPasswEye && passwEyeComponent}
+      {withPasswEye && passwEyeComponent}
     </div>
     {!!error && <InputHelp>{error}</InputHelp>}
   </div>
