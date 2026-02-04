@@ -28,7 +28,7 @@ export const withInputTextTypePassword = withBemMod<IInputTextProps>(
     const value = getValues()[name];
 
     const [isPasswEyeOpen, setIsPasswEyeOpen] = useState(false);
-    const passwEyeIcon = isPasswEyeOpen ? 'eye-opened' : 'eye-closed';
+    const passwEyeIcon = isPasswEyeOpen ? 'eyeOpened' : 'eyeClosed';
 
     const handlePasswEyeClick = () => setIsPasswEyeOpen((prev) => !prev);
 
