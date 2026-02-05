@@ -85,10 +85,10 @@
 	<!-- Блок `search-form` -->
 	<form class="search-form"\>
 		<!-- Элемент `input` блока `search-form` -->
-		<input class="search-form\_\_input"\>
+		<input class="search-form__input"\>
 
 		<!-- Элемент `button` блока `search-form` -->
-		<button class="search-form\_\_button"\>Найти</button\>
+		<button class="search-form__button"\>Найти</button\>
 	</form\>
 
 ### Принципы работы с элементами
@@ -111,32 +111,32 @@
 
 	<!--
 	 Верно. Структура полного имени элементов соответствует схеме:
-	 `имя-блока\_\_имя-элемента`
+	 `имя-блока__имя-элемента`
 	-->
 	<form class="search-form"\>
-		<div class="search-form\_\_content"\>
-			<input class="search-form\_\_input"\>
-			<button class="search-form\_\_button"\>Найти</button\>
+		<div class="search-form__content"\>
+			<input class="search-form__input"\>
+			<button class="search-form__button"\>Найти</button\>
 		</div\>
 	</form\>
 
 	<!--
 	 Неверно. Структура полного имени элементов не соответствует схеме:
-	 `имя-блока\_\_имя-элемента`
+	 `имя-блока__имя-элемента`
 	-->
 	<form class="search-form"\>
-		<div class="search-form\_\_content"\>
+		<div class="search-form__content"\>
 			<!--
 	 Рекомендуется:
-	 `search-form\_\_input` или `search-form\_\_content-input`
+	 `search-form__input` или `search-form__content-input`
 	 -->
-			<input class="search-form\_\_content\_\_input"\>
+			<input class="search-form__content__input"\>
 
 			<!--
 	 Рекомендуется:
-	 `search-form\_\_button` или `search-form\_\_content-button`
+	 `search-form__button` или `search-form__content-button`
 	 -->
-			<button class="search-form\_\_content\_\_button"\>Найти</button\>
+			<button class="search-form__content__button"\>Найти</button\>
 		</div\>
 	</form\>
 
@@ -147,9 +147,9 @@
 **Пример**
 
 	<div class="block"\>
-		<div class="block\_\_elem1"\>
-			<div class="block\_\_elem2"\>
-				<div class="block\_\_elem3"\></div\>
+		<div class="block__elem1"\>
+			<div class="block__elem2"\>
+				<div class="block__elem3"\></div\>
 			</div\>
 		</div\>
 	</div\>
@@ -159,20 +159,20 @@
 **Пример**
 
 	.block {}
-	.block\_\_elem1 {}
-	.block\_\_elem2 {}
-	.block\_\_elem3 {}
+	.block__elem1 {}
+	.block__elem2 {}
+	.block__elem3 {}
 
 Это позволяет изменять DOM-структуру блока без внесения правок в коде каждого отдельного элемента:
 
 **Пример**
 
 	<div class="block"\>
-		<div class="block\_\_elem1"\>
-			<div class="block\_\_elem2"\></div\>
+		<div class="block__elem1"\>
+			<div class="block__elem2"\></div\>
 		</div\>
 
-		<div class="block\_\_elem3"\></div\>
+		<div class="block__elem3"\></div\>
 	</div\>
 
 Структура блока меняется, а правила для элементов и их названия остаются прежними.
@@ -189,10 +189,10 @@
 	<!-- Блок `search-form` -->
 	<form class="search-form"\>
 		<!-- Элемент `input` блока `search-form` -->
-		<input class="search-form\_\_input"\>
+		<input class="search-form__input"\>
 
 		<!-- Элемент `button` блока `search-form` -->
-		<button class="search-form\_\_button"\>Найти</button\>
+		<button class="search-form__button"\>Найти</button\>
 	</form\>
 
 	<!-- Неверно. Элементы лежат вне контекста блока `search-form` -->
@@ -201,10 +201,10 @@
 	</form\>
 
 	<!-- Элемент `input` блока `search-form` -->
-	<input class="search-form\_\_input"\>
+	<input class="search-form__input"\>
 
 	<!-- Элемент `button` блока `search-form` -->
-	<button class="search-form\_\_button"\>Найти</button\>
+	<button class="search-form__button"\>Найти</button\>
 
 #### Необязательность
 
@@ -272,11 +272,11 @@ Cущность, определяющая внешний вид, состоян�
 **Пример**
 
 	<!-- Блок `search-form` имеет булевый модификатор `focused` -->
-	<form class="search-form search-form\_focused"\>
-		<input class="search-form\_\_input"\>
+	<form class="search-form search-form_focused"\>
+		<input class="search-form__input"\>
 
 		<!-- Элемент `button` имеет булевый модификатор `disabled` -->
-		<button class="search-form\_\_button search-form\_\_button\_disabled"\>Найти</button\>
+		<button class="search-form__button search-form__button_disabled"\>Найти</button\>
 	</form\>
 
 #### Ключ-значение
@@ -293,11 +293,11 @@ Cущность, определяющая внешний вид, состоян�
 **Пример**
 
 	<!-- Блок `search-form` имеет модификатор `theme` со значением `islands` -->
-	<form class="search-form search-form\_theme\_islands"\>
-		<input class="search-form\_\_input"\>
+	<form class="search-form search-form_theme_islands"\>
+		<input class="search-form__input"\>
 
 		<!-- Элемент `button` имеет модификатор `size` со значением `m` -->
-		<button class="search-form\_\_button search-form\_\_button\_size\_m"\>Найти</button\>
+		<button class="search-form__button search-form__button_size_m"\>Найти</button\>
 	</form\>
 
 	<!--
@@ -305,14 +305,14 @@ Cущность, определяющая внешний вид, состоян�
 	 с разными значениями
 	-->
 	<form class="search-form
-	 search-form\_theme\_islands
-	 search-form\_theme\_lite"\>
+	 search-form_theme_islands
+	 search-form_theme_lite"\>
 
-		<input class="search-form\_\_input"\>
+		<input class="search-form__input"\>
 
-		<button class="search-form\_\_button
-	 search-form\_\_button\_size\_s
-	 search-form\_\_button\_size\_m"\>
+		<button class="search-form__button
+	 search-form__button_size_s
+	 search-form__button_size_m"\>
 			Найти
 		</button\>
 	</form\>
@@ -330,17 +330,17 @@ Cущность, определяющая внешний вид, состоян�
 **Пример**
 
 	<!-- Верно. Блок `search-form` имеет модификатор `theme` со значением `islands`-->
-	<form class="search-form search-form\_theme\_islands"\>
-		<input class="search-form\_\_input"\>
+	<form class="search-form search-form_theme_islands"\>
+		<input class="search-form__input"\>
 
-		<button class="search-form\_\_button"\>Найти</button\>
+		<button class="search-form__button"\>Найти</button\>
 	</form\>
 
 	<!-- Неверно. Отсутствует модифицируемый класс `search-form` -->
-	<form class="search-form\_theme\_islands"\>
-		<input class="search-form\_\_input"\>
+	<form class="search-form_theme_islands"\>
+		<input class="search-form__input"\>
 
-		<button class="search-form\_\_button"\>Найти</button\>
+		<button class="search-form__button"\>Найти</button\>
 	</form\>
 
 > [Зачем в именах модификаторов и элементов указывать имя блока?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%97%D0%B0%D1%87%D0%B5%D0%BC-%D0%B2-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B0%D1%85-%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2-%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-%D1%83%D0%BA%D0%B0%D0%B7%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D0%B8%D0%BC%D1%8F-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0)
@@ -362,7 +362,7 @@ Cущность, определяющая внешний вид, состоян�
 	<!-- Блок `header` -->
 	<div class="header"\>
 		<!-- К блоку `search-form` примиксован элемент `search-form` блока `header`-->
-		<div class="search-form header\_\_search-form"\></div\>
+		<div class="search-form header__search-form"\></div\>
 	</div\>
 
 В данном примере мы совместили поведение и стили блока `search-form` и элемента `search-form` блока `header`. Такой подход позволяет нам задать внешнюю геометрию и позиционирование в элементе `header__search-form`, а сам блок `search-form` оставить универсальным. Таким образом, блок можно использовать в любом другом окружении, потому что он не специфицирует никакие отступы. Это позволяет нам говорить о его независимости.
