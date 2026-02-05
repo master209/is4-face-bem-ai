@@ -79,7 +79,7 @@ JavaScript
     
 3.  БЭМ предоставляет комплексное решение по созданию архитектуры проекта и помогает организовать процессы разработки.
     
-    > Подробнее читайте в разделе [Применение методологии для решения задач веб-разработки](https://github.com/bem-site/bem-method/blob/bem-info-data/method/solved-problems/solved-problems.ru.md).
+Подробнее читайте в разделе [Применение методологии для решения задач веб-разработки](https://github.com/bem-site/bem-method/blob/bem-info-data/method/solved-problems/solved-problems.ru.md).
     
 
 В чем разница между БЭМ и Web Components?
@@ -115,7 +115,7 @@ JavaScript
     
 *   В БЭМ используется [БЭМ-дерево](https://github.com/bem-site/bem-method/blob/bem-info-data/method/key-concepts/key-concepts.ru.md#%D0%91%D0%AD%D0%9C-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE). Такой подход позволяет размещать на одном DOM-узле несколько компонентов ([БЭМ-сущностей](https://github.com/bem-site/bem-method/blob/bem-info-data/method/key-concepts/key-concepts.ru.md#%D0%91%D0%AD%D0%9C-%D1%81%D1%83%D1%89%D0%BD%D0%BE%D1%81%D1%82%D1%8C)).
     
-    > Подробнее читайте в разделе про [миксы](https://github.com/bem-site/bem-method/blob/bem-info-data/method/key-concepts/key-concepts.ru.md#%D0%9C%D0%B8%D0%BA%D1%81).
+Подробнее читайте в разделе про [миксы](https://github.com/bem-site/bem-method/blob/bem-info-data/method/key-concepts/key-concepts.ru.md#%D0%9C%D0%B8%D0%BA%D1%81).
     
 
 Полезен ли БЭМ в маленьких проектах?
@@ -204,27 +204,27 @@ JavaScript
 
 *   Обеспечивает пространство имен.
     
-    > Это позволяет ограничить влияние элементов и модификаторов одного блока на другой.
-    > 
-    > **Пример**
-    > 
-    > <!-- Модификаторы `button_size_m` и `select_size_m` не будут влиять друг на друга. -->
-    > <div class="button button_size_m"\>...</div\>
-    > <div class="select select_size_m"\>...</div\>
+Это позволяет ограничить влияние элементов и модификаторов одного блока на другой.
+
+**Пример**
+
+	<!-- Модификаторы `button_size_m` и `select_size_m` не будут влиять друг на друга. -->
+	<div class="button button_size_m"\>...</div\>
+	<div class="select select_size_m"\>...</div\>
     
 *   Позволяет использовать миксы.
     
-    > При использовании миксов необходимо явно указывать пространство имен для модификаторов, чтобы было ясно к какой из сущностей на данном DOM-узле относится модификатор.
-    > 
-    > **Пример**
-    > 
-    > <!-- Имя модификатора `button_size_m` позволяет определить,
-    > что модификатор относится к кнопке, а не к миксу — блоку `dropdown`. -->
-    > <div class="button dropdown button_size_m"\>...</div\>
+При использовании миксов необходимо явно указывать пространство имен для модификаторов, чтобы было ясно к какой из сущностей на данном DOM-узле относится модификатор.
+
+**Пример**
+
+	<!-- Имя модификатора `button_size_m` позволяет определить,
+	что модификатор относится к кнопке, а не к миксу — блоку `dropdown`. -->
+	<div class="button dropdown button_size_m"\>...</div\>
     
 *   Облегчает поиск в коде.
     
-    > Уникальные имена облегчают поиск сущностей в коде и файловой структуре.
+Уникальные имена облегчают поиск сущностей в коде и файловой структуре.
     
 
 Зачем создавать отдельные директории и файлы для каждого блока и технологии?
@@ -359,11 +359,11 @@ JavaScript
 
 *   Блок может иметь много модификаторов.
     
-    > **Пример**
-    > 
-    > <div class="button button_size_m button_theme_islands button_type_submit"\>
-    >     <div class="button__text"\>...</div\>
-    > </div\>
+**Пример**
+
+	<div class="button button_size_m button_theme_islands button_type_submit"\>
+		<div class="button__text"\>...</div\>
+	</div\>
     
 *   Модификатор определяет состояние блока/элемента, которое может быть изменено во время выполнения скрипта JavaScript.
     
