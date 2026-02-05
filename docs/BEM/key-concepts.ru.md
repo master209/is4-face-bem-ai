@@ -131,18 +131,18 @@
 Рассмотрим пример DOM-дерева:
 
 
-	<header class\="header"\>
-		<img class\="logo"\>
-		<form class\="search-form"\>
-			<input class\="input"\>
-			<button class\="button"\></button\>
+	<header class="header"\>
+		<img class="logo"\>
+		<form class="search-form"\>
+			<input class="input"\>
+			<button class="button"\></button\>
 		</form\>
-		<ul class\="lang-switcher"\>
-			<li class\="lang-switcher\_\_item"\>
-				<a class\="lang-switcher\_\_link" href\="url"\>en</a\>
+		<ul class="lang-switcher"\>
+			<li class="lang-switcher__item"\>
+				<a class="lang-switcher__link" href="url"\>en</a\>
 			</li\>
-			<li class\="lang-switcher\_\_item"\>
-				<a class\="lang-switcher\_\_link" href\="url"\>ru</a\>
+			<li class="lang-switcher__item"\>
+				<a class="lang-switcher__link" href="url"\>ru</a\>
 			</li\>
 		</ul\>
 	</header\>
