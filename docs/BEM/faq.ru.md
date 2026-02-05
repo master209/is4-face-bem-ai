@@ -26,7 +26,7 @@
 *   [Зачем создавать отдельные директории и файлы для каждого блока и технологии?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%97%D0%B0%D1%87%D0%B5%D0%BC-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C-%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B8-%D0%B8-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%B4%D0%BB%D1%8F-%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%B3%D0%BE-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-%D0%B8-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8)
 *   [Наследуют ли элементы блока его CSS-свойства?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9D%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D1%83%D1%8E%D1%82-%D0%BB%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-%D0%B5%D0%B3%D0%BE-css-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0)
 *   [Почему не стоит создавать блоки-обертки?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5-%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8-%D0%BE%D0%B1%D0%B5%D1%80%D1%82%D0%BA%D0%B8)
-*   [Почему не стоит создавать элементы элементов (block\_\_elem1\_\_elem2)?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5-%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-block__elem1__elem2)
+*   [Почему не стоит создавать элементы элементов (block__elem1__elem2)?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5-%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-block__elem1__elem2)
 
 Модификаторы и миксы
 --------------------
@@ -37,7 +37,7 @@
 *   [Когда создавать булевый модификатор, когда — модификатор «ключ-значение»?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C-%D0%B1%D1%83%D0%BB%D0%B5%D0%B2%D1%8B%D0%B9-%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80-%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0--%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80-%D0%BA%D0%BB%D1%8E%D1%87-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B5)
 *   [Как выбрать имя модификатора?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9A%D0%B0%D0%BA-%D0%B2%D1%8B%D0%B1%D1%80%D0%B0%D1%82%D1%8C-%D0%B8%D0%BC%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D0%B0)
 *   [Как сделать глобальные модификаторы для блоков?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9A%D0%B0%D0%BA-%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C-%D0%B3%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D1%8B-%D0%B4%D0%BB%D1%8F-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2)
-*   [Почему нельзя писать имя модификатора блока в имени элемента (block\_mod\_\_elem)?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D0%BB%D1%8C%D0%B7%D1%8F-%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-%D0%B8%D0%BC%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D0%B0-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-%D0%B2-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0-block_mod__elem)
+*   [Почему нельзя писать имя модификатора блока в имени элемента (block_mod__elem)?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D0%BB%D1%8C%D0%B7%D1%8F-%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-%D0%B8%D0%BC%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D0%B0-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-%D0%B2-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0-block_mod__elem)
 
 CSS
 ---
@@ -50,7 +50,7 @@ CSS
 *   [Можно ли использовать комбинированные селекторы?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9C%D0%BE%D0%B6%D0%BD%D0%BE-%D0%BB%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D0%BA%D0%BE%D0%BC%D0%B1%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B)
 *   [Можно ли использовать селекторы по пользовательским тегам?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9C%D0%BE%D0%B6%D0%BD%D0%BE-%D0%BB%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%81%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%BF%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%BC-%D1%82%D0%B5%D0%B3%D0%B0%D0%BC)
 *   [Почему не стоит делать общий сброс стилей (reset)?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5-%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C-%D0%BE%D0%B1%D1%89%D0%B8%D0%B9-%D1%81%D0%B1%D1%80%D0%BE%D1%81-%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9-reset)
-*   [Почему не стоит писать block\_mod вместо block block\_mod?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5-%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-block_mod-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-block-block_mod)
+*   [Почему не стоит писать block_mod вместо block block_mod?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5-%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-block_mod-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-block-block_mod)
 *   [В каких случаях следует создавать вспомогательные блоки?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%92-%D0%BA%D0%B0%D0%BA%D0%B8%D1%85-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D1%8F%D1%85-%D1%81%D0%BB%D0%B5%D0%B4%D1%83%D0%B5%D1%82-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C-%D0%B2%D1%81%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8)
 *   [Зачем внешнюю геометрию и позиционирование задавать через родительский блок?](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%97%D0%B0%D1%87%D0%B5%D0%BC-%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D1%8E%D1%8E-%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8E-%D0%B8-%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9-%D0%B1%D0%BB%D0%BE%D0%BA)
 
@@ -208,9 +208,9 @@ JavaScript
     > 
     > **Пример**
     > 
-    > <!-- Модификаторы \`button\_size\_m\` и \`select\_size\_m\` не будут влиять друг на друга. -->
-    > <div class\="button button\_size\_m"\>...</div\>
-    > <div class\="select select\_size\_m"\>...</div\>
+    > <!-- Модификаторы `button_size_m` и `select_size_m` не будут влиять друг на друга. -->
+    > <div class="button button_size_m"\>...</div\>
+    > <div class="select select_size_m"\>...</div\>
     
 *   Позволяет использовать миксы.
     
@@ -218,9 +218,9 @@ JavaScript
     > 
     > **Пример**
     > 
-    > <!-- Имя модификатора \`button\_size\_m\` позволяет определить,
-    > что модификатор относится к кнопке, а не к миксу — блоку \`dropdown\`. -->
-    > <div class\="button dropdown button\_size\_m"\>...</div\>
+    > <!-- Имя модификатора `button_size_m` позволяет определить,
+    > что модификатор относится к кнопке, а не к миксу — блоку `dropdown`. -->
+    > <div class="button dropdown button_size_m"\>...</div\>
     
 *   Облегчает поиск в коде.
     
@@ -259,7 +259,7 @@ JavaScript
 
 > Подробнее читайте в разделе [HTML по БЭМ](https://github.com/bem-site/bem-method/blob/bem-info-data/method/bem-for-html/bem-for-html.ru.md).
 
-Почему не стоит создавать элементы элементов (block\_\_elem1\_\_elem2)?
+Почему не стоит создавать элементы элементов (block__elem1__elem2)?
 -----------------------------------------------------------------------
 
 [](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5-%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-block__elem1__elem2)
@@ -305,7 +305,7 @@ JavaScript
 
 **Пример**
 
-<div class\="button button\_disabled"\>...</div\>
+	<div class="button button_disabled"\>...</div\>
 
 ### Создавайте модификатор вида «ключ-значение»
 
@@ -315,8 +315,8 @@ JavaScript
 
 **Пример**
 
-<div class\="button button\_size\_s"\>...</div\>
-<div class\="button button\_size\_m"\>...</div\>
+	<div class="button button_size_s"\>...</div\>
+	<div class="button button_size_m"\>...</div\>
 
 Как выбрать имя модификатора?
 -----------------------------
@@ -327,10 +327,10 @@ JavaScript
 
 **Пример**
 
-<!-- Неудачное имя модификатора -->
-<button class\="button button\_background\_yellow"\>...</button\>
-<!-- Удачное имя модификатора -->
-<button class\="button button\_view\_action"\>...</button\>
+	<!-- Неудачное имя модификатора -->
+	<button class="button button_background_yellow"\>...</button\>
+	<!-- Удачное имя модификатора -->
+	<button class="button button_view_action"\>...</button\>
 
 Имя модификатора `button_background_yellow` неудачное, потому что:
 
@@ -348,7 +348,7 @@ JavaScript
 
 > Подробнее читайте в разделе [Стилизация групп блоков](https://github.com/bem-site/bem-method/blob/bem-info-data/method/bem-for-css/bem-for-css.ru.md#%D0%A1%D1%82%D0%B8%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%B3%D1%80%D1%83%D0%BF%D0%BF-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2).
 
-Почему нельзя писать имя модификатора блока в имени элемента (block\_mod\_\_elem)?
+Почему нельзя писать имя модификатора блока в имени элемента (block_mod__elem)?
 ----------------------------------------------------------------------------------
 
 [](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D0%BB%D1%8C%D0%B7%D1%8F-%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-%D0%B8%D0%BC%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D0%B0-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-%D0%B2-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0-block_mod__elem)
@@ -361,8 +361,8 @@ JavaScript
     
     > **Пример**
     > 
-    > <div class\="button button\_size\_m button\_theme\_islands button\_type\_submit"\>
-    >     <div class\="button\_\_text"\>...</div\>
+    > <div class="button button_size_m button_theme_islands button_type_submit"\>
+    >     <div class="button__text"\>...</div\>
     > </div\>
     
 *   Модификатор определяет состояние блока/элемента, которое может быть изменено во время выполнения скрипта JavaScript.
@@ -421,15 +421,15 @@ CSS-реализация:
             button.js                         # JS-реализация кнопки
     
 
-button\_position\_left.css:
+button_position_left.css:
 
-.button\_position\_left {
+.button_position_left {
     left: 0;
 }
 
-button\_position\_right.css:
+button_position_right.css:
 
-.button\_position\_right {
+.button_position_right {
     right: 0;
 }
 
@@ -481,12 +481,12 @@ button\_position\_right.css:
 
 HTML-реализация:
 
-<icon-twitter class\="icon\_social\_twitter"\>...</icon-twitter\>
+	<icon-twitter class="icon_social_twitter"\>...</icon-twitter\>
 
 CSS-реализация:
 
-icon-twitter {}
-.icon\_social\_twitter {}
+	icon-twitter {}
+	.icon_social_twitter {}
 
 В таком подходе существует ряд ограничений:
 
@@ -502,7 +502,7 @@ icon-twitter {}
 
 Общий сброс стилей по сути реализуется с помощью [глобальных CSS-правил](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%9A%D0%B0%D0%BA-%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C-%D0%B3%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D1%8B-%D0%B4%D0%BB%D1%8F-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2), которые в большинстве случаев пишутся к селекторам на тег, что нежелательно делать в БЭМ-проекте.
 
-Почему не стоит писать block\_mod вместо block block\_mod?
+Почему не стоит писать block_mod вместо block block_mod?
 ----------------------------------------------------------
 
 [](https://github.com/bem-site/bem-method/blob/bem-info-data/faq/faq.ru.md#%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5-%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-block_mod-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-block-block_mod)
@@ -513,9 +513,9 @@ icon-twitter {}
 
 **Пример**
 
-<div class\="button\_size\_m button\_theme\_islands button\_type\_submit"\>
-    <div class\="button\_\_text"\>...</div\>
-</div\>
+	<div class="button_size_m button_theme_islands button_type_submit"\>
+		<div class="button__text"\>...</div\>
+	</div\>
 
 > **Примечание.** Совмещение нескольких модификаторов на одном и том же DOM-узле приведет к дублированию кода, реализующего базовую функциональность (логику и стили) блока.
 

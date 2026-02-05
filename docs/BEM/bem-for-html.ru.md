@@ -20,7 +20,7 @@ HTML по БЭМ
 
 В простейшем случае одному DOM-узлу соответствует один блок:
 
-<span class\="menu"\></span\>
+	<span class="menu"\></span\>
 
 ### Несколько блоков на одном DOM-узле
 
@@ -30,7 +30,7 @@ HTML по БЭМ
 
 Микс используется, например, чтобы добавить блоку или элементу модификатор. В примере ниже к стилям блока `menu` добавлены новые стили модификатора этого блока `menu_theme_bright`:
 
-<span class\="menu menu\_theme\_bright"\></span\>
+	<span class="menu menu_theme_bright"\></span\>
 
 > [Читать подробнее про миксы](https://github.com/bem-site/bem-method/blob/bem-info-data/method/bem-for-css/bem-for-css.ru.md#%D0%9C%D0%B8%D0%BA%D1%81%D1%8B)
 
@@ -51,11 +51,11 @@ HTML по БЭМ
 
 В примере ниже пункты меню представлены ссылками. Такая структура блока реализуется за счет вложенности элементов:
 
-<ul class\="menu"\>
-    <li class\="menu\_\_item"\>
-        <a class\="menu\_\_link" href\="https://"\>...</a\>
-    </li\>
-</ul\>
+	<ul class="menu"\>
+		<li class="menu__item"\>
+			<a class="menu__link" href="https://"\>...</a\>
+		</li\>
+	</ul\>
 
 Использование HTML-оберток
 --------------------------
@@ -74,22 +74,22 @@ HTML по БЭМ
 
 HTML-реализация:
 
-<body class\="page"\>
-    <!-- верхний колонтитул и навигация -->
-    <header class\="header page\_\_header"\>...</header\>
-    <!-- нижний колонтитул -->
-    <footer class\="footer page\_\_footer"\>...</footer\>
-</body\>
+	<body class="page"\>
+		<!-- верхний колонтитул и навигация -->
+		<header class="header page__header"\>...</header\>
+		<!-- нижний колонтитул -->
+		<footer class="footer page__footer"\>...</footer\>
+	</body\>
 
 CSS-реализация:
 
-.page\_\_header {
-    padding: 20px;
-}
+	.page__header {
+		padding: 20px;
+	}
 
-.page\_\_footer {
-    padding: 50px;
-}
+	.page__footer {
+		padding: 50px;
+	}
 
 ### Расположение HTML-элементов внутри блока
 
@@ -101,15 +101,15 @@ CSS-реализация:
 
 HTML-реализация:
 
-<button class\="button"\>
-    <span class\="button\_\_inner"\>
-        <span class\="icon"\></span\>
-    </span\>
-</button\>
+	<button class="button"\>
+		<span class="button__inner"\>
+			<span class="icon"\></span\>
+		</span\>
+	</button\>
 
 CSS-реализация:
 
-.button\_\_inner {
-    margin: auto;
-    width: 10px;
-}
+	.button__inner {
+		margin: auto;
+		width: 10px;
+	}
