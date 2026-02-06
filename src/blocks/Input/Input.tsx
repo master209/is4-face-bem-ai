@@ -9,7 +9,6 @@ import { IMG_PATH } from '../../const';
 
 import './Input.scss';
 
-
 interface IInputProps extends IClassNameProps {
   children: ReactNode;
   name: string;

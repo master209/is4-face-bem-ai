@@ -27,7 +27,11 @@ export const Icon: FC<IIconProps> = ({
       onMouseLeave={handleMouseLeave}
       {...props}
     >
-      <Img src={src} alt={alt}/>
+      <Img
+        src={src}
+        alt={alt}
+        className="Img_iconImg"
+      />
       {tip && (
         <Tooltip theme="light" view="default" size="m" anchor={ref} visible={visible}>
           {tip}

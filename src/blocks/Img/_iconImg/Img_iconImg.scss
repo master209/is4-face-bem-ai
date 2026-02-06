@@ -1,0 +1,9 @@
+@import "../../../scss/theme-app";
+
+.Img_iconImg {
+  border-radius: 50%;
+
+  &:hover {
+    background-color: darken($white, 5%);
+  }
+}

@@ -7,12 +7,4 @@
 .Icon {
   position: relative;
   padding: 0 10px;
-
-  .Img {
-    border-radius: 50%;
-
-    &:hover {
-      background-color: darken($white, 5%);
-    }
-  }
 }
