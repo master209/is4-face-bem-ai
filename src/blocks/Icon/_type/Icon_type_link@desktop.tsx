@@ -31,12 +31,14 @@ export const withIconTypeLink = withBemMod<IIconTypeLinkProps, IIconProps>(
         {...props}
       >
         <Link
+          className="Link_iconLink"
           href={href || '#'}
           handleClick={onClick}
         >
           <Img
             src={src}
             alt={alt}
+            className="Img_iconImg"
           />
         </Link>
         {tip && (

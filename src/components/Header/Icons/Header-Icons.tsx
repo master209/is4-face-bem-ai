@@ -23,15 +23,13 @@ export const HeaderIcons: FC<IClassNameProps> = ({...props}) => {
 
   return (
     <div {...props} className={cnHeader('Icons')}>
-      {/*
       <Icon
         src={`${IMG_PATH}search.svg`}
         alt='search'
-        title="поиск"
+        tip="найти"
         onClick={() => true}
         className={cnHeader('IconSearch')}
       />
-      */}
       <IconTypeLink
         type="link"
         src={`${IMG_PATH}exit-door.svg`}
