@@ -8,7 +8,7 @@ import { cnGrid, useGridDataContext, useGridPaginationContext } from '..';
 
 import './Grid-Pagination.scss';
 
-export const cnPagination = cn('Pagination');
+// export const cnPagination = cn('Pagination');
 
 export const Pagination: FC<IClassNameProps> = () => {
   const { state: dataState } = useGridDataContext();

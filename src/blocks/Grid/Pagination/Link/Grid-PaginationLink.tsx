@@ -3,11 +3,10 @@ import React, { FC, MouseEvent } from 'react';
 import { IClassNameProps } from '@bem-react/core';
 
 import { Link } from '../../..';
-import { cnPagination } from '..';
-import { useGridPaginationContext } from '../..';
+import { cnGrid, useGridPaginationContext } from '../..';
 
-import './Pagination-Link.scss';
-import './_ellipsis/Pagination-Link_ellipsis.scss';
+import './Grid-PaginationLink.scss';
+import './_ellipsis/Grid-PaginationLink_ellipsis.scss';
 
 export interface IPaginationLinkProps extends IClassNameProps {
   pageNum: number;
@@ -25,7 +24,7 @@ export const PaginationLink: FC<IPaginationLinkProps> = ({pageNum, children, ell
 
   return (
     <Link
-      className={cnPagination('Link', {ellipsis})}
+      className={cnGrid('PaginationLink', {ellipsis})}
       href={pageNum.toString() || children}
       handleClick={handleClick}
     >

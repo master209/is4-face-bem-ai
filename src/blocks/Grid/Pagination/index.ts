@@ -1,6 +1,6 @@
-export { cnPagination, Pagination } from './Grid-Pagination';
-export { PaginationItem } from './Item/Pagination-Item';
-export { PaginationLink } from './Link/Pagination-Link';
+export { Pagination } from './Grid-Pagination';
+export { PaginationItem } from './Item/Grid-PaginationItem';
+export { PaginationLink } from './Link/Grid-PaginationLink';
 
 export enum TipTipe {
   Home = 'HOME',

@@ -3,13 +3,13 @@ import React, { FC, useState, useRef } from 'react';
 import { IClassNameProps } from '@bem-react/core';
 import { Tooltip } from '../../../../lib/yandex-ui/Tooltip';
 
-import { TipTipe, cnPagination, PaginationLink as Link } from '..';
-import { useGridPaginationContext, useGridDataContext } from '../..';
+import { TipTipe, PaginationLink as Link } from '..';
+import { cnGrid, useGridPaginationContext, useGridDataContext } from '../..';
 
-import './Pagination-Item.scss';
-import './_disabled/Pagination-Item_disabled.scss';
-import './_active/Pagination-Item_active.scss';
-import './_hidden/Pagination-Item_hidden.scss';
+import './Grid-PaginationItem.scss';
+import './_disabled/Grid-PaginationItem_disabled.scss';
+import './_active/Grid-PaginationItem_active.scss';
+import './_hidden/Grid-PaginationItem_hidden.scss';
 
 export interface IPaginationItemProps extends IClassNameProps {
   pageNum: number;
@@ -56,7 +56,8 @@ export const PaginationItem: FC<IPaginationItemProps> = ({
   return (
     <>
       <li
-        className={cnPagination('Item', {active: isActive(), disabled, hidden})}
+        // className={cnPagination('Item', {active: isActive(), disabled, hidden})}
+        className={cnGrid('PaginationItem', {active: isActive(), disabled, hidden})}
         ref={ref}
         onMouseOver={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
