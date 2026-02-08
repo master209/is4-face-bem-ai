@@ -1,2 +1,7 @@
 .Input_withLabel {
+
+  .InputLabel {   /* лучше этот каскад, чем пробрасывать className для Label */
+    margin-right: 11px;
+  }
+
 }

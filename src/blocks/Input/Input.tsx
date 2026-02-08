@@ -15,7 +15,6 @@ interface IInputProps extends IClassNameProps {
   icon?: string;
   required?: boolean;
   withLabel?: boolean; // лейбл перед инпутом
-  labelClass?: string;
   withLabelEnd?: boolean; // лейбл после инпута
   withPasswEye?: boolean; // есть ли компонент глазик для просмотра пароля
   passwEyeComponent?: ReactNode; // компонент глазик для просмотра пароля
@@ -33,7 +32,6 @@ export const Input: FC<IInputProps> = ({
   icon,
   required = false,
   withLabel = false,
-  labelClass,
   withLabelEnd = false,
   withPasswEye = false,
   passwEyeComponent,
@@ -51,12 +49,7 @@ export const Input: FC<IInputProps> = ({
   }, [className])}
   >
     <div className={cnInput('Wrap')}>
-      {withLabel && 
-        <InputLabel
-          id={name}
-          labelClass={labelClass}
-        >{label}
-        </InputLabel>}
+      {withLabel && <InputLabel id={name}>{label}</InputLabel>}
       {withIcon && icon &&
         <Icon
           src={`${IMG_PATH}${icon}.svg`}
@@ -64,12 +57,7 @@ export const Input: FC<IInputProps> = ({
           className="Icon_inputIcon"
         />}
       {children}
-      {withLabelEnd && 
-        <InputLabel
-          id={name}
-          labelClass={labelClass}
-        >{label}
-        </InputLabel>}
+      {withLabelEnd && <InputLabel id={name}>{label}</InputLabel>}
       {withPasswEye && passwEyeComponent}
     </div>
     {!!error && <InputHelp>{error}</InputHelp>}

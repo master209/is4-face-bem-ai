@@ -13,4 +13,10 @@
     margin-bottom: 6px;
     width: 100%;
   }
+
+  .InputLabel {   /* лучше этот каскад, чем пробрасывать className для Label */
+    font-size: 14px;
+    width: 150px;
+  }
+  
 }

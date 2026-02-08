@@ -22,7 +22,6 @@ export const GridPerpage: FC<IClassNameProps> = () => {
       <InputSelect
         className={cnGrid('Perpage')}
         label="Строк на странице:"
-        labelClass='Grid-PerpageLabel'
         name="Perpage"
         value={paginationState.perPage}
         handleChange={handleChange}

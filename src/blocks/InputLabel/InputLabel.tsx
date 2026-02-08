@@ -9,12 +9,11 @@ export const cnInputLabel = cn('InputLabel');
 export interface IInputLabelProps extends IClassNameProps {
   children: ReactNode;
   id: string;
-  labelClass?: string;
 }
 
-export const InputLabel: FC<IInputLabelProps> = ({children, id, labelClass}) => (
+export const InputLabel: FC<IInputLabelProps> = ({children, id}) => (
   <label
-    className={cnInputLabel(null, [labelClass])}
+    className={cnInputLabel()}
     htmlFor={id}
   >
     {children}

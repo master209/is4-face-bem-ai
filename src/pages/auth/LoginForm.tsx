@@ -48,7 +48,6 @@ export function LoginForm(): JSX.Element {
         <Form onSubmit={onSubmit} handleSubmit={handleSubmit}>
           <InputText
             // withLabel
-            // labelClass='Form-Label'
             // withIcon={false}
             useFormProps = {{register, errors, getValues}}
             name="username"
@@ -62,7 +61,6 @@ export function LoginForm(): JSX.Element {
           />
           <InputTextTypePassword
             // withLabel
-            // labelClass='Form-Label'
             // withIcon={false}
             useFormProps = {{register, errors, getValues}}
             modtype="password"

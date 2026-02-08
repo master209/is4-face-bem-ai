@@ -1,19 +1,6 @@
 @import "../../../../../scss/theme-app";
 
 .Filter-Item {
-  .InputSelect {
-    width: 100%;
-
-    &:hover {
-      background-color: $white;
-      border-radius: 3px;
-      box-shadow: none;
-      border: 1px solid;
-      box-sizing: border-box;
-      padding: 2px 5px;
-    }
-  }
-
   .InputDaterange {
     display: flex;
     min-width: 180px;

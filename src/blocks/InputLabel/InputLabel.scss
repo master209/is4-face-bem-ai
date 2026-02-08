@@ -1,6 +1,6 @@
 @import "../../scss/theme-app";
 
-.InputLabel {
+.InputLabel {   /* лучше этот каскад, чем пробрасывать className для Label */
   font-size: 17px;
   margin-right: 5px;
 }

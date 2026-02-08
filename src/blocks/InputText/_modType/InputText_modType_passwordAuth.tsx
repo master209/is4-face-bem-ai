@@ -19,7 +19,6 @@ export const withInputTextTypePasswordAuth = withBemMod<IInputTextProps>(
     icon = 'password',
     placeholder = 'Пароль',
     withLabel = false,
-    labelClass,
     withIcon = true,
     required = true,
     validators,
@@ -71,7 +70,6 @@ export const withInputTextTypePasswordAuth = withBemMod<IInputTextProps>(
         required={required}
         withLabel={withLabel}
         label={placeholder}
-        labelClass={withLabel ? labelClass : undefined}
         withIcon={withIcon}
         withPasswEye={true}
         passwEyeComponent={(
