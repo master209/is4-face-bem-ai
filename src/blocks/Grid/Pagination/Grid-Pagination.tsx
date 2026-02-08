@@ -30,54 +30,51 @@ export const Pagination: FC<IClassNameProps> = () => {
 
   return (
     <>
-      { /* eslint-disable */
-        !loading ? (
-          tableRows.length ? (
-            <ul className={cnGrid('Pagination')}>
+      {!loading ? (
+        tableRows.length &&
+          <ul className={cnGrid('Pagination')}>
+            <Item
+              pageNum={1}
+              disabled={+page === 1}
+              tipTipe={TipTipe.Home}
+            >«</Item>
+            <Item
+              pageNum={+page - 1}
+              disabled={+page === 1}
+              tipTipe={TipTipe.Prev}
+            >‹</Item>
+            {Items.map((item) => (
               <Item
-                pageNum={1}
-                disabled={+page === 1}
-                tipTipe={TipTipe.Home}
-              >«</Item>
-              <Item
-                pageNum={+page - 1}
-                disabled={+page === 1}
-                tipTipe={TipTipe.Prev}
-              >‹</Item>
-              {Items.map((item) => (
-                <Item
-                  pageNum={+item}
-                  key={item}
-                >{item}</Item>
-              ))}
-              <Item
-                pageNum={+page + 1}
-                disabled={isDisabled}
-                tipTipe={TipTipe.Next}
-              >›</Item>
-              <Item
-                pageNum={pagesCount}
-                disabled={isDisabled}
-                tipTipe={TipTipe.End}
-              >»</Item>
-              <Item
-                pageNum={pagesCount}
-                disabled
-                hidden={isHidden}
-                ellipsis
-              >...
-              </Item>
-              <Item
-                pageNum={pagesCount}
-                disabled={isDisabled}
-                hidden={isHidden}
-                tipTipe={TipTipe.End}
-              >
-                {pagesCount.toString()}
-              </Item>
-            </ul>)
-            : null)
-          : 'загружаю...'
+                pageNum={+item}
+                key={item}
+              >{item}</Item>
+            ))}
+            <Item
+              pageNum={+page + 1}
+              disabled={isDisabled}
+              tipTipe={TipTipe.Next}
+            >›</Item>
+            <Item
+              pageNum={pagesCount}
+              disabled={isDisabled}
+              tipTipe={TipTipe.End}
+            >»</Item>
+            <Item
+              pageNum={pagesCount}
+              disabled
+              hidden={isHidden}
+              ellipsis
+            >...
+            </Item>
+            <Item
+              pageNum={pagesCount}
+              disabled={isDisabled}
+              hidden={isHidden}
+              tipTipe={TipTipe.End}
+            >
+              {pagesCount.toString()}
+            </Item>
+          </ul>) : 'загружаю...'
       }
     </>
   );
