@@ -1,6 +1,11 @@
+@import "./_disabled/Grid-PaginationItem_disabled";
+@import "./_active/Grid-PaginationItem_active";
+@import "./_hidden/Grid-PaginationItem_hidden";
+
 .Grid-PaginationItem {
 
   &:first-child {
     margin-left: 14px;
   }
+
 }

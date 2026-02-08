@@ -1,18 +1,3 @@
-@import "../../../../../scss/theme-app";
+.Grid .Grid-PaginationItem_active {
 
-.Grid-PaginationItem_active {
-
-  .Grid-PaginationLink {
-    z-index: 3;
-    color: $white;
-    background-color: $pagination--color;
-    border-color: $pagination--color;
-
-    &:hover {
-      color: $white;
-      background-color: $pagination--color;
-      border-color: $pagination--color;
-    }
-
-  }
 }

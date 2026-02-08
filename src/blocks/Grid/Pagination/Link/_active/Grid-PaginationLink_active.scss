@@ -1,0 +1,13 @@
+.Grid .Grid-PaginationLink_active {
+  z-index: 3;
+  color: $white;
+  background-color: $pagination--color;
+  border-color: $pagination--color;
+
+  &:hover {
+    color: $white;
+    background-color: $pagination--color;
+    border-color: $pagination--color;
+  }
+
+}

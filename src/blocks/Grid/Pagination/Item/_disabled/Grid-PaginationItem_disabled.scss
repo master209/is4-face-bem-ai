@@ -1,12 +1,2 @@
-@import "../../../../../scss/theme-app";
-
-.Grid-PaginationItem_disabled {
-
-  .Grid-PaginationLink {
-    pointer-events: none;
-    cursor: auto;
-    color: $link--color_disabled;
-    background-color: $white;
-  }
-
+.Grid .Grid-PaginationItem_disabled {
 }

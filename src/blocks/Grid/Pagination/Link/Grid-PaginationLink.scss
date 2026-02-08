@@ -1,4 +1,7 @@
 @import "../../../../scss/theme-app";
+@import "./_active/Grid-PaginationLink_active";
+@import "./_disabled/Grid-PaginationLink_disabled";
+@import "./_ellipsis/Grid-PaginationLink_ellipsis";
 
 .Grid-PaginationLink {
   margin-left: -1px;

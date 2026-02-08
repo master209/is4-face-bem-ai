@@ -1,5 +1,4 @@
 import React, { FC, useState, useRef } from 'react';
-
 import { IClassNameProps } from '@bem-react/core';
 import { Tooltip } from '../../../../lib/yandex-ui/Tooltip';
 
@@ -7,13 +6,11 @@ import { TipTipe, PaginationLink as Link } from '..';
 import { cnGrid, useGridPaginationContext, useGridDataContext } from '../..';
 
 import './Grid-PaginationItem.scss';
-import './_disabled/Grid-PaginationItem_disabled.scss';
-import './_active/Grid-PaginationItem_active.scss';
-import './_hidden/Grid-PaginationItem_hidden.scss';
 
 export interface IPaginationItemProps extends IClassNameProps {
   pageNum: number;
   children: string;
+  active?: boolean;
   disabled?: boolean;
   hidden?: boolean;
   ellipsis?: boolean;
@@ -46,23 +43,28 @@ export const PaginationItem: FC<IPaginationItemProps> = ({
     }
   };
 
-  const isActive = () =>
+  const active = (
     paginationState.page === children ||
     (
       dataState.pagesCount === +children && // если уже и так на последней странице...
       +paginationState.page > +children // ...и затребован еще больший номер страницы
-    );
+    )
+  );
 
   return (
     <>
       <li
-        // className={cnPagination('Item', {active: isActive(), disabled, hidden})}
-        className={cnGrid('PaginationItem', {active: isActive(), disabled, hidden})}
+        className={cnGrid('PaginationItem', {active, disabled, hidden})}
         ref={ref}
         onMouseOver={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
       >
-        <Link pageNum={pageNum} ellipsis={ellipsis}>
+        <Link
+          pageNum={pageNum}
+          disabled={disabled}
+          active={active}
+          ellipsis={ellipsis}
+        >
           {children}
         </Link>
       </li>

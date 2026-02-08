@@ -1,14 +1,10 @@
 import React, { FC } from 'react';
-
 import { IClassNameProps } from '@bem-react/core';
-import { cn } from '@bem-react/classname';
 
 import { TipTipe, PaginationItem as Item } from '.';
 import { cnGrid, useGridDataContext, useGridPaginationContext } from '..';
 
 import './Grid-Pagination.scss';
-
-// export const cnPagination = cn('Pagination');
 
 export const Pagination: FC<IClassNameProps> = () => {
   const { state: dataState } = useGridDataContext();
