@@ -60,7 +60,13 @@ export const Pagination: FC<IClassNameProps> = () => {
                 disabled={isDisabled}
                 tipTipe={TipTipe.End}
               >»</Item>
-              <Item pageNum={pagesCount} disabled hidden={isHidden} ellipsis>...</Item>
+              <Item
+                pageNum={pagesCount}
+                disabled
+                hidden={isHidden}
+                ellipsis
+              >...
+              </Item>
               <Item
                 pageNum={pagesCount}
                 disabled={isDisabled}
