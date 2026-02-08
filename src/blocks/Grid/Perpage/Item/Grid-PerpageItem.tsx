@@ -4,7 +4,7 @@ import { IClassNameProps } from '@bem-react/core';
 
 import { cnGrid } from '../..';
 
-import './GridPerpage-Item.scss';
+import './Grid-PerpageItem.scss';
 
 export interface IGridPerpageItemProps extends IClassNameProps {
   item: number;

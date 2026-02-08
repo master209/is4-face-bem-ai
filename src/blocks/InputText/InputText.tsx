@@ -15,6 +15,7 @@ export const InputText: FC<IInputTextProps> = ({
   icon,
   placeholder,
   withLabel = false,
+  labelClass,
   withIcon = true,
   required = false,
   autocomplete = InputAutoComplete.On,
@@ -35,6 +36,7 @@ export const InputText: FC<IInputTextProps> = ({
       withLabel={withLabel}
       withIcon={withIcon}
       label={withLabel ? placeholder : undefined}
+      labelClass={withLabel ? labelClass : undefined}
       error={error}
     >
       <input

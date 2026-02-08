@@ -4,7 +4,7 @@ import { cn } from '@bem-react/classname';
 
 import { Icon } from '../Icon';
 import { InputHelp } from '../InputHelp';
-import { InputLabel as Label } from '../InputLabel';
+import { InputLabel } from '../InputLabel';
 import { IMG_PATH } from '../../const';
 
 import './Input.scss';
@@ -15,6 +15,7 @@ interface IInputProps extends IClassNameProps {
   icon?: string;
   required?: boolean;
   withLabel?: boolean; // лейбл перед инпутом
+  labelClass?: string;
   withLabelEnd?: boolean; // лейбл после инпута
   withPasswEye?: boolean; // есть ли компонент глазик для просмотра пароля
   passwEyeComponent?: ReactNode; // компонент глазик для просмотра пароля
@@ -32,6 +33,7 @@ export const Input: FC<IInputProps> = ({
   icon,
   required = false,
   withLabel = false,
+  labelClass,
   withLabelEnd = false,
   withPasswEye = false,
   passwEyeComponent,
@@ -49,7 +51,12 @@ export const Input: FC<IInputProps> = ({
   }, [className])}
   >
     <div className={cnInput('Wrap')}>
-      {withLabel && <Label>{label}</Label>}
+      {withLabel && 
+        <InputLabel
+          id={name}
+          labelClass={labelClass}
+        >{label}
+        </InputLabel>}
       {withIcon && icon &&
         <Icon
           src={`${IMG_PATH}${icon}.svg`}
@@ -57,7 +64,12 @@ export const Input: FC<IInputProps> = ({
           className="Icon_inputIcon"
         />}
       {children}
-      {withLabelEnd && <Label>{label}</Label>}
+      {withLabelEnd && 
+        <InputLabel
+          id={name}
+          labelClass={labelClass}
+        >{label}
+        </InputLabel>}
       {withPasswEye && passwEyeComponent}
     </div>
     {!!error && <InputHelp>{error}</InputHelp>}

@@ -28,6 +28,7 @@ export interface IInputTextProps extends IClassNameProps {
   icon?: string;
   placeholder?: string; // если не задано св-во withLabel, то по умолчанию - плейсхолдер
   withLabel?: boolean; // если true, то лейбл вместо плейсхолдера
+  labelClass?: string;
   withIcon?: boolean; // с иконкой на текстовом инпуте слева?
   required?: boolean;
   autocomplete?: InputAComplete;

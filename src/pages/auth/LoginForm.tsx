@@ -47,6 +47,9 @@ export function LoginForm(): JSX.Element {
         <h1>Вход в ИС4</h1>
         <Form onSubmit={onSubmit} handleSubmit={handleSubmit}>
           <InputText
+            // withLabel
+            // labelClass='Form-Label'
+            // withIcon={false}
             useFormProps = {{register, errors, getValues}}
             name="username"
             icon="user"
@@ -58,6 +61,9 @@ export function LoginForm(): JSX.Element {
             error={errors.username?.message}
           />
           <InputTextTypePassword
+            // withLabel
+            // labelClass='Form-Label'
+            // withIcon={false}
             useFormProps = {{register, errors, getValues}}
             modtype="password"
           />

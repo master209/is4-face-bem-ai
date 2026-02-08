@@ -11,6 +11,7 @@ export const cnInputSelect = cn('InputSelect');
 export interface IInputSelectProps extends IClassNameProps {
   children: ReactNode;
   label: string;
+  labelClass?: string;
   name: string;
   value: string;
   handleChange: (ev: ChangeEvent<HTMLSelectElement>) => void;
@@ -20,6 +21,7 @@ export interface IInputSelectProps extends IClassNameProps {
 export const InputSelect: FC<IInputSelectProps> = ({
   children,
   label,
+  labelClass,
   className,
   name,
   value,
@@ -31,6 +33,7 @@ export const InputSelect: FC<IInputSelectProps> = ({
     required={required}
     label={label}
     withLabel
+    labelClass={labelClass}
   >
     <select
       className={cnInputSelect(null, [className && `${className}Items`])}

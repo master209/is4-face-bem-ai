@@ -27,7 +27,7 @@ export { GridHeader } from './Header/Grid-Header';
 export { GridShown } from './Shown/Grid-Shown';
 export { GridReset } from './Reset/Grid-Reset';
 export { GridPerpage } from './Perpage/Grid-Perpage';
-export { GridPerpageItem } from './Perpage/Item/GridPerpage-Item';
+export { GridPerpageItem } from './Perpage/Item/Grid-PerpageItem';
 export { GridTable, GridRow, GridSummary } from './Table';
 export { Pagination } from './Pagination';
 

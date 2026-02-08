@@ -1,4 +1,4 @@
-@import "./Label/GridPerpage-Label";
+@import "./Label/Grid-PerpageLabel";
 
 .Grid-Perpage {
   display: flex;
@@ -13,14 +13,4 @@
     margin-bottom: 6px;
     width: 100%;
   }
-
-  .InputLabel {
-    font-size: 14px;
-    width: 150px;
-  }
-}
-
-.Grid-PerpageItems {
-  text-align: center;
-  flex-basis: 35%;
 }
