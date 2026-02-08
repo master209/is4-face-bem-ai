@@ -46,12 +46,12 @@ const GridContentNew: FC<IGridProps> = ({
       className={cnGrid({loading}, [className, cnLoading])}
     >
       {Header && <GridHeader Header={Header}/>}
-      <div className={cnRow(null, ['Shown-Reset'])}>
+      <div className={cnGrid('ShownReset', [cnRow()])}>
         {!noShown && <GridShown/>}
         {<GridReset/>}
       </div>
       <GridTable/>
-      <div className={classnames(cnRow(null, ['Pagination-Perpage']), classHidden)}>
+      <div className={classnames(cnGrid('PaginationPerpage', [cnRow()]), classHidden)}>
         {!noPagination && <Pagination/>}
         {!noPerpage && <GridPerpage/>}
       </div>

@@ -4,7 +4,7 @@ import { IClassNameProps } from '@bem-react/core';
 import { cn } from '@bem-react/classname';
 
 import { TipTipe, PaginationItem as Item } from '.';
-import { useGridDataContext, useGridPaginationContext } from '..';
+import { cnGrid, useGridDataContext, useGridPaginationContext } from '..';
 
 import './Pagination.scss';
 
@@ -33,11 +33,11 @@ export const Pagination: FC<IClassNameProps> = () => {
   const isDisabled = +page === pagesCount;
 
   return (
-    <div>
+    <>
       { /* eslint-disable */
         !loading ? (
           tableRows.length ? (
-            <ul className={cnPagination()}>
+            <ul className={cnGrid('Pagination')}>
               <Item
                 pageNum={1}
                 disabled={+page === 1}
@@ -77,6 +77,6 @@ export const Pagination: FC<IClassNameProps> = () => {
             : null)
           : 'загружаю...'
       }
-    </div>
+    </>
   );
 };

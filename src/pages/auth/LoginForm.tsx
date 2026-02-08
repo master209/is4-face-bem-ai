@@ -43,7 +43,7 @@ export function LoginForm(): JSX.Element {
       <Helmet>
         <title>{TITLE_FREFIX}Вход в ИС4</title>
       </Helmet>
-      <div className={cnLoginForm(null, ['Form'])}>
+      <div className={cnLoginForm()}>
         <h1>Вход в ИС4</h1>
         <Form onSubmit={onSubmit} handleSubmit={handleSubmit}>
           <InputText

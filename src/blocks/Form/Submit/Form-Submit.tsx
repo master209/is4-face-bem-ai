@@ -18,7 +18,7 @@ export const FormSubmit: FC<IFormSubmitProps> = ({
   ...props
 }) => (
   <SubmitButton
-    className={cnForm('Submit')}
+    // className={cnForm('Submit')}
     disabled={submitDisabled}
     {...props}
   >
