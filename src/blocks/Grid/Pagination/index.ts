@@ -1,4 +1,4 @@
-export { cnPagination, Pagination } from './Pagination';
+export { cnPagination, Pagination } from './Grid-Pagination';
 export { PaginationItem } from './Item/Pagination-Item';
 export { PaginationLink } from './Link/Pagination-Link';
 
