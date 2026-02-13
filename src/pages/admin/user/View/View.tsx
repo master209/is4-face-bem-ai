@@ -44,7 +44,7 @@ const UserView: FC<IClassNameProps> = () => {
       <UserViewStateContext.Provider value={{state, dispatch}}>
 		  <div className="UserView">
 			  <div className="HeaderAndTime">
-				<h1>Просмотр клиента #${state.tabs['Юзер'].userId.val}</h1>
+				<h1>Просмотр клиента #{state.tabs['Юзер'].userId.val}</h1>
 				<p className="CurrentTime">Время открытия страницы: {state.currentTime}</p>
 			  </div>
 			  <PageHeader/>

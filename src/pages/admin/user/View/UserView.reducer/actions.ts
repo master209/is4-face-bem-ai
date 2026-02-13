@@ -44,6 +44,6 @@ export const dispatchLoadData = (dispatch: Dispatch<Action>, {api, req}: Request
 
       // При ошибке API делаем редирект обратно
       console.log('🔄 Redirecting to manage due to API error');
-      window.location.href = '/admin/users/manage';
+      //window.location.href = '/admin/users/manage';
     });
 };

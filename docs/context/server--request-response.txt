@@ -1,0 +1,848 @@
+ЗАПРОС К API -
+GET: api.is4.site.ru/users/view/247
+
+-----------------------------------
+
+ОТВЕТ -
+{
+  "pageHeader": {
+    "username": {
+      "lab": "Логин",
+      "val": "9173172699"
+    },
+    "balance": {
+      "lab": "Баланс по договору",
+      "val": 15.67
+    },
+    "userStatus": {
+      "lab": "Статус юзера",
+      "val": "активен"
+    },
+    "serviceStatus": {
+      "lab": "Статус услуги",
+      "val": "Активно"
+    }
+  },
+  "tabs": {
+    "Юзер": {
+      "id": {
+        "lab": "Service ID",
+        "val": "247"
+      },
+      "userId": {
+        "lab": "User ID",
+        "val": 94
+      },
+      "username": {
+        "lab": "Логин",
+        "val": "9173172699"
+      },
+      "lastname": {
+        "lab": "Фамилия",
+        "val": "Ниндзя"
+      },
+      "firstname": {
+        "lab": "Имя",
+        "val": "Неранжан"
+      },
+      "userStatus": {
+        "lab": "Статус юзера",
+        "val": "активен"
+      }
+    },
+    "Услуга": {
+      "serviceName": {
+        "lab": "Название услуги",
+        "val": "Интернет"
+      },
+      "radUsername": {
+        "lab": "Логин из Радиуса",
+        "val": "9173172699"
+      },
+      "radGroup": {
+        "lab": "Группа из Радиуса",
+        "val": "group_internet"
+      },
+      "radPassword": {
+        "lab": "Пароль к услуге из Радиуса",
+        "val": "ehpxbw3qKK"
+      },
+      "isBalance": {
+        "lab": "Баланс по договору",
+        "val": 15.67,
+        "diff": false
+      },
+      "isServiceStatus": {
+        "lab": "Статус услуги",
+        "val": "Активно",
+        "diff": false
+      },
+      "isTariff": {
+        "lab": "Тариф",
+        "val": "Студенческий безлимит 40М",
+        "diff": false
+      },
+      "isAbonCost": {
+        "lab": "Абон. плата без НДС, руб.",
+        "val": 650,
+        "diff": false
+      },
+      "isAbonCostNDS": {
+        "lab": "Абон. плата с НДС, руб.",
+        "val": 660.72,
+        "diff": false
+      },
+      "isRate": {
+        "lab": "Скорость интернета, Мбит/с",
+        "val": 40,
+        "diff": false
+      }
+    },
+    "Радиус": {
+      "radUsername": {
+        "lab": "Логин из Радиуса",
+        "val": "9173172699"
+      },
+      "radGroup": {
+        "lab": "Группа из Радиуса",
+        "val": "group_internet"
+      },
+      "radPassword": {
+        "lab": "Пароль к услуге из Радиуса",
+        "val": "ehpxbw3qKK"
+      }
+    },
+    "История списаний средств": {
+      "tableHead": {
+        "id": "id",
+        "s_internet_id": "ID услуги",
+        "numberContract": "Номер договора",
+        "tariffName": "Тариф",
+        "payNameShort": "За что списано",
+        "dateAccural": "Дата за которую списанио",
+        "counts": "Кол-во",
+        "cost": "Цена за единицу",
+        "amount": "Сумма списания"
+      },
+      "tableRows": [
+        {
+          "id": 28337,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "11-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 28252,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "10-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 28167,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "09-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 28082,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "08-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 27997,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "07-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 27912,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "06-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 27827,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "05-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 27743,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "04-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 27659,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "03-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 27575,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "02-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 27491,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "01-02-2026",
+          "counts": "1",
+          "cost": "23.21",
+          "amount": "23.21"
+        },
+        {
+          "id": 27407,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "31-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 27323,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "30-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 27239,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "29-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 27155,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "28-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 27071,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "27-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 26987,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "26-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 26903,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "25-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 26819,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "24-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 26735,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "23-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 26650,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "22-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 26565,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "21-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 26481,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "20-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        },
+        {
+          "id": 26396,
+          "s_internet_id": 50208,
+          "number_contract": "ОФ64",
+          "tariff_name": "Студенческий безлимит 40М",
+          "pay_name_short": "Ежемесячная абон.плата",
+          "date_accural": "19-01-2026",
+          "counts": "1",
+          "cost": "20.97",
+          "amount": "20.97"
+        }
+      ]
+    },
+    "История пополнений средств": {
+      "tableHead": {
+        "id": "id",
+        "resultUrlTime": "Время запроса на оплату",
+        "spisDate": "Время оплаты по данным от банка",
+        "spisAmount": "Сумма, руб."
+      },
+      "tableRows": [
+        {
+          "id": 1073,
+          "result_url_time": "19-01-2026 21:59:31",
+          "pay_time": "19-01-2026 20:59:29",
+          "amount": "660.72"
+        },
+        {
+          "id": 973,
+          "result_url_time": "19-12-2025 11:07:33",
+          "pay_time": "19-12-2025 10:07:31",
+          "amount": "500"
+        },
+        {
+          "id": 768,
+          "result_url_time": "06-10-2025 09:43:22",
+          "pay_time": "06-10-2025 08:43:21",
+          "amount": "450"
+        },
+        {
+          "id": 707,
+          "result_url_time": "03-09-2025 16:09:35",
+          "pay_time": "03-09-2025 15:09:34",
+          "amount": "450"
+        },
+        {
+          "id": 609,
+          "result_url_time": "05-07-2025 01:07:54",
+          "pay_time": "05-07-2025 00:07:53",
+          "amount": "450"
+        },
+        {
+          "id": 568,
+          "result_url_time": "10-06-2025 10:09:37",
+          "pay_time": "10-06-2025 09:09:35",
+          "amount": "450"
+        },
+        {
+          "id": 484,
+          "result_url_time": "09-05-2025 09:34:39",
+          "pay_time": "09-05-2025 08:34:38",
+          "amount": "450"
+        },
+        {
+          "id": 450,
+          "result_url_time": "09-04-2025 00:43:52",
+          "pay_time": "08-04-2025 23:43:50",
+          "amount": "450"
+        },
+        {
+          "id": 415,
+          "result_url_time": "10-03-2025 22:33:54",
+          "pay_time": "10-03-2025 21:33:53",
+          "amount": "450"
+        },
+        {
+          "id": 344,
+          "result_url_time": "12-01-2025 00:38:15",
+          "pay_time": "11-01-2025 23:38:14",
+          "amount": "450"
+        },
+        {
+          "id": 310,
+          "result_url_time": "12-12-2024 02:30:19",
+          "pay_time": "12-12-2024 01:30:18",
+          "amount": "450"
+        },
+        {
+          "id": 273,
+          "result_url_time": "11-11-2024 12:50:19",
+          "pay_time": "11-11-2024 11:50:16",
+          "amount": "450"
+        },
+        {
+          "id": 249,
+          "result_url_time": "12-10-2024 21:50:23",
+          "pay_time": "12-10-2024 20:50:20",
+          "amount": "450"
+        },
+        {
+          "id": 225,
+          "result_url_time": "11-09-2024 22:43:37",
+          "pay_time": "11-09-2024 21:43:37",
+          "amount": "450"
+        }
+      ]
+    },
+    "История тарифов": {
+      "tableHead": {
+        "tariffName": "Название тарифа",
+        "startDate": "Дата включения",
+        "endDate": "Дата отключения"
+      },
+      "tableRows": [
+        {
+          "name": "Студенческий безлимит 40М",
+          "start_date": "20-01-2026",
+          "end_date": ""
+        },
+        {
+          "name": "Студенческий безлимит 20М",
+          "start_date": "20-12-2025",
+          "end_date": "19-01-2026"
+        },
+        {
+          "name": "Студенческий безлимит 12_25 20М",
+          "start_date": "11-09-2024",
+          "end_date": "19-12-2025"
+        }
+      ]
+    },
+    "История сессий": {
+      "tableHead": {
+        "id": "ID",
+        "acctstarttime": "acctstarttime",
+        "acctupdatetime": "acctupdatetime",
+        "acctstoptime": "acctstoptime",
+        "acctsessiontime": "acctsessiontime",
+        "acctinputoctets": "acctinputoctets,MB",
+        "acctoutputoctets": "acctoutputoctets,MB",
+        "nasportid": "Адрес",
+        "callingstationid": "MAC",
+        "framedipaddress": "IP",
+        "acctterminatecause": "Причина заверш сессии"
+      },
+      "tableRows": [
+        {
+          "radacctid": 65849,
+          "acctstarttime": "11-02-2026 07:00:19",
+          "acctupdatetime": "12-02-2026 18:40:19",
+          "acctstoptime": "",
+          "acctsessiontime": "01дн,  11ч 40м 00с",
+          "acctinputoctets": 1167.3,
+          "acctoutputoctets": 13504,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": null
+        },
+        {
+          "radacctid": 64528,
+          "acctstarttime": "09-02-2026 16:45:53",
+          "acctupdatetime": "11-02-2026 06:59:49",
+          "acctstoptime": "11-02-2026 06:59:49",
+          "acctsessiontime": "01дн,  14ч 13м 56с",
+          "acctinputoctets": 2232.4,
+          "acctoutputoctets": 14188.7,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 61609,
+          "acctstarttime": "07-02-2026 10:43:41",
+          "acctupdatetime": "09-02-2026 16:45:20",
+          "acctstoptime": "09-02-2026 16:45:20",
+          "acctsessiontime": "02дн,  06ч 01м 40с",
+          "acctinputoctets": 1826.4,
+          "acctoutputoctets": 19315.1,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 61561,
+          "acctstarttime": "07-02-2026 10:05:46",
+          "acctupdatetime": "07-02-2026 10:43:22",
+          "acctstoptime": "07-02-2026 10:43:22",
+          "acctsessiontime": " 00ч 37м 36с",
+          "acctinputoctets": 46.9,
+          "acctoutputoctets": 38.2,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 61265,
+          "acctstarttime": "07-02-2026 01:48:30",
+          "acctupdatetime": "07-02-2026 10:05:19",
+          "acctstoptime": "07-02-2026 10:05:19",
+          "acctsessiontime": " 08ч 16м 49с",
+          "acctinputoctets": 66.5,
+          "acctoutputoctets": 640.4,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 60429,
+          "acctstarttime": "06-02-2026 10:34:01",
+          "acctupdatetime": "07-02-2026 01:48:12",
+          "acctstoptime": "07-02-2026 01:48:12",
+          "acctsessiontime": " 15ч 14м 10с",
+          "acctinputoctets": 477.2,
+          "acctoutputoctets": 5891,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 60405,
+          "acctstarttime": "06-02-2026 10:23:55",
+          "acctupdatetime": "06-02-2026 10:33:40",
+          "acctstoptime": "06-02-2026 10:33:40",
+          "acctsessiontime": " 00ч 09м 45с",
+          "acctinputoctets": 8.4,
+          "acctoutputoctets": 0.8,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 60389,
+          "acctstarttime": "06-02-2026 10:12:36",
+          "acctupdatetime": "06-02-2026 10:23:31",
+          "acctstoptime": "06-02-2026 10:23:31",
+          "acctsessiontime": " 00ч 10м 56с",
+          "acctinputoctets": 13.9,
+          "acctoutputoctets": 21.6,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 59001,
+          "acctstarttime": "05-02-2026 09:30:52",
+          "acctupdatetime": "06-02-2026 10:12:16",
+          "acctstoptime": "06-02-2026 10:12:16",
+          "acctsessiontime": "01дн,  00ч 41м 24с",
+          "acctinputoctets": 886.4,
+          "acctoutputoctets": 11053.7,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 58393,
+          "acctstarttime": "04-02-2026 18:45:39",
+          "acctupdatetime": "05-02-2026 09:30:29",
+          "acctstoptime": "05-02-2026 09:30:29",
+          "acctsessiontime": " 14ч 44м 50с",
+          "acctinputoctets": 349.5,
+          "acctoutputoctets": 3899.1,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 57773,
+          "acctstarttime": "04-02-2026 07:57:08",
+          "acctupdatetime": "04-02-2026 18:45:06",
+          "acctstoptime": "04-02-2026 18:45:06",
+          "acctsessiontime": " 10ч 47м 58с",
+          "acctinputoctets": 308.7,
+          "acctoutputoctets": 5308.2,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 56143,
+          "acctstarttime": "01-02-2026 23:01:00",
+          "acctupdatetime": "04-02-2026 07:56:32",
+          "acctstoptime": "04-02-2026 07:56:32",
+          "acctsessiontime": "02дн,  08ч 55м 32с",
+          "acctinputoctets": 1919.9,
+          "acctoutputoctets": 22134.1,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 53833,
+          "acctstarttime": "30-01-2026 07:19:18",
+          "acctupdatetime": "01-02-2026 22:22:00",
+          "acctstoptime": "01-02-2026 22:22:00",
+          "acctsessiontime": "02дн,  15ч 02м 42с",
+          "acctinputoctets": 1749.9,
+          "acctoutputoctets": 28741.7,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 53665,
+          "acctstarttime": "29-01-2026 22:07:57",
+          "acctupdatetime": "30-01-2026 07:18:44",
+          "acctstoptime": "30-01-2026 07:18:44",
+          "acctsessiontime": " 09ч 10м 48с",
+          "acctinputoctets": 247,
+          "acctoutputoctets": 2281.1,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 53260,
+          "acctstarttime": "29-01-2026 03:52:22",
+          "acctupdatetime": "29-01-2026 22:07:36",
+          "acctstoptime": "29-01-2026 22:07:36",
+          "acctsessiontime": " 18ч 15м 15с",
+          "acctinputoctets": 956.3,
+          "acctoutputoctets": 12355.8,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 53187,
+          "acctstarttime": "29-01-2026 02:27:05",
+          "acctupdatetime": "29-01-2026 03:50:01",
+          "acctstoptime": "29-01-2026 03:50:01",
+          "acctsessiontime": " 01ч 22м 56с",
+          "acctinputoctets": 51.9,
+          "acctoutputoctets": 454.3,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 53061,
+          "acctstarttime": "28-01-2026 22:53:43",
+          "acctupdatetime": "29-01-2026 02:25:41",
+          "acctstoptime": "29-01-2026 02:25:41",
+          "acctsessiontime": " 03ч 31м 57с",
+          "acctinputoctets": 271.8,
+          "acctoutputoctets": 3290.5,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 52955,
+          "acctstarttime": "28-01-2026 20:56:00",
+          "acctupdatetime": "28-01-2026 22:51:37",
+          "acctstoptime": "28-01-2026 22:51:37",
+          "acctsessiontime": " 01ч 55м 38с",
+          "acctinputoctets": 44.9,
+          "acctoutputoctets": 754.6,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 52935,
+          "acctstarttime": "28-01-2026 20:40:47",
+          "acctupdatetime": "28-01-2026 20:54:42",
+          "acctstoptime": "28-01-2026 20:54:42",
+          "acctsessiontime": " 00ч 13м 55с",
+          "acctinputoctets": 9.2,
+          "acctoutputoctets": 14.7,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        },
+        {
+          "radacctid": 52747,
+          "acctstarttime": "28-01-2026 17:00:38",
+          "acctupdatetime": "28-01-2026 20:39:15",
+          "acctstoptime": "28-01-2026 20:39:15",
+          "acctsessiontime": " 03ч 38м 37с",
+          "acctinputoctets": 71.2,
+          "acctoutputoctets": 644,
+          "nasportid": "eth1.1302",
+          "callingstationid": "98:DE:D0:89:F1:95",
+          "framedipaddress": "172.16.7.189",
+          "acctterminatecause": "Lost-Carrier"
+        }
+      ]
+    },
+    "Расхождения в базах": []
+  },
+  "buttons": {
+    "Юзер": {
+      "synchronize": {
+        "lab": "Синхронизировать данные в базах",
+        "handlerUrl": "synchronize-data"
+      }
+    },
+    "Услуга": {
+      "lockService": {
+        "lab": "Заблокировать услугу административно",
+        "handlerUrl": "lock-service"
+      }
+    },
+    "Радиус": {
+      "resetSessRadius": {
+        "lab": "Сбросить сессию",
+        "handlerUrl": "reset-sess",
+        "payload": "username"
+      }
+    },
+    "История сессий": {
+      "resetSess": {
+        "lab": "Сбросить сессию",
+        "handlerUrl": "reset-sess",
+        "payload": "username"
+      }
+    }
+  },
+  "links": {
+    "История списаний средств": {
+      "pays": {
+        "lab": "Полная история списаний средств",
+        "linkUrl": "/admin/hist/spis?sort=-id&page=1&BAccural[username]=9173172699"
+      }
+    },
+    "История пополнений средств": {
+      "pays": {
+        "lab": "Полная история пополнений средств",
+        "linkUrl": "/admin/hist/pay?sort=-id&page=1&PayLog[username]=9173172699"
+      }
+    },
+    "История тарифов": {
+      "pays": {
+        "lab": "Полная история тарифов",
+        "linkUrl": "/admin/hist/tariff?sort=-id&page=1&Clients[username]=9173172699"
+      }
+    },
+    "История сессий": {
+      "pays": {
+        "lab": "Полная история сессий",
+        "linkUrl": "/admin/hist/sess?sort=-id&page=1&Radacct[username]=9173172699"
+      }
+    }
+  },
+  "isServiceLocked": false,
+  "currentTime": "18:42:19"
+}
+
