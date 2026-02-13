@@ -1,6 +1,7 @@
 import { Dispatch } from 'react';
 import { Action, ActionType, State } from '..';
 import { RequestProps } from '../../../../../blocks/Grid';
+import { mockUserViewData } from '../mockData';
 
 export const dispatchLoading = (dispatch: Dispatch<Action>) => {
   dispatch({
@@ -46,4 +47,19 @@ export const dispatchLoadData = (dispatch: Dispatch<Action>, {api, req}: Request
       console.log('🔄 Redirecting to manage due to API error');
       //window.location.href = '/admin/users/manage';
     });
+};
+
+export const dispatchMockData = (dispatch: Dispatch<Action>) => {
+  console.log('🔄 dispatchMockData called - using mock data');
+
+  dispatchLoading(dispatch);
+
+  // Имитируем асинхронную загрузку данных
+  setTimeout(() => {
+    console.log('📦 Dispatching LOAD_DATA with mock data:', mockUserViewData);
+    dispatch({
+      type: ActionType.LOAD_DATA,
+      payload: mockUserViewData
+    });
+  }, 100); // Небольшая задержка для имитации сетевого запроса
 };

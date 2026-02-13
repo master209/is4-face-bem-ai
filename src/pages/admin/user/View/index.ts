@@ -10,3 +10,6 @@ export { GridHead } from './Page-Data/Grid-Head/Grid-Head';
 export { GridRow } from './Page-Data/Grid-Row/Grid-Row';
 export { GridCell } from './Page-Data/Grid-Cell/Grid-Cell';
 
+// Re-export Tab components for convenience
+export { TabSet } from '../../../../blocks/TabSet';
+export { Tab } from '../../../../blocks/Tab';

@@ -1,8 +1,9 @@
 import { Reducer, ReducerState, Dispatch } from 'react';
+import { ITabConfig } from '../../../../../blocks/Tab';
 
 type Item = {
   lab: string;
-  val: string;
+  val: string | number;
 }
 
 export type Btn = {
@@ -23,25 +24,7 @@ export type State = {
     userStatus: Item;
     serviceStatus: Item;
   };
-  tabs: {
-    'Юзер': {
-      id: Item;
-      userId: Item;
-      [key: string]: Item;
-    },
-    'Услуга': {[key: string]: Item;},
-    'Радиус': {[key: string]: Item;},
-    'История пополнений средств': {[key: string]: Item;},
-    'История списаний средств': {[key: string]: Item;},
-    'История тарифов': {[key: string]: Item;},
-    'История сессий': {
-      tableHead: object;
-      tableRows: TableRow[];
-    },
-    'Расхождения в базах': {
-      [key: string]: { lab: string; is: string; lk: string; },
-    }[]
-  },
+  tabs: ITabConfig[];
   buttons: {
     'Юзер': {[key: string]: Btn;},
     'Услуга': {[key: string]: Btn;},
@@ -101,6 +84,6 @@ export interface IUserViewStateContext {
 }
 
 export type TableRow = {
-  id: string;
-  [key: string]: string;
+  id?: string;
+  [key: string]: string | number | null | undefined;
 }

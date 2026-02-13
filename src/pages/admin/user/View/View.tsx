@@ -11,6 +11,7 @@ import {
   PageHeader,
   PageData,
   dispatchLoadData,
+  dispatchMockData,
   useAsReducer
 } from '.';
 
@@ -22,16 +23,9 @@ const UserView: FC<IClassNameProps> = () => {
   const {id: ID} = useParams();
 
   const loadData = () => {
-    // Проверяем данные в sessionStorage (для переходов через двойной клик)
-    const sessionState = sessionStorage.getItem('gridRowViewState');
-    console.log('🔍 UserView loadData, sessionState:', sessionState);
-
-    if (sessionState) {
-      const {apiHandler, row} = JSON.parse(sessionState) as OnRowDblClick & {row: IGridRow};
-      console.log('✅ UserView has sessionState. apiHandler, row:', apiHandler, row);
-
-      dispatchLoadData(dispatch, {api, req:`${apiHandler}${ID as string}`});
-    }
+    // Временно используем моковые данные для тестирования рефакторинга
+    console.log('🔄 UserView loadData - using mock data for refactoring testing');
+    dispatchMockData(dispatch);
   };
 
   useEffect(() => {
@@ -44,7 +38,7 @@ const UserView: FC<IClassNameProps> = () => {
       <UserViewStateContext.Provider value={{state, dispatch}}>
 		  <div className="UserView">
 			  <div className="HeaderAndTime">
-				<h1>Просмотр клиента #{state.tabs['Юзер'].userId.val}</h1>
+				<h1>Просмотр клиента #{state.tabs.find(tab => tab.id === 'user')?.fields?.find(field => field.key === 'userId')?.value}</h1>
 				<p className="CurrentTime">Время открытия страницы: {state.currentTime}</p>
 			  </div>
 			  <PageHeader/>
