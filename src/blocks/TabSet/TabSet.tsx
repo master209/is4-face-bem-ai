@@ -81,13 +81,13 @@ export const TabSet: FC<ITabSetProps & IClassNameProps> = ({
     <div className={`TabSet ${className}`}>
       <div className="TabSet-Header">
         {tabs.map((tabConfig) => (
-          <Link
+          <div
             key={tabConfig.id}
             className={`TabSet-Label TabSet-Label_${tabConfig.id === activeTab ? 'active' : 'inactive'}`}
-            handleClick={() => onTabChange(tabConfig.id)}
+            onClick={() => onTabChange(tabConfig.id)}
           >
             {tabConfig.name}
-          </Link>
+          </div>
         ))}
       </div>
       <div className="TabSet-Content">
