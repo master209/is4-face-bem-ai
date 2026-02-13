@@ -1,4 +1,4 @@
-import { ITabConfig, IButton } from '../Tab';
+import { ITabConfig, IButton, IField, ITableRow, IDiffItem } from '../Tab';
 
 export interface ITabSetProps {
   tabs: ITabConfig[];
@@ -7,3 +7,6 @@ export interface ITabSetProps {
   onButtonClick?: (button: IButton) => void;
   className?: string;
 }
+
+// Re-export for convenience
+export type { IField, ITableRow, IDiffItem };
