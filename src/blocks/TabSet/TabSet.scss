@@ -7,6 +7,7 @@
     display: inline-block;
     margin-right: 5px;
     padding: 1px 10px;
+    cursor: pointer;
 
     &_active {
       color: $white;
