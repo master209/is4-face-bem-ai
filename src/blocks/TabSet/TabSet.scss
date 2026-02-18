@@ -1,3 +1,9 @@
+@import "../../scss/theme-app";
+
 .TabSet {
   position: relative;
+
+  .Grid-Row:last-child {
+    border: 1px solid $table--border-color;
+  }
 }
