@@ -83,12 +83,12 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
   return (
     <>
       <div
-        className={`Tab-Label Tab-Label_${isActive ? 'active' : 'inactive'}`}
+        className={`Tab-Label${isActive ? ' Tab-Label_active' : ''}`}
         onClick={handleClick}
       >
         {config.name}
       </div>
-      <div className={`Tab-Content Tab-Content_${isActive ? 'active' : 'inactive'}`}>
+      <div className={`Tab-Content${isActive ? ' Tab-Content_active' : ''}`}>
         {config.buttons && config.buttons.length > 0 && (
           <div className="Tab-ButtonSet">
             {config.buttons.map((button) => (

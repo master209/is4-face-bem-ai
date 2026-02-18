@@ -1,0 +1,208 @@
+<div class="TabSet ">
+    <div class="Tab-Label Tab-Label_active">Юзер</div>
+    <div class="Tab-Content Tab-Content_active">
+        <div class="Tab-ButtonSet">
+            <button class="Button">Синхронизировать данные в базах</button>
+        </div>
+        <p><span class="Tab-FieldLabel">Service ID:</span> 247</p>
+        <p><span class="Tab-FieldLabel">User ID:</span> 94</p>
+        <p><span class="Tab-FieldLabel">Логин:</span> 9173172699</p>
+        <p><span class="Tab-FieldLabel">Фамилия:</span> Ниндзя</p>
+        <p><span class="Tab-FieldLabel">Имя:</span> Неранжан</p>
+        <p><span class="Tab-FieldLabel">Статус юзера:</span> активен</p>
+    </div>
+    <div class="Tab-Label Tab-Label_inactive">Услуга</div>
+    <div class="Tab-Content Tab-Content_inactive">
+        <div class="Tab-ButtonSet">
+            <button class="Button">Заблокировать услугу административно</button>
+        </div>
+        <p><span class="Tab-FieldLabel">Название услуги:</span> Интернет</p>
+        <p><span class="Tab-FieldLabel">Логин из Радиуса:</span> 9173172699</p>
+        <p><span class="Tab-FieldLabel">Группа из Радиуса:</span> group_internet</p>
+        <p><span class="Tab-FieldLabel">Баланс по договору:</span> 15.67</p>
+        <p><span class="Tab-FieldLabel">Статус услуги:</span> Активно</p>
+        <p><span class="Tab-FieldLabel">Тариф:</span> Студенческий безлимит 40М</p>
+        <p><span class="Tab-FieldLabel">Абон. плата без НДС, руб.:</span> 650</p>
+        <p><span class="Tab-FieldLabel">Абон. плата с НДС, руб.:</span> 660.72</p>
+        <p><span class="Tab-FieldLabel">Скорость интернета, Мбит/с:</span> 40</p>
+    </div>
+    <div class="Tab-Label Tab-Label_inactive">Радиус</div>
+    <div class="Tab-Content Tab-Content_inactive">
+        <div class="Tab-ButtonSet">
+            <button class="Button">Сбросить сессию</button>
+        </div>
+        <p><span class="Tab-FieldLabel">Логин из Радиуса:</span> 9173172699</p>
+        <p><span class="Tab-FieldLabel">Группа из Радиуса:</span> group_internet</p>
+        <p><span class="Tab-FieldLabel">Пароль к услуге из Радиуса:</span> ehpxbw3qKK</p>
+    </div>
+    <div class="Tab-Label Tab-Label_inactive">История списаний средств</div>
+    <div class="Tab-Content Tab-Content_inactive">
+        <div class="Tab-LinkSet"><a class="Link" href="/admin/hist/spis?sort=-id&amp;page=1&amp;BAccural[username]=9173172699">Полная история списаний средств</a></div>
+        <div class="Grid-Table">
+            <table>
+                <thead>
+                    <tr class="Grid-Head">
+                        <th class="Grid-Cell">id</th>
+                        <th class="Grid-Cell">ID услуги</th>
+                        <th class="Grid-Cell">Номер договора</th>
+                        <th class="Grid-Cell">Тариф</th>
+                        <th class="Grid-Cell">За что списано</th>
+                        <th class="Grid-Cell">Дата за которую списано</th>
+                        <th class="Grid-Cell">Кол-во</th>
+                        <th class="Grid-Cell">Цена за единицу</th>
+                        <th class="Grid-Cell">Сумма списания</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="Grid-Row">
+                        <td class="Grid-Cell ">28337</td>
+                        <td class="Grid-Cell ">50208</td>
+                        <td class="Grid-Cell ">ОФ64</td>
+                        <td class="Grid-Cell ">Студенческий безлимит 40М</td>
+                        <td class="Grid-Cell ">Ежемесячная абон.плата</td>
+                        <td class="Grid-Cell ">11-02-2026</td>
+                        <td class="Grid-Cell ">1</td>
+                        <td class="Grid-Cell ">23.21</td>
+                        <td class="Grid-Cell ">23.21</td>
+                    </tr>
+                    <tr class="Grid-Row">
+                        <td class="Grid-Cell ">28252</td>
+                        <td class="Grid-Cell ">50208</td>
+                        <td class="Grid-Cell ">ОФ64</td>
+                        <td class="Grid-Cell ">Студенческий безлимит 40М</td>
+                        <td class="Grid-Cell ">Ежемесячная абон.плата</td>
+                        <td class="Grid-Cell ">10-02-2026</td>
+                        <td class="Grid-Cell ">1</td>
+                        <td class="Grid-Cell ">23.21</td>
+                        <td class="Grid-Cell ">23.21</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="Tab-Label Tab-Label_inactive">История пополнений средств</div>
+    <div class="Tab-Content Tab-Content_inactive">
+        <div class="Tab-LinkSet"><a class="Link" href="/admin/hist/pay?sort=-id&amp;page=1&amp;PayLog[username]=9173172699">Полная история пополнений средств</a></div>
+        <div class="Grid-Table">
+            <table>
+                <thead>
+                    <tr class="Grid-Head">
+                        <th class="Grid-Cell">id</th>
+                        <th class="Grid-Cell">Время запроса на оплату</th>
+                        <th class="Grid-Cell">Время оплаты по данным от банка</th>
+                        <th class="Grid-Cell">Сумма, руб.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="Grid-Row">
+                        <td class="Grid-Cell ">1073</td>
+                        <td class="Grid-Cell ">19-01-2026 21:59:31</td>
+                        <td class="Grid-Cell ">19-01-2026 20:59:29</td>
+                        <td class="Grid-Cell ">660.72</td>
+                    </tr>
+                    <tr class="Grid-Row">
+                        <td class="Grid-Cell ">973</td>
+                        <td class="Grid-Cell ">19-12-2025 11:07:33</td>
+                        <td class="Grid-Cell ">19-12-2025 10:07:31</td>
+                        <td class="Grid-Cell ">500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="Tab-Label Tab-Label_inactive">История тарифов</div>
+    <div class="Tab-Content Tab-Content_inactive">
+        <div class="Tab-LinkSet"><a class="Link" href="/admin/hist/tariff?sort=-id&amp;page=1&amp;Clients[username]=9173172699">Полная история тарифов</a></div>
+        <div class="Grid-Table">
+            <table>
+                <thead>
+                    <tr class="Grid-Head">
+                        <th class="Grid-Cell">Название тарифа</th>
+                        <th class="Grid-Cell">Дата включения</th>
+                        <th class="Grid-Cell">Дата отключения</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="Grid-Row">
+                        <td class="Grid-Cell ">Студенческий безлимит 40М</td>
+                        <td class="Grid-Cell ">20-01-2026</td>
+                        <td class="Grid-Cell "></td>
+                    </tr>
+                    <tr class="Grid-Row">
+                        <td class="Grid-Cell ">Студенческий безлимит 20М</td>
+                        <td class="Grid-Cell ">20-12-2025</td>
+                        <td class="Grid-Cell ">19-01-2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="Tab-Label Tab-Label_inactive">История сессий</div>
+    <div class="Tab-Content Tab-Content_inactive">
+        <div class="Tab-ButtonSet">
+            <button class="Button">Сбросить сессию</button>
+        </div>
+        <div class="Tab-LinkSet"><a class="Link" href="/admin/hist/sess?sort=-id&amp;page=1&amp;Radacct[username]=9173172699">Полная история сессий</a></div>
+        <div class="Grid-Table">
+            <table>
+                <thead>
+                    <tr class="Grid-Head">
+                        <th class="Grid-Cell">ID</th>
+                        <th class="Grid-Cell">acctstarttime</th>
+                        <th class="Grid-Cell">acctupdatetime</th>
+                        <th class="Grid-Cell">acctstoptime</th>
+                        <th class="Grid-Cell">acctsessiontime</th>
+                        <th class="Grid-Cell">acctinputoctets,MB</th>
+                        <th class="Grid-Cell">acctoutputoctets,MB</th>
+                        <th class="Grid-Cell">Адрес</th>
+                        <th class="Grid-Cell">MAC</th>
+                        <th class="Grid-Cell">IP</th>
+                        <th class="Grid-Cell">Причина заверш сессии</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="Grid-Row">
+                        <td class="Grid-Cell ">65849</td>
+                        <td class="Grid-Cell ">11-02-2026 07:00:19</td>
+                        <td class="Grid-Cell ">12-02-2026 18:40:19</td>
+                        <td class="Grid-Cell "></td>
+                        <td class="Grid-Cell right">01дн, 11ч 40м 00с</td>
+                        <td class="Grid-Cell right">1167.3</td>
+                        <td class="Grid-Cell right">13504</td>
+                        <td class="Grid-Cell ">eth1.1302</td>
+                        <td class="Grid-Cell ">98:DE:D0:89:F1:95</td>
+                        <td class="Grid-Cell ">172.16.7.189</td>
+                        <td class="Grid-Cell "></td>
+                    </tr>
+                    <tr class="Grid-Row">
+                        <td class="Grid-Cell ">64528</td>
+                        <td class="Grid-Cell ">09-02-2026 16:45:53</td>
+                        <td class="Grid-Cell ">11-02-2026 06:59:49</td>
+                        <td class="Grid-Cell ">11-02-2026 06:59:49</td>
+                        <td class="Grid-Cell right">01дн, 14ч 13м 56с</td>
+                        <td class="Grid-Cell right">2232.4</td>
+                        <td class="Grid-Cell right">14188.7</td>
+                        <td class="Grid-Cell ">eth1.1302</td>
+                        <td class="Grid-Cell ">98:DE:D0:89:F1:95</td>
+                        <td class="Grid-Cell ">172.16.7.189</td>
+                        <td class="Grid-Cell ">Lost-Carrier</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="Tab-Label Tab-Label_inactive">Расхождения в базах</div>
+    <div class="Tab-Content Tab-Content_inactive">
+        <table class="Tab-DiffTable">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>ИС</th>
+                    <th>ЛК</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+

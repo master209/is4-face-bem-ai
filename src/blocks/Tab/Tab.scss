@@ -6,19 +6,17 @@
     margin-right: 5px;
     padding: 1px 10px;
     cursor: pointer;
+    color: $link--color;
+    background-color: $white;
 
     &_active {
       color: $white;
       background-color: $link--color;
     }
-
-    &_inactive {
-      color: $link--color;
-      background-color: $white;
-    }
   }
 
   &-Content {
+    display: none;
     width: 100%;
     position: absolute;
     margin: 10px 0;
@@ -40,10 +38,6 @@
 
     &_active {
       display: block;
-    }
-
-    &_inactive {
-      display: none;
     }
   }
 
