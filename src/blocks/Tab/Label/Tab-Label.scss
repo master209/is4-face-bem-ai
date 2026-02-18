@@ -1,0 +1,12 @@
+@import "./_active/Tab-Label_active";
+
+@import "../../../scss/theme-app";
+
+.Tab-Label {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 1px 10px;
+  cursor: pointer;
+  color: $link--color;
+  background-color: $white;
+}

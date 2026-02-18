@@ -1,0 +1,9 @@
+// ШАБЛОН: Файл модификатора элемента
+// Заменить BlockName, ElementName, modifierName, ModifierVal
+
+@import "../../../../scss/theme-app"; // Проверить путь!
+
+.BlockName-ElementName_modifierName {
+  // Стили для особого состояния элемента
+  // Только отличия от базового состояния
+}

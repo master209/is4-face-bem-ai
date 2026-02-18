@@ -1,0 +1,12 @@
+@import "../../../scss/theme-app";
+
+.Tab-DiffTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Tab-DiffTableHeader {
+  font-weight: bold;
+  text-align: right;
+  background-color: $bg-color_hover;
+}

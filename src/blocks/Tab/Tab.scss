@@ -1,88 +1,9 @@
-@import "../../scss/theme-app";
+// Основной файл блока Tab - импортирует все элементы и модификаторы
 
-.Tab {
-  &-Label {
-    display: inline-block;
-    margin-right: 5px;
-    padding: 1px 10px;
-    cursor: pointer;
-    color: $link--color;
-    background-color: $white;
-
-    &_active {
-      color: $white;
-      background-color: $link--color;
-    }
-  }
-
-  &-Content {
-    display: none;
-    width: 100%;
-    position: absolute;
-    margin: 10px 0;
-    padding: 15px 12px;
-    border: 1px solid $input--border-color;
-
-    .Button-Wrap {
-      text-align: left;
-      margin-bottom: 11px;
-    }
-
-    .Link {
-      border-bottom: none;
-
-      &:hover {
-        border-bottom: 1px solid $link--color_hover;
-      }
-    }
-
-    &_active {
-      display: block;
-    }
-  }
-
-  &-ButtonSet {
-    display: flex;
-
-    .Button-Wrap {
-      margin-right: 20px;
-    }
-  }
-
-  &-LinkSet {
-    display: flex;
-    margin-bottom: 10px;
-
-    .Link {
-      margin-right: 20px;
-    }
-  }
-
-  &-FieldLabel {
-    font-weight: bold;
-    margin-right: 5px;
-  }
-
-  &-DiffMarker {
-    color: $error--color;
-    font-size: 12px;
-    margin-left: 10px;
-  }
-
-  &-DiffTable {
-    width: 100%;
-    border-collapse: collapse;
-
-    th, td {
-      border: 1px solid $table--border-color;
-      padding: 8px;
-      text-align: left;
-    }
-
-    .Tab-DiffLabel {
-      font-weight: bold;
-      text-align: right;
-      background-color: $bg-color_hover;
-    }
-  }
-}
+@import "./Label/Tab-Label";
+@import "./Content/Tab-Content";
+@import "./ButtonSet/Tab-ButtonSet";
+@import "./LinkSet/Tab-LinkSet";
+@import "./FieldLabel/Tab-FieldLabel";
+@import "./DiffMarker/Tab-DiffMarker";
+@import "./DiffTable/Tab-DiffTable";

@@ -58,7 +58,7 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
       <tbody>
         {diffData.map((item: IDiffItem, index: number) => (
           <tr key={index}>
-            <th className="Tab-DiffLabel">{item.lab}</th>
+            <th className="Tab-DiffTableHeader">{item.lab}</th>
             <td>{item.is}</td>
             <td>{item.lk}</td>
           </tr>
@@ -92,12 +92,13 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
         {config.buttons && config.buttons.length > 0 && (
           <div className="Tab-ButtonSet">
             {config.buttons.map((button) => (
-              <Button
-                key={button.id}
-                onClick={() => onButtonClick?.(button)}
-              >
-                {button.label}
-              </Button>
+              <div key={button.id} className="Tab-ContentButton">
+                <Button
+                  onClick={() => onButtonClick?.(button)}
+                >
+                  {button.label}
+                </Button>
+              </div>
             ))}
           </div>
         )}
@@ -105,7 +106,7 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
         {config.links && config.links.length > 0 && (
           <div className="Tab-LinkSet">
             {config.links.map((link, index) => (
-              <Link key={index} href={link.url}>
+              <Link key={index} href={link.url} className="Tab-ContentLink">
                 {link.label}
               </Link>
             ))}

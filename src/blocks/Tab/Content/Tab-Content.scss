@@ -1,0 +1,25 @@
+@import "./_active/Tab-Content_active";
+
+@import "../../../scss/theme-app";
+
+.Tab-Content {
+  display: none;
+  width: 100%;
+  position: absolute;
+  margin: 10px 0;
+  padding: 15px 12px;
+  border: 1px solid $input--border-color;
+}
+
+.Tab-ContentButton {
+  text-align: left;
+  margin-bottom: 11px;
+}
+
+.Tab-ContentLink {
+  border-bottom: none;
+
+  &:hover {
+    border-bottom: 1px solid $link--color_hover;
+  }
+}

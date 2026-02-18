@@ -1,0 +1,11 @@
+// ШАБЛОН: Базовый файл элемента с импортом модификатора
+// Заменить ElementName на имя элемента, modifierName на имя модификатора
+
+@import "./_modifierName/BlockName-ElementName_modifierName";
+
+@import "../../../scss/theme-app"; // Проверить путь!
+
+.BlockName-ElementName {
+  // Базовые стили элемента (дефолтное состояние)
+  // Если есть модификатор _inactive - сделать его стили базовыми
+}
