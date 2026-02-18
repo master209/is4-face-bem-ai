@@ -101,16 +101,37 @@ Tab/
 
 ### Код компонента (после рефакторинга):
 ```tsx
-// Упрощенные селекторы
-className={`Tab-Label${isActive ? ' Tab-Label_active' : ''}`}
-className={`Tab-Content${isActive ? ' Tab-Content_active' : ''}`}
-
-// Новые БЭМ-классы вместо каскадов
-<div className="Tab-Content">
-  <div className="Tab-ContentButton">
-    <Button>...</Button>
+// Компонент Tab теперь возвращает блок с вложенными элементами
+return (
+  <div className="Tab">  {/* ← Блок Tab */}
+    <div className={`Tab-Label${isActive ? ' Tab-Label_active' : ''}`}>
+      {config.name}
+    </div>
+    <div className={`Tab-Content${isActive ? ' Tab-Content_active' : ''}`}>
+      {/* Новые БЭМ-классы вместо каскадов */}
+      <div className="Tab-ContentButton">
+        <Button>...</Button>
+      </div>
+      <Link className="Tab-ContentLink">...</Link>
+    </div>
   </div>
-  <Link className="Tab-ContentLink">...</Link>
+);
+```
+
+### Итоговая HTML структура:
+```html
+<!-- Правильная БЭМ структура -->
+<div class="TabSet">
+  <div class="Tab"> <!-- Каждая вкладка - блок Tab -->
+    <div class="Tab-Label Tab-Label_active">Юзер</div>
+    <div class="Tab-Content Tab-Content_active">
+      <div class="Tab-ContentButton">...</div>
+    </div>
+  </div>
+  <div class="Tab"> <!-- Следующая вкладка -->
+    <div class="Tab-Label">Услуга</div>
+    <div class="Tab-Content">...</div>
+  </div>
 </div>
 ```
 

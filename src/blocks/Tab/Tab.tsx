@@ -81,7 +81,7 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
   };
 
   return (
-    <>
+    <div className="Tab">
       <div
         className={`Tab-Label${isActive ? ' Tab-Label_active' : ''}`}
         onClick={handleClick}
@@ -115,6 +115,6 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
 
         {renderContent()}
       </div>
-    </>
+    </div>
   );
 };

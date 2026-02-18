@@ -1,7 +1,8 @@
-// Основной файл блока Tab - импортирует все элементы и модификаторы
+// Основной файл блока Tab - импортирует базовые стили блока и все элементы
 
-@import "./Label/Tab-Label";
-@import "./Content/Tab-Content";
+@import "./Tab-block";          // Базовые стили блока Tab
+@import "./Label/Tab-Label";    // Элемент Label с модификатором
+@import "./Content/Tab-Content"; // Элемент Content с модификатором
 @import "./ButtonSet/Tab-ButtonSet";
 @import "./LinkSet/Tab-LinkSet";
 @import "./FieldLabel/Tab-FieldLabel";
