@@ -1,6 +1,5 @@
-@import "./_active/Tab-Content_active";
-
 @import "../../../scss/theme-app";
+@import "./_active/Tab-Content_active";
 
 .Tab-Content {
   display: none;
@@ -20,6 +19,9 @@
 
 .Tab-ContentLink {
   border-bottom: none;
+  line-height: 13px;
+  display: block;
+  height: 15px;
 
   &:hover {
     border-bottom: 1px solid $link--color_hover;

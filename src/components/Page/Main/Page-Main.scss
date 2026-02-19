@@ -8,6 +8,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  overflow: hidden;
+  overflow: scroll;
   background: $content--bg-color;
 }

@@ -1,3 +1,7 @@
+import { cn } from '@bem-react/classname';
+
+export const cnTab = cn('Tab');
+
 export interface IField {
   key: string;
   label: string;
@@ -49,7 +53,7 @@ export interface ITabConfig {
 
 export interface ITabProps {
   config: ITabConfig;
-  isActive: boolean;
+  active: boolean;
   onClick: () => void;
   onButtonClick?: (button: IButton) => void;
   className?: string;

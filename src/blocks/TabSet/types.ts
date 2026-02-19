@@ -1,4 +1,7 @@
+import { cn } from '@bem-react/classname';
 import { ITabConfig, IButton, IField, ITableRow, IDiffItem } from '../Tab';
+
+export const cnTabSet = cn('TabSet');
 
 export interface ITabSetProps {
   tabs: ITabConfig[];

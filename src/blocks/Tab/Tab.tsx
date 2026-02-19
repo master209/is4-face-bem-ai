@@ -3,19 +3,19 @@ import { IClassNameProps } from '@bem-react/core';
 import { Link } from '../Link';
 import { Button } from '../Button';
 import { GridTable } from '../../pages/admin/user/View/Page-Data/Grid-Table';
-import { ITabProps, IField, IDiffItem } from './types';
+import { cnTab, ITabProps, IField, IDiffItem } from './types';
 
 import './Tab.scss';
 
 const Diff: FC = () => (
-  <span className="Tab-DiffMarker">
+  <span className={cnTab('DiffMarker')}>
     расхождения в базах по этому полю
   </span>
 );
 
 export const Tab: FC<ITabProps & IClassNameProps> = ({
   config,
-  isActive,
+  active,
   onClick,
   onButtonClick,
   className = ''
@@ -29,7 +29,7 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
     <>
       {fields.map((field: IField) => (
         <p key={field.key}>
-          <span className="Tab-FieldLabel">{field.label}:</span> {field.value}
+          <span className={cnTab('FieldLabel')}>{field.label}:</span> {field.value}
           {field.diff && <Diff />}
         </p>
       ))}
@@ -47,7 +47,7 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
   );
 
   const renderDiff = (diffData: IDiffItem[]) => (
-    <table className="Tab-DiffTable">
+    <table className={cnTab('DiffTable')}>
       <thead>
         <tr>
           <th>&nbsp;</th>
@@ -58,7 +58,7 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
       <tbody>
         {diffData.map((item: IDiffItem, index: number) => (
           <tr key={index}>
-            <th className="Tab-DiffTableHeader">{item.lab}</th>
+            <th className={cnTab('DiffTableHeader')}>{item.lab}</th>
             <td>{item.is}</td>
             <td>{item.lk}</td>
           </tr>
@@ -81,18 +81,18 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
   };
 
   return (
-    <div className="Tab">
+    <div className={cnTab()}>
       <div
-        className={`Tab-Label${isActive ? ' Tab-Label_active' : ''}`}
+        className={cnTab('Label', {active})}
         onClick={handleClick}
       >
         {config.name}
       </div>
-      <div className={`Tab-Content${isActive ? ' Tab-Content_active' : ''}`}>
+      <div className={cnTab('Content', {active})}>
         {config.buttons && config.buttons.length > 0 && (
-          <div className="Tab-ButtonSet">
+          <div className={cnTab('ButtonSet')}>
             {config.buttons.map((button) => (
-              <div key={button.id} className="Tab-ContentButton">
+              <div key={button.id} className={cnTab('ContentButton')}>
                 <Button
                   onClick={() => onButtonClick?.(button)}
                 >
@@ -104,9 +104,9 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
         )}
 
         {config.links && config.links.length > 0 && (
-          <div className="Tab-LinkSet">
+          <div className={cnTab('LinkSet')}>
             {config.links.map((link, index) => (
-              <Link key={index} href={link.url} className="Tab-ContentLink">
+              <Link key={index} href={link.url} className={cnTab('ContentLink')}>
                 {link.label}
               </Link>
             ))}
