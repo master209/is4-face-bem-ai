@@ -2,8 +2,8 @@
 
 .TabSet {
   position: relative;
+}
 
-  .Grid-Row:last-child {
-    border: 1px solid $table--border-color;
-  }
+.Grid-Row:last-child {
+  border: 1px solid $table--border-color !important;
 }
