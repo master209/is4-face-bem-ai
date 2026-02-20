@@ -180,5 +180,5 @@ className={`Tab-Label${isActive ? ' Tab-Label_active' : ''}`}
 
 ## 📚 Ссылки
 - [Документация БЭМ](https://ru.bem.info/)
-- [Примеры в блоке Grid](../examples/grid-analysis.md)
+- [Примеры рефакторинга Tab](examples/tab-refactoring.md)
 - [Шаблоны](../templates/)
