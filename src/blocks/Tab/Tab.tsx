@@ -1,17 +1,16 @@
-import React, { FC, MouseEvent } from 'react';
+import React, { FC } from 'react';
 import { IClassNameProps } from '@bem-react/core';
-import { Link } from '../Link';
-import { Button } from '../Button';
 import { GridTable } from '../../pages/admin/user/View/Page-Data/Grid-Table';
-import { cnTab, ITabProps, IField, IDiffItem } from './types';
+import { cnTab, ITabProps, IField } from './types';
+import { TabLabel } from './Label/Tab-Label';
+import { TabContent } from './Content/Tab-Content';
+import { TabButtonSet } from './ButtonSet/Tab-ButtonSet';
+import { TabLinkSet } from './LinkSet/Tab-LinkSet';
+import { TabFieldLabel } from './FieldLabel/Tab-FieldLabel';
+import { TabDiffMarker } from './DiffMarker/Tab-DiffMarker';
+import { TabDiffTable } from './DiffTable/Tab-DiffTable';
 
 import './Tab.scss';
-
-const Diff: FC = () => (
-  <span className={cnTab('DiffMarker')}>
-    расхождения в базах по этому полю
-  </span>
-);
 
 export const Tab: FC<ITabProps & IClassNameProps> = ({
   config,
@@ -20,17 +19,13 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
   onButtonClick,
   className = ''
 }) => {
-  const handleClick = (ev: MouseEvent) => {
-    ev.preventDefault();
-    onClick();
-  };
 
   const renderFields = (fields: IField[]) => (
     <>
       {fields.map((field: IField) => (
         <p key={field.key}>
-          <span className={cnTab('FieldLabel')}>{field.label}:</span> {field.value}
-          {field.diff && <Diff />}
+          <TabFieldLabel>{field.label}</TabFieldLabel> {field.value}
+          {field.diff && <TabDiffMarker />}
         </p>
       ))}
     </>
@@ -46,25 +41,8 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
     />
   );
 
-  const renderDiff = (diffData: IDiffItem[]) => (
-    <table className={cnTab('DiffTable')}>
-      <thead>
-        <tr>
-          <th>&nbsp;</th>
-          <th>ИС</th>
-          <th>ЛК</th>
-        </tr>
-      </thead>
-      <tbody>
-        {diffData.map((item: IDiffItem, index: number) => (
-          <tr key={index}>
-            <th className={cnTab('DiffTableHeader')}>{item.lab}</th>
-            <td>{item.is}</td>
-            <td>{item.lk}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+  const renderDiff = (diffData: any[]) => (
+    <TabDiffTable diffData={diffData} />
   );
 
   const renderContent = () => {
@@ -82,39 +60,20 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
 
   return (
     <div className={cnTab()}>
-      <div
-        className={cnTab('Label', {active})}
-        onClick={handleClick}
-      >
+      <TabLabel active={active} onClick={onClick}>
         {config.name}
-      </div>
-      <div className={cnTab('Content', {active})}>
+      </TabLabel>
+      <TabContent active={active}>
         {config.buttons && config.buttons.length > 0 && (
-          <div className={cnTab('ButtonSet')}>
-            {config.buttons.map((button) => (
-              <div key={button.id} className={cnTab('ContentButton')}>
-                <Button
-                  onClick={() => onButtonClick?.(button)}
-                >
-                  {button.label}
-                </Button>
-              </div>
-            ))}
-          </div>
+          <TabButtonSet buttons={config.buttons} onButtonClick={onButtonClick} />
         )}
 
         {config.links && config.links.length > 0 && (
-          <div className={cnTab('LinkSet')}>
-            {config.links.map((link, index) => (
-              <Link key={index} href={link.url} className={cnTab('ContentLink')}>
-                {link.label}
-              </Link>
-            ))}
-          </div>
+          <TabLinkSet links={config.links} />
         )}
 
         {renderContent()}
-      </div>
+      </TabContent>
     </div>
   );
 };
