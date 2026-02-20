@@ -1,0 +1,60 @@
+КАК МЫ ФОРМИРУЕМ ИМЕНА КЛАССОВ
+Всё на примере БЭМ-блока Tab
+
+import { cn } from '@bem-react/classname';
+
+export const cnTab = cn('Tab');
+
+1. Имена классов для Блоков
+результат будет одинаков в обоих случаях:
+<div class="Tab">
+
+<div className="Tab">				// так мы не делаем
+<div className={cnTab()}>		// мы делаем так!
+    
+
+2. Имена классов для Элементов
+результат будет одинаков в обоих случаях:
+<div class="Tab-ButtonSet">
+
+<div className="Tab-ButtonSet">				// так мы не делаем
+<div className={cnTab('ButtonSet')}>	// мы делаем так!
+
+3. Имена классов для модификаторов Элементов
+<div class="Tab-Label Tab-Label_active">
+
+className={`Tab-Label${isActive ? ' Tab-Label_active' : ''}`}		// так мы не делаем
+className={cnTab('Label', {active})}														// мы делаем так! (для active=true будет - "Tab-Label Tab-Label_active"; для active=false будет только - "Tab-Label"; )
+
+
+
+--------------------------------------
+
+
+
+Примеры использования cn() из документации:
+/node_modules/@bem-react/classname/classname.d.ts
+/**
+ * BEM Entity className initializer with React naming preset.
+ *
+ * @example
+ * ``` ts
+ *
+ * import { cn } from '@bem-react/classname';
+ *
+ * const cat = cn('Cat');
+ *
+ * cat(); // Cat
+ * cat({ size: 'm' }); // Cat_size_m
+ * cat('Tail'); // Cat-Tail
+ * cat('Tail', { length: 'small' }); // Cat-Tail_length_small
+ *
+ * const dogPaw = cn('Dog', 'Paw');
+ *
+ * dogPaw(); // Dog-Paw
+ * dogPaw({ color: 'black', exists: true }); // Dog-Paw_color_black Dog-Paw_exists
+ * ```
+ *
+ * @see https://en.bem.info/methodology/naming-convention/#react-style
+ */
+
