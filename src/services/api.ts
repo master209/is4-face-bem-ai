@@ -13,7 +13,7 @@ import {getToken} from './token';
 
 // const shouldDisplayError = (response: AxiosResponse) => [BAD_REQUEST, UNAUTHORIZED, NOT_FOUND].includes(response.status);
 
-export const BACKEND_URL = 'http://api.is4.gals-telecom.ru'; // -devel
+export const BACKEND_URL = 'http://api.is4-devel.gals-telecom.ru'; // -devel
 const REQUEST_TIMEOUT = 5000;
 
 interface RequestHeaders {

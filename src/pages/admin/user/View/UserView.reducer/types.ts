@@ -25,21 +25,6 @@ export type State = {
     serviceStatus: Item;
   };
   tabs: ITabConfig[];
-  buttons: {
-    'Юзер': {[key: string]: Btn;},
-    'Услуга': {[key: string]: Btn;},
-    'Радиус': {[key: string]: Btn;},
-    'История сессий': {[key: string]: Btn;},
-  };
-  links: {
-    'Юзер': {[key: string]: Lnk;},
-    'Услуга': {[key: string]: Lnk;},
-    'Радиус': {[key: string]: Lnk;},
-    'История пополнений средств': {[key: string]: Lnk;},
-    'История списаний средств': {[key: string]: Lnk;},
-    'История тарифов': {[key: string]: Lnk;},
-    'История сессий': {[key: string]: Lnk;},
-  };
   tabActive: string;
   currentTime: string;
 }
