@@ -1,15 +1,16 @@
 import React, { FC } from 'react';
-import { cnTab, IDiffItem } from '../types';
+import { cnData } from '../Data';
+import { IDiffItem } from '../types';
 
-interface ITabDiffTableProps {
+export interface IDataDiffTableProps {
   diffData: IDiffItem[];
 }
 
-export const TabDiffTable: FC<ITabDiffTableProps> = ({
+export const DataDiffTable: FC<IDataDiffTableProps> = ({
   diffData
 }) => {
   return (
-    <table className={cnTab('DiffTable')}>
+    <table className={cnData('DiffTable')}>
       <thead>
         <tr>
           <th>&nbsp;</th>
@@ -20,7 +21,7 @@ export const TabDiffTable: FC<ITabDiffTableProps> = ({
       <tbody>
         {diffData.map((item: IDiffItem, index: number) => (
           <tr key={index}>
-            <th className={cnTab('DiffTableHeader')}>{item.lab}</th>
+            <th className={cnData('DiffTableHeader')}>{item.lab}</th>
             <td>{item.is}</td>
             <td>{item.lk}</td>
           </tr>

@@ -1,20 +1,21 @@
 import React, { FC } from 'react';
-import { Button } from '../../Button';
-import { cnTab, IButton } from '../types';
+import { Button } from '../../../../../../blocks/Button';
+import { cnData } from '../Data';
+import { IButton } from '../types';
 
-interface ITabButtonSetProps {
+export interface IDataButtonSetProps {
   buttons: IButton[];
   onButtonClick?: (button: IButton) => void;
 }
 
-export const TabButtonSet: FC<ITabButtonSetProps> = ({
+export const DataButtonSet: FC<IDataButtonSetProps> = ({
   buttons,
   onButtonClick
 }) => {
   return (
-    <div className={cnTab('ButtonSet')}>
+    <div className={cnData('ButtonSet')}>
       {buttons.map((button) => (
-        <div key={button.id} className={cnTab('ContentButton')}>
+        <div key={button.id} className={cnData('ContentButton')}>
           <Button
             onClick={() => onButtonClick?.(button)}
           >

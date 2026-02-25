@@ -4,7 +4,8 @@ import { toast } from 'react-toastify';
 
 import { UserViewStateContext, dispatchSwitchTab } from '..';
 import { TabSet } from '../../../../../blocks/TabSet';
-import { ITabConfig, IButton, IField } from '../../../../../blocks/Tab';
+import { IUniversalTab } from '../../../../../blocks/Tab';
+import { Data, IDataConfig, IButton } from '../Data';
 
 import { BACKEND_URL } from '../../../../../services/api';
 import { getToken } from '../../../../../services/token';
@@ -15,7 +16,7 @@ type Tost = {type: string, text: string};
 
 export const PageData: FC<IClassNameProps> = () => {
   const {state, dispatch} = useContext(UserViewStateContext);
-  const {tabs, tabActive} = state;
+  const {tabs: dataTabs, tabActive} = state;
 
   const showToast = ({type, text}: Tost) => type === 'error' ? toast.error(text) : toast.info(text);
 
@@ -25,8 +26,8 @@ export const PageData: FC<IClassNameProps> = () => {
 
   const handleButtonClick = (button: IButton) => {
     const getPayload = (payload = '') =>
-      tabs.find(t => t.id === 'user')?.fields?.find((f: IField) => f.key === payload)?.value ||
-      tabs.find(t => t.id === 'user')?.fields?.find((f: IField) => f.key === 'id')?.value;
+      dataTabs.find(t => t.id === 'user')?.fields?.find((f) => f.key === payload)?.value ||
+      dataTabs.find(t => t.id === 'user')?.fields?.find((f) => f.key === 'id')?.value;
 
     fetch(`${BACKEND_URL}/users/${button.handlerUrl}`, {
       method: 'POST',
@@ -43,14 +44,25 @@ export const PageData: FC<IClassNameProps> = () => {
       });
   };
 
+  // Преобразуем IDataConfig[] в IUniversalTab[]
+  const universalTabs: IUniversalTab[] = dataTabs.map((tabConfig: IDataConfig) => ({
+    id: tabConfig.id,
+    label: tabConfig.name,
+    content: (
+      <Data
+        config={tabConfig}
+        onButtonClick={handleButtonClick}
+      />
+    )
+  }));
+
   return (
     <div>
-      {tabs.length > 0 ? (
+      {dataTabs.length > 0 ? (
         <TabSet
-          tabs={tabs}
+          tabs={universalTabs}
           activeTab={tabActive}
           onTabChange={handleTabChange}
-          onButtonClick={handleButtonClick}
         />
       ) : (
         <p>загружаю...</p>

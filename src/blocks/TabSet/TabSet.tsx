@@ -10,18 +10,16 @@ export const TabSet: FC<ITabSetProps & IClassNameProps> = ({
   tabs,
   activeTab,
   onTabChange,
-  onButtonClick,
   className = ''
 }) => {
   return (
     <div className={cnTabSet({}, [className])}>
-      {tabs.map((tabConfig) => (
+      {tabs.map((tab) => (
         <Tab
-          key={tabConfig.id}
-          config={tabConfig}
-          active={tabConfig.id === activeTab}
-          onClick={() => onTabChange(tabConfig.id)}
-          onButtonClick={onButtonClick}
+          key={tab.id}
+          tab={tab}
+          active={tab.id === activeTab}
+          onClick={() => onTabChange(tab.id)}
         />
       ))}
     </div>

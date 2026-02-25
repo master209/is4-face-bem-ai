@@ -1,19 +1,9 @@
 import { Reducer, ReducerState, Dispatch } from 'react';
-import { ITabConfig } from '../../../../../blocks/Tab';
+import { IDataConfig } from '../Data';
 
 type Item = {
   lab: string;
   val: string | number;
-}
-
-export type Btn = {
-  lab: string;
-  handlerUrl: string; // Адрес обработчика для кнопки
-}
-
-export type Lnk = {
-  lab: string;
-  linkUrl: string;
 }
 
 export type State = {
@@ -24,7 +14,7 @@ export type State = {
     userStatus: Item;
     serviceStatus: Item;
   };
-  tabs: ITabConfig[];
+  tabs: IDataConfig[];
   tabActive: string;
   currentTime: string;
 }

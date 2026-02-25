@@ -1,3 +1,5 @@
+import { IDataConfig } from './Data';
+
 export const mockUserViewData = {
   loading: false,
   pageHeader: {
