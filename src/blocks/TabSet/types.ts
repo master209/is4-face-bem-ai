@@ -5,7 +5,6 @@ export const cnTabSet = cn('TabSet');
 
 export interface ITabSetProps {
   tabs: IUniversalTab[];
-  activeTab: string;
-  onTabChange: (tabId: string) => void;
+  onTabChange?: (tabId: string) => void;
   className?: string;
 }

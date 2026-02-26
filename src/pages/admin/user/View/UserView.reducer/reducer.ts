@@ -22,7 +22,6 @@ const initState: State = {
     },
   },
   tabs: [],
-  tabActive: 'Юзер',
   currentTime: '',
 };
 

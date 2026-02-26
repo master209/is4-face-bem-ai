@@ -2,7 +2,7 @@ import React, { FC, useContext } from 'react';
 import { IClassNameProps } from '@bem-react/core';
 import { toast } from 'react-toastify';
 
-import { UserViewStateContext, dispatchSwitchTab } from '..';
+import { UserViewStateContext } from '..';
 import { TabSet } from '../../../../../blocks/TabSet';
 import { IUniversalTab } from '../../../../../blocks/Tab';
 import { Data, IDataConfig, IButton } from '../Data';
@@ -15,14 +15,10 @@ import './Page-Data.scss';
 type Tost = {type: string, text: string};
 
 export const PageData: FC<IClassNameProps> = () => {
-  const {state, dispatch} = useContext(UserViewStateContext);
-  const {tabs: dataTabs, tabActive} = state;
+  const {state} = useContext(UserViewStateContext);
+  const {tabs: dataTabs} = state;
 
   const showToast = ({type, text}: Tost) => type === 'error' ? toast.error(text) : toast.info(text);
-
-  const handleTabChange = (tabId: string) => {
-    dispatch && dispatchSwitchTab(dispatch, tabId);
-  };
 
   const handleButtonClick = (button: IButton) => {
     const getPayload = (payload = '') =>
@@ -58,15 +54,13 @@ export const PageData: FC<IClassNameProps> = () => {
 
   return (
     <div>
-      {dataTabs.length > 0 ? (
-        <TabSet
-          tabs={universalTabs}
-          activeTab={tabActive}
-          onTabChange={handleTabChange}
-        />
-      ) : (
-        <p>загружаю...</p>
-      )}
+      <TabSet
+        tabs={universalTabs}
+        onTabChange={(tabId) => {
+          // Опциональная бизнес-логика при переключении таба
+          console.log('Tab changed to:', tabId);
+        }}
+      />
     </div>
   );
 };

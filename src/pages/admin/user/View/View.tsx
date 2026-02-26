@@ -4,8 +4,6 @@ import { IClassNameProps } from '@bem-react/core';
 
 import { api } from '../../../../store';
 import { Layout } from '../../../../components';
-import { OnRowDblClick } from '../../../../blocks/Grid';
-import { IGridRow } from '../../../../types/common';
 import {
   UserViewStateContext,
   PageHeader,

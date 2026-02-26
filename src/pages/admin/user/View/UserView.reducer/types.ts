@@ -15,7 +15,6 @@ export type State = {
     serviceStatus: Item;
   };
   tabs: IDataConfig[];
-  tabActive: string;
   currentTime: string;
 }
 
