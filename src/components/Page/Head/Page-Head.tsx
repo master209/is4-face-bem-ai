@@ -8,6 +8,6 @@ import './Page-Head.scss';
 
 export const PageHead: FC<IClassNameProps> = () => (
   <div className={cnPage('Head')}>
-    PageHead
+    &nbsp;
   </div>
 );

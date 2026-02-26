@@ -7,9 +7,8 @@ import { DataButtonSet } from './ButtonSet/Data-ButtonSet';
 import { DataLinkSet } from './LinkSet/Data-LinkSet';
 import { DataFieldLabel } from './FieldLabel/Data-FieldLabel';
 import { DataDiffTable } from './DiffTable/Data-DiffTable';
-// import { DataDiffMarker } from './DiffMarker/Data-DiffMarker';
 
-import { IDataConfig, IButton, IField, ILink } from './types';
+import { IDataConfig, IButton, IField } from './types';
 
 import './Data.scss';
 
