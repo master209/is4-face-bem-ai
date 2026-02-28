@@ -1,7 +1,6 @@
 import { Dispatch } from 'react';
 import { Action, ActionType, State } from '..';
 import { RequestProps } from '../../../../../blocks/Grid';
-import { mockUserViewData } from '../mockData';
 
 export const dispatchLoading = (dispatch: Dispatch<Action>) => {
   dispatch({
