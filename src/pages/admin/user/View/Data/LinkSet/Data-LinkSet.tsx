@@ -14,7 +14,7 @@ export const DataLinkSet: FC<IDataLinkSetProps> = ({
     <div className={cnData('LinkSet')}>
       {links.map((link, index) => (
         <Link key={index} href={link.url} className={cnData('ContentLink')}>
-          {link.label}
+          {link.lab}
         </Link>
       ))}
     </div>

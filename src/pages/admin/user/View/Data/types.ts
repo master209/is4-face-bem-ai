@@ -1,25 +1,25 @@
 export interface IField {
   key: string;
-  label: string;
-  value: string | number;
+  lab: string;
+  val: string | number;
   diff?: boolean;
 }
 
 export interface IButton {
   id: string;
-  label: string;
+  lab: string;
   handlerUrl: string;
   payload?: string;
 }
 
 export interface ILink {
-  label: string;
+  lab: string;
   url: string;
 }
 
 export interface IColumn {
   key: string;
-  label: string;
+  lab: string;
 }
 
 export interface ITableRow {

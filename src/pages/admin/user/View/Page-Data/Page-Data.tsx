@@ -22,8 +22,8 @@ export const PageData: FC<IClassNameProps> = () => {
 
   const handleButtonClick = (button: IButton) => {
     const getPayload = (payload = '') =>
-      dataTabs.find(t => t.id === 'user')?.fields?.find((f) => f.key === payload)?.value ||
-      dataTabs.find(t => t.id === 'user')?.fields?.find((f) => f.key === 'id')?.value;
+      dataTabs.find(t => t.id === 'user')?.fields?.find((f) => f.key === payload)?.val ||
+      dataTabs.find(t => t.id === 'user')?.fields?.find((f) => f.key === 'id')?.val;
 
     fetch(`${BACKEND_URL}/users/${button.handlerUrl}`, {
       method: 'POST',
@@ -43,7 +43,7 @@ export const PageData: FC<IClassNameProps> = () => {
   // Преобразуем IDataConfig[] в IUniversalTab[]
   const universalTabs: IUniversalTab[] = dataTabs.map((tabConfig: IDataConfig) => ({
     id: tabConfig.id,
-    label: tabConfig.name,
+    lab: tabConfig.name,
     content: (
       <Data
         config={tabConfig}

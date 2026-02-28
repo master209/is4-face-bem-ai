@@ -5,7 +5,7 @@ export const cnTab = cn('Tab');
 
 export interface IUniversalTab {
   id: string;
-  label: string;
+  lab: string;
   content: ReactNode;
 }
 

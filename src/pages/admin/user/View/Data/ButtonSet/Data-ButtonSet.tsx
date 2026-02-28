@@ -19,7 +19,7 @@ export const DataButtonSet: FC<IDataButtonSetProps> = ({
           <Button
             onClick={() => onButtonClick?.(button)}
           >
-            {button.label}
+            {button.lab}
           </Button>
         </div>
       ))}

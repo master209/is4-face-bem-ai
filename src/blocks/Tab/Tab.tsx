@@ -15,7 +15,7 @@ export const Tab: FC<ITabProps & IClassNameProps> = ({
   return (
     <div className={`${cnTab()} ${className}`.trim()}>
       <TabLabel active={active} onClick={onClick}>
-        {tab.label}
+        {tab.lab}
       </TabLabel>
       <TabContent active={active}>
         {tab.content}

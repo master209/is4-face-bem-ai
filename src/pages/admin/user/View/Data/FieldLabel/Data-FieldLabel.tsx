@@ -13,8 +13,8 @@ export const DataFieldLabel: FC<IDataFieldLabelProps> = ({
   return (
     <p>
       <span className={cnData('FieldLabel')}>
-        {field.label}:
-      </span> {field.value}
+        {field.lab}:
+      </span> {field.val}
       {field.diff && <DataDiffMarker />}
     </p>
   );

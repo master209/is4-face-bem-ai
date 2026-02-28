@@ -36,7 +36,7 @@ export const Data: FC<IDataProps> = ({
 
       case 'table':
         const tableHead = config.columns?.reduce((acc: any, col) => {
-          acc[col.key] = col.label;
+          acc[col.key] = col.lab;
           return acc;
         }, {}) || {};
 
