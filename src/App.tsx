@@ -16,6 +16,7 @@ import { getAction } from './helpers';
 
 import UserView from './pages/admin/user/View/View';
 import ContractView from './pages/contragent/contract/View/View';
+import ContragentView from './pages/contragent/contragent/View/View';
 import PaymentRaznos from './pages/main/payment/Raznos/Raznos';
 
 // https://yastatic.net/s3/frontend/lego/storybook/index.html?path=/docs/surface-tooltip-desktop--playground
@@ -28,6 +29,7 @@ const App: FC = () => {
         <Route path="" element={<HomeScreen/>}/>
         <Route path={'admin/user/view/:id'} element={<UserView/>}/>
         <Route path={'contragent/contract/view/:id'} element={<ContractView/>}/>
+        <Route path={'contragent/contragent/view/:id'} element={<ContragentView/>}/>
         <Route path={'main/payment/raznos/:id'} element={<PaymentRaznos/>}/>
 
         {routsSideMenu.map(({module, controllers}: IRouteItem) => (

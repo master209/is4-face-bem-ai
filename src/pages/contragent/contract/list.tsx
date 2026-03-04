@@ -11,7 +11,7 @@ const ContractList: FC<IClassNameProps> = () => {
   return (
     <div className={cnContractList()}>
       <h1>Договоры</h1>
-      <Grid url="contracts" />
+      <Grid url="contract" />
     </div>
   );
 };

@@ -11,7 +11,7 @@ const ContragentList: FC<IClassNameProps> = () => {
   return (
     <div className={cnContragentList()}>
       <h1>Контрагенты</h1>
-      <Grid url="contragents" />
+      <Grid url="contragent" />
     </div>
   );
 };

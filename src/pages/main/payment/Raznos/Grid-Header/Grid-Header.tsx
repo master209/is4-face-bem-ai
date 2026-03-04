@@ -64,7 +64,7 @@ export const GridHeader: FC<IClassNameProps> = () => {
           ? renderACfield(
             'contragent',
             val,
-            'contragents-list',
+            'contragent-list',
             dispatchContractsByContragent)
           : val;
       default:
