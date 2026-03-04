@@ -25,7 +25,7 @@ export const PageData: FC<IClassNameProps> = () => {
       dataTabs.find(t => t.id === 'user')?.fields?.find((f) => f.key === payload)?.val ||
       dataTabs.find(t => t.id === 'user')?.fields?.find((f) => f.key === 'id')?.val;
 
-    fetch(`${BACKEND_URL}/users/${button.handlerUrl}`, {
+    fetch(`${BACKEND_URL}/user/${button.handlerUrl}`, {
       method: 'POST',
       body: button.payload ? getPayload(button.payload) as string : undefined,
       headers: {

@@ -20,6 +20,7 @@ const PaymentVtb = lazy(() => import('./pages/main/payment/Sber/Vtb'));
 
 const ContragentList = lazy(() => import('./pages/contragent/contragent/list'));
 const ContractList = lazy(() => import('./pages/contragent/contract/list'));
+const ContractView = lazy(() => import('./pages/contragent/contract/View/View'));
 const ContragentGroupCompaniesList = lazy(() => import('./pages/contragent/group-companies/list'));
 const ContragentTypesPropertyList = lazy(() => import('./pages/contragent/types-property/list'));
 const ContragentTypesList = lazy(() => import('./pages/contragent/types/list'));
@@ -50,7 +51,7 @@ export const routsSideMenu: IRouteItem[] = [
   {
     module: 'admin',
     controllers: [
-      {controller: 'users', actions: [
+      {controller: 'user', actions: [
         {action: 'manage', page: UserManage},
         {action: 'view', param: 'id', page: UserView}
       ]},
@@ -81,7 +82,8 @@ export const routsSideMenu: IRouteItem[] = [
         {action: 'list', page: ContragentList}
       ]},
       {controller: 'contract', actions: [
-        {action: 'list', page: ContractList}
+        {action: 'list', page: ContractList},
+        {action: 'view', param: 'id', page: ContractView}
       ]},
       {controller: 'group-companies', actions: [
         {action: 'list', page: ContragentGroupCompaniesList}
@@ -131,9 +133,9 @@ export const routsSideMenu: IRouteItem[] = [
     ],
   },
   {
-    module: 'users',
+    module: 'user',
     controllers: [
-      {controller: 'users', actions: [
+      {controller: 'user', actions: [
         {action: 'list', page: UserList},
       ]},
     ],

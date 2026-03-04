@@ -5,7 +5,7 @@ export const navSideMenu: INavItem[] = [
     id: 'admin',
     title: 'Админка',
     links: [
-      {to: '/admin/users/manage', text: 'Клиенты'},
+      {to: '/admin/user/manage', text: 'Клиенты'},
       {to: '/admin/hist/spis', text: 'История списаний средств'},
       {to: '/admin/hist/pay', text: 'История пополнений средств'},
       {to: '/admin/hist/tariff', text: 'История тарифов'},
@@ -57,10 +57,10 @@ export const navSideMenu: INavItem[] = [
     ],
   },
   {
-    id: 'users',
+    id: 'user',
     title: 'Сотрудники',
     links: [
-      {to: '/users/users/list', text: 'Сотрудники'},
+      {to: '/user/user/list', text: 'Сотрудники'},
     ],
   },
 ];

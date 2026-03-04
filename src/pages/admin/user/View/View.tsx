@@ -21,11 +21,6 @@ const UserView: FC<IClassNameProps> = () => {
   const {state, dispatch} = useAsReducer();
   const {id: ID} = useParams();
 
-/* const loadData = () => {
-    const {apiHandler} = location.state as OnRowDblClick;
-    dispatchLoadData(dispatch, {api, req:`${apiHandler}${ID as string}`});
-}; */
-
   const loadData = () => {
     // Проверяем данные в sessionStorage (для переходов через двойной клик)
     const sessionState = sessionStorage.getItem('gridRowViewState');

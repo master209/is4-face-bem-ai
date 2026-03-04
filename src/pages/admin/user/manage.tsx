@@ -15,7 +15,7 @@ const UserManage: FC<IClassNameProps> = () => (
       <title>{TITLE_FREFIX}Управление клиентами</title>
     </Helmet>
     <h1>Управление клиентами</h1>
-    <Grid url="users/manage" />
+    <Grid url="user/manage" />
   </div>
 );
 

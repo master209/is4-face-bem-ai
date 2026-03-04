@@ -35,7 +35,7 @@ export enum APIRoute {
   Auth = '/auth',
   CheckAuth = '/check-auth',
   Logout = '/logout',
-  CanUser = '/users/can-user'
+  CanUser = '/user/can-user'
 }
 
 export const FormError = {

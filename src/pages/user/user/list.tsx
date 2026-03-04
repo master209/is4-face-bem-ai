@@ -11,7 +11,7 @@ const UserList: FC<IClassNameProps> = () => {
   return (
     <div className={cnUserList()}>
       <h1>Сотрудники</h1>
-      <Grid url="users" />
+      <Grid url="user" />
     </div>
   );
 };
