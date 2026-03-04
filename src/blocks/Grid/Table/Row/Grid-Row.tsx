@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent, useContext, useEffect, useState, createRef, useCallback } from 'react';
+import React, { FC, MouseEvent, useState, createRef, useCallback } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 
 import { IClassNameProps, compose } from '@bem-react/core';
@@ -101,7 +101,7 @@ export const GridRow: FC<IGridRowProps> = ({row}) => {
         />
       ))}
       </td>
-      <Tooltip view="default" size="m" anchor={ref} visible={visible}>
+      <Tooltip theme="dark" view="default" size="m" anchor={ref} visible={visible}>
         {tips[tip]}
       </Tooltip>
     </tr>

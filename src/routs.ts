@@ -19,6 +19,7 @@ const PaymentVtb = lazy(() => import('./pages/main/payment/Sber/Vtb'));
 // const PaymentRaznos = lazy(() => import('./pages/main/payment/Raznos/Raznos'));
 
 const ContragentList = lazy(() => import('./pages/contragent/contragent/list'));
+const ContractList = lazy(() => import('./pages/contragent/contract/list'));
 const ContragentGroupCompaniesList = lazy(() => import('./pages/contragent/group-companies/list'));
 const ContragentTypesPropertyList = lazy(() => import('./pages/contragent/types-property/list'));
 const ContragentTypesList = lazy(() => import('./pages/contragent/types/list'));
@@ -78,6 +79,9 @@ export const routsSideMenu: IRouteItem[] = [
     controllers: [
       {controller: 'contragent', actions: [
         {action: 'list', page: ContragentList}
+      ]},
+      {controller: 'contract', actions: [
+        {action: 'list', page: ContractList}
       ]},
       {controller: 'group-companies', actions: [
         {action: 'list', page: ContragentGroupCompaniesList}
