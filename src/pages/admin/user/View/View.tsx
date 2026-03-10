@@ -44,8 +44,8 @@ const UserView: FC<IClassNameProps> = () => {
       <UserViewStateContext.Provider value={{state, dispatch}}>
 		  <div className="UserView">
 			  <div className="HeaderAndTime">
-				<h1>Просмотр клиента #{state.tabs.find(tab => tab.id === 'user')?.fields?.find(field => field.key === 'userId')?.val}</h1>
-				<p className="CurrentTime">Время открытия страницы: {state.currentTime}</p>
+  				<h1>Просмотр клиента #{state.tabs.find(tab => tab.id === 'user')?.fields?.find(field => field.key === 'userId')?.val}</h1>
+	  			<p className="CurrentTime">Время открытия страницы: {state.currentTime}</p>
 			  </div>
 			  <PageHeader/>
 			  <PageData/>
