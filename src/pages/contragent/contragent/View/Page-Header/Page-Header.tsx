@@ -7,25 +7,29 @@ import './Page-Header.scss';
 
 export const PageHeader: FC<IClassNameProps> = () => {
   const {state} = useContext(ContragentViewStateContext);
-  const {pageHeader: {bookForm, name, dateRelevance, dateRelevanceEnd}} = state;
+  const {pageHeader: {id, isJur, bookForm, name, dateRelevance, dateRelevanceEnd}} = state;
 
   return (
     <div>
-      {bookForm.val ? (
+      {id.val ? (
         <div className="Page-Header">
           <table>
             <tbody>
               <tr>
-                <td><span className="th">{bookForm.lab}:</span> {bookForm.val}</td>
+                <th>{isJur.lab}</th><td>{isJur.val}</td>
+              </tr>
+              {isJur.val === 'да' ?
+                (<tr>
+                   <th>{bookForm.lab}</th><td>{bookForm.val}</td>
+                 </tr>) : null}
+              <tr>
+                <th>{name.lab}</th><td>{name.val}</td>
               </tr>
               <tr>
-                <td><span className="th">{name.lab}:</span> {name.val}</td>
+                <th>{dateRelevance.lab}</th><td>{dateRelevance.val}</td>
               </tr>
               <tr>
-                <td><span className="th">{dateRelevance.lab}:</span> {dateRelevance.val}</td>
-              </tr>
-              <tr>
-                <td><span className="th">{dateRelevanceEnd.lab}:</span> {dateRelevanceEnd.val}</td>
+                <th>{dateRelevanceEnd.lab}</th><td>{dateRelevanceEnd.val}</td>
               </tr>
             </tbody>
           </table>

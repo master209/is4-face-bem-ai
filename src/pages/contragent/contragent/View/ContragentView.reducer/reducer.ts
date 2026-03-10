@@ -8,6 +8,10 @@ const initState: State = {
       lab: 'ID',
       val: '',
     },
+    isJur: {
+      lab: 'Юридическое лицо?',
+      val: '',
+    },
     bookForm: {
       lab: 'Организационно-правовая форма',
       val: '',
@@ -22,10 +26,6 @@ const initState: State = {
     },
     dateRelevanceEnd: {
       lab: 'Дата окончания актуальности',
-      val: '',
-    },
-    isJur: {
-      lab: 'Юридическое лицо?',
       val: '',
     },
   },
