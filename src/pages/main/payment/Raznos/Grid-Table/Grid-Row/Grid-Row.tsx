@@ -8,6 +8,8 @@ export interface IGridRowProps extends IClassNameProps {
   setSumArr: Dispatch<SetStateAction<objArr>>;
 }
 
+import './Grid-Row.scss';
+
 export const GridRow: FC<IGridRowProps> = ({sumArr, setSumArr}:IGridRowProps) => {
   const {state} = useContext(RaznosStateContext);
   const {isApproval, tableRows} = state;

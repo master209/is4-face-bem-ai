@@ -16,16 +16,16 @@ export const PageHeader: FC<IClassNameProps> = () => {
           <table>
             <tbody>
               <tr>
-                <td><span className="th">{name.lab}:</span> {name.val}</td>
+                <th>{name.lab}</th><td>{name.val}</td>
               </tr>
               <tr>
-                <td><span className="th">{numberContract.lab}:</span> {numberContract.val}</td>
+                <th>{numberContract.lab}</th><td>{numberContract.val}</td>
               </tr>
               <tr>
-                <td><span className="th">{conclusionDate.lab}:</span> {conclusionDate.val}</td>
+                <th>{conclusionDate.lab}</th><td>{conclusionDate.val}</td>
               </tr>
               <tr>
-                <td><span className="th">{email.lab}:</span> {email.val}</td>
+                <th>{email.lab}</th><td>{email.val}</td>
               </tr>
             </tbody>
           </table>

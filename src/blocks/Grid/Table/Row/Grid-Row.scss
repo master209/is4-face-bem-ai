@@ -7,10 +7,6 @@
     color: $black; /* $content--color */
     background-color: $bg-color_hover;
   }
-
-  &:last-child {
-    border: none !important;
-  }
 }
 
 .NotHovered {
