@@ -16,6 +16,9 @@ export const cellHidden = (key: string) => key === 'id' ? 'Hidden' : '';
 // для округления денег до копеек в меньшую сторону
 export const round = (sum: number): number => Math.round( sum * 100 ) / 100;
 
+export const boolYesNo = (bool: boolean) => bool ? 'да' : 'нет';
+export const numYesNo = (num: number) => num > 0 ? 'да' : 'нет';
+
 // преобразует +7 912 345 6789 к 9123456789
 export const normPhone = (phone: string) =>
   phone

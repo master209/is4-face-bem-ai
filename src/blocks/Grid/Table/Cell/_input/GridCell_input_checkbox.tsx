@@ -13,18 +13,19 @@ export const withGridCellInputCheckbox = withBemMod<IGridCellProps>(
   { inputType: 'checkbox' }, // тип контрола для этого модификатора
   // eslint-disable-next-line react/display-name
   (GridCell) => ({...props}: IGridCellProps) => {
-    const [isLoading, setIsLoading] = useState(false);
     const {row, field, inputs} = props;
     const isChecked = () => row[field] === 'да';
+    const [isLoading, setIsLoading] = useState(false);
+
+    const numYesNo = (num: number) => num > 0 ? 'да' : 'нет';
 
     const handleChange = async (ev: ChangeEvent, checked: boolean) => {
       setIsLoading(true);
       try {
-        await api.put(`${inputs[field].apiHandler}/${row.id}`, {
+        const response = await api.put(`${inputs[field].apiHandler}/${row.id}`, {
           [field]: checked ? 0 : 1
         });
-        // После успешного запроса можно обновить локальные данные,
-        // но для простоты полагаемся на перезагрузку страницы или обновление через другие механизмы
+        row[field] = numYesNo(response.data[field]);
       } catch (error) {
         console.error('Error updating checkbox:', error);
         // В случае ошибки можно показать уведомление пользователю
