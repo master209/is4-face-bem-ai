@@ -11,6 +11,8 @@ import { GridCell as GridCellBase, withGridCellInputCheckbox } from '..';
 import { cnGrid, IGridRow, useGridDataContext, useGridSelectionContext } from '../..';
 import { DBL_CLICK_DELAY, IMG_PATH } from '../../../../const';
 
+import {api} from '../../../../store';
+
 import './Grid-Row.scss';
 import './_selected/Grid-Row_selected.scss';
 
@@ -42,11 +44,16 @@ export const GridRow: FC<IGridRowProps> = ({row}) => {
   const delay = DBL_CLICK_DELAY;
   let timer: ReturnType<typeof setTimeout>;
 
-  const handleActionClick = useCallback((ev: MouseEvent, apiHandler: string) => {
+  const handleActionClick = async (ev: MouseEvent, apiHandler: string) => {
     ev.preventDefault();
-    // Пока оставляем старый способ для действий (удаления)
-    // TODO: возможно потом тоже перевести на новый подход
-  }, []);
+
+    console.log('apiHandler, id: ', apiHandler, row.id);
+    try {
+      await api.delete(`${apiHandler}?id=${row.id}`);
+    } catch (error) {
+      console.error('Error action Delete: ', error);
+    }
+  };
 
   const handleClick = useCallback((ev: MouseEvent, id: string) => {
     timer = setTimeout(() => {

@@ -30,8 +30,7 @@ export const withGridCellInputCheckbox = withBemMod<IGridCellProps>(
         });
         row[field] = numYesNo(response.data[field]); // установка значения с сервера
       } catch (error) {
-        console.error('Error updating checkbox:', error);
-        // В случае ошибки можно показать уведомление пользователю
+        console.error('Error updating checkbox: ', error);
       } finally {
         setIsLoading(false);
       }
