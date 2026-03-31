@@ -29,6 +29,7 @@ export const navSideMenu: INavItem[] = [
     links: [
       {to: '/contragent/contragent/list', text: 'Контрагенты'},
       {to: '/contragent/contract/list', text: 'Договоры'},
+      {to: '/contragent/letter/list', text: 'Письма'},
       {to: '/contragent/group-companies/list', text: 'Группы компаний'},
       {to: '/contragent/types-property/list', text: 'Орг-правовые формы'},
       {to: '/contragent/types/list', text: 'Типы контрагентов'},

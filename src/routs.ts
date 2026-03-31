@@ -22,6 +22,8 @@ const ContractList = lazy(() => import('./pages/contragent/contract/list'));
 const ContractView = lazy(() => import('./pages/contragent/contract/View/View'));
 const ContragentList = lazy(() => import('./pages/contragent/contragent/list'));
 const ContragentView = lazy(() => import('./pages/contragent/contragent/View/View'));
+const LetterList = lazy(() => import('./pages/contragent/letter/list'));
+const LetterView = lazy(() => import('./pages/contragent/letter/View/View'));
 const ContragentGroupCompaniesList = lazy(() => import('./pages/contragent/group-companies/list'));
 const ContragentTypesPropertyList = lazy(() => import('./pages/contragent/types-property/list'));
 const ContragentTypesList = lazy(() => import('./pages/contragent/types/list'));
@@ -86,6 +88,10 @@ export const routsSideMenu: IRouteItem[] = [
       {controller: 'contract', actions: [
         {action: 'list', page: ContractList},
         {action: 'view', param: 'id', page: ContractView}
+      ]},
+      {controller: 'letter', actions: [
+        {action: 'list', page: LetterList},
+        {action: 'view', param: 'id', page: LetterView}
       ]},
       {controller: 'group-companies', actions: [
         {action: 'list', page: ContragentGroupCompaniesList}

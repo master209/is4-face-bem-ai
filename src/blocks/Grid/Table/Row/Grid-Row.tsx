@@ -1,5 +1,4 @@
 import React, { FC, MouseEvent, useState, createRef, useCallback } from 'react';
-import { useLocation, useSearchParams } from 'react-router-dom';
 
 import { IClassNameProps, compose } from '@bem-react/core';
 import { Tooltip } from '../../../../lib/yandex-ui/Tooltip';
@@ -28,11 +27,9 @@ export const GridRow: FC<IGridRowProps> = ({row}) => {
 
   const { state: dataState } = useGridDataContext();
   const { state: selectionState, toggleRow, doubleClickRow } = useGridSelectionContext();
-  const [searchParams, setSearchParams] = useSearchParams();
   const [visible, setVisible] = useState(false);
   const [tip, setTip] = useState('id');
   const [prevent, setPrevent] = useState(false);
-  const {pathname} = useLocation();
   const ref = createRef<HTMLTableRowElement>();
 
   const { inputs, actions, onRowDblClick, tableHead } = dataState;

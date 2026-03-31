@@ -23,7 +23,7 @@ h1 {
 }
 
 .Hidden {
-  display: none;
+  display: none !important;
 }
 
 *:disabled {
